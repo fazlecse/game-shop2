@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G2BulP</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon">
+    <!-- Fontawesome6-Js-link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Bootstrap5-Css-link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl-carousel-Css-link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- select2-Css-link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- Nice select Css-link -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloaderFunction()" class="">
+    <!-- Preloader section start -->
+    <div id="preloader">
+        <img src="./assets/img/preloader/game.png" alt="">
+    </div>
+    <!-- Preloader section end -->
+
+
+    <!-- Nav section start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt="G2BulP" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <i class="fa-light fa-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo.png"
+                            alt="G2BulP" /></a>
+
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-light fa-arrow-right"></i></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="custom-nav">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link nav-regional-btn" href="#">EN</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <div class="language-box">
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="./assets/img/language/en.png" alt="">
+                                    <span class="text">EN</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="" class="dropdown-item" type="button"><img
+                                                src="./assets/img/language/en.png" alt="">
+                                            English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="dropdown-item" type="button"><img
+                                                src="./assets/img/language/bn.png" alt="">
+                                            Bengali
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-login-btn" href="login.html">
+                            <div class="icon-box"><i class="fa-light fa-user"></i></div>
+                            <div class="text-box">
+                                log in <br>
+                                register
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-cart-btn" href="cart.html"><i class="fa-light fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Products section start -->
+    <section class="products-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="sidebar-widget-area">
+                        <h4 class="widget-title">Search</h4>
+                        <div class="search-box">
+                            <input type="text" class="form-control" placeholder="Search here...">
+                            <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget-area">
+                        <h4 class="widget-title">Categories</h4>
+
+                        <div class="checkbox-categories-area">
+                            <div class="section-inner">
+                                <div class="categories-list">
+                                    <a href="" class="category-link">
+                                        <span>gift card</span>
+                                        <span>(10)</span>
+                                    </a>
+                                    <a href="" class="category-link">
+                                        <span>voucher</span>
+                                        <span>(10)</span>
+                                    </a>
+                                    <a href="" class="category-link">
+                                        <span>game top up</span>
+                                        <span>(10)</span>
+                                    </a>
+                                    <a href="" class="category-link">
+                                        <span>mobile game</span>
+                                        <span>(10)</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row justify-content-between align-items-center gap-2">
+                        <div class="col-auto">
+                            <h6>04 Items found</h6>
+                        </div>
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center gap-2">
+                                <span>Sort By</span>
+                                <div class="nice-select-section">
+                                    <select class="nice-select right">
+                                        <option data-display="All Type">All Type</option>
+                                        <option value="1">Popular</option>
+                                        <option value="2">Latest</option>
+                                        <option value="3">Featured</option>
+                                        <option value="4">Featured</option>
+                                        <option value="4">Discount</option>
+                                        <option value="4">Date</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-20">
+                        <div class="row g-3 g-sm-4">
+                            <div class="col-lg-6 col-6">
+                                <div class="product-box">
+                                    <a href="product-details.html" class="img-box">
+                                        <img src="./assets/img/products/big/1.jpg" alt="">
+                                    </a>
+                                    <div class="text-box">
+                                        <div class="review">
+                                            <ul class="reviews d-flex align-items-center gap-2">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                                <span>(5 reviews)</span>
+                                            </ul>
+                                        </div>
+                                        <a href="product-details.html" class="title mt-10">EA SPORTS FC 25 (PC) - Steam
+                                            Account -
+                                            GLOBAL</a>
+                                        <div class="region"><img src="./assets/img/mini-flag/bd.svg" alt="">Bangladesh
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-6">
+                                <div class="product-box">
+                                    <a href="product-details.html" class="img-box">
+                                        <img src="./assets/img/products/big/2.png" alt="">
+                                    </a>
+                                    <div class="text-box">
+                                        <div class="review">
+                                            <ul class="reviews d-flex align-items-center gap-2">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                                <span>(5 reviews)</span>
+                                            </ul>
+                                        </div>
+                                        <a href="product-details.html" class="title mt-10">EA SPORTS FC 25 (PC) - Steam
+                                            Account -
+                                            GLOBAL</a>
+                                        <div class="region"><img src="./assets/img/mini-flag/in.svg" alt="">india</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-6">
+                                <div class="product-box">
+                                    <a href="product-details.html" class="img-box">
+                                        <img src="./assets/img/products/big/3.jpeg" alt="">
+                                    </a>
+                                    <div class="text-box">
+                                        <div class="review">
+                                            <ul class="reviews d-flex align-items-center gap-2">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                                <span>(5 reviews)</span>
+                                            </ul>
+                                        </div>
+                                        <a href="product-details.html" class="title mt-10">EA SPORTS FC 25 (PC) - Steam
+                                            Account -
+                                            GLOBAL</a>
+                                        <div class="region"><img src="./assets/img/mini-flag/us.svg" alt="">united
+                                            states
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-6">
+                                <div class="product-box">
+                                    <a href="product-details.html" class="img-box">
+                                        <img src="./assets/img/products/big/4.png" alt="">
+                                    </a>
+                                    <div class="text-box">
+                                        <div class="review">
+                                            <ul class="reviews d-flex align-items-center gap-2">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                                <span>(5 reviews)</span>
+                                            </ul>
+                                        </div>
+                                        <a href="product-details.html" class="title mt-10">EA SPORTS FC 25 (PC) - Steam
+                                            Account -
+                                            GLOBAL</a>
+                                        <div class="region"><img src="./assets/img/mini-flag/gb.svg" alt="">united
+                                            kingdom
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- pagination section start -->
+                    <div class="pagination-section mt-20">
+                        <nav aria-label="...">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fal fa-long-arrow-left"></i></a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active" aria-current="page">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fal fa-long-arrow-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- pagination section end -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Products section end -->
+
+    <!-- Footer Section start -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget-logo">
+                            <a href="index.html"><img class="logo" src="assets/img/logo/logo.png" alt="G2BulP"></a>
+                        </div>
+                        <ul class="mt-20">
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-circle-info"></i>
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-newspaper"></i>
+                                    G2Bulp News
+                                </a>
+                            </li>
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-headset"></i>
+                                    Support
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Customers</h5>
+                        <ul class="mt-20">
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-arrow-rotate-left"></i>
+                                    Return & Refund Policy
+                                </a>
+                            </li>
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-cookie-bite"></i>
+                                    Privacy and Cookies
+                                </a>
+                            </li>
+                            <li>
+                                <a class="widget-link" href="policy.html">
+                                    <i class="fa-light fa-file-contract"></i>
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Service</h5>
+                        <ul class="mt-20">
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-shield-check"></i>
+                                    100% Safety Guarantee
+                                </a>
+                            </li>
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-headset"></i>
+                                    24/7 Customer Support
+                                </a>
+                            </li>
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-file-contract"></i>
+                                    Terms of Service
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6 pt-sm-0 pt-3 ps-lg-5 lets-talk-col">
+                    <div class="footer-widget">
+                        <div class="lets-talk-box">
+                            <div class="text-box">Let’s Talk Us</div>
+                            <div class="icon-box"><i class="fa-solid fa-circle-phone"></i></div>
+                        </div>
+                        <div class="contact-box  mt-20">
+                            <p class="title"><i class="fa-light fa-envelope"></i>E-Mail</p>
+                            <p class="subtitle">example@gmail.com</p>
+                        </div>
+                        <div class="distribution-platforms">
+                            <img src="./assets/img/distribution-platforms/google-play.png" alt="">
+                            <img src="./assets/img/distribution-platforms/app-store.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section end -->
+
+    <!-- Copyright section start -->
+    <div class="copyright-section">
+        <div class="container">
+            <div class="copyright-inner">
+                <div class="row gy-4">
+                    <div class="col-sm-6">
+                        <p class="mb-0 text-center text-sm-start">Copyright ©2024 <a class="highlight"
+                                href="index.html">G2BulP</a> All Rights
+                            Reserved!
+                        </p>
+                    </div>
+                    <div class="col-sm-6 d-flex justify-content-center justify-content-sm-end">
+                        <div class="payment-gateway">
+                            <img src="./assets/img/gateway/1.png" alt="">
+                            <img src="./assets/img/gateway/2.png" alt="">
+                            <img src="./assets/img/gateway/3.png" alt="">
+                            <img src="./assets/img/gateway/4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright section end -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Jquery Js link -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap Js link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl carausel Js link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper Js link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- select2 Js link -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- Nice select Js link -->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+
+    <!-- Main Js link -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

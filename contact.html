@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G2BulP</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon">
+    <!-- Fontawesome6-Js-link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Bootstrap5-Css-link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl-carousel-Css-link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- select2-Css-link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload="preloaderFunction()" class="">
+    <!-- Preloader section start -->
+    <div id="preloader">
+        <img src="./assets/img/preloader/game.png" alt="">
+    </div>
+    <!-- Preloader section end -->
+
+
+    <!-- Nav section start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt="G2BulP" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <i class="fa-light fa-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo.png"
+                            alt="G2BulP" /></a>
+
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-light fa-arrow-right"></i></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="custom-nav">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link nav-regional-btn" href="#">EN</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <div class="language-box">
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="./assets/img/language/en.png" alt="">
+                                    <span class="text">EN</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="" class="dropdown-item" type="button"><img
+                                                src="./assets/img/language/en.png" alt="">
+                                            English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="dropdown-item" type="button"><img
+                                                src="./assets/img/language/bn.png" alt="">
+                                            Bengali
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-login-btn" href="login.html">
+                            <div class="icon-box"><i class="fa-light fa-user"></i></div>
+                            <div class="text-box">
+                                log in <br>
+                                register
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-cart-btn" href="cart.html"><i class="fa-light fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Contact section start -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-inner">
+                <div class="row g-4 g-xl-5">
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="contact-area">
+                            <div class="section-header mb-0">
+                                <h3>Contact Information</h3>
+                            </div>
+                            <p class="para_text">Give us a call or drop by anytime, we endeavour to answer all enquiries
+                                within 24 hours on business days. We will be happy to answer your questions.</p>
+                            <div class="contact-item-list">
+                                <div class="item">
+                                    <div class="icon-area">
+                                        <i class="fa-light fa-phone"></i>
+                                    </div>
+                                    <div class="content-area">
+                                        <h6 class="mb-0">Phone:</h6>
+                                        <p class="mb-0">+45345847431324</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="icon-area">
+                                        <i class="fa-light fa-envelope"></i>
+                                    </div>
+                                    <div class="content-area">
+                                        <h6 class="mb-0">Email:</h6>
+                                        <p class="mb-0">demo@example.com</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="icon-area">
+                                        <i class="fa-light fa-location-dot"></i>
+                                    </div>
+                                    <div class="content-area">
+                                        <h6 class="mb-0">Address:</h6>
+                                        <p class="mb-0">22 Baker Street, London</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-30">
+                                <h5>Socials</h5>
+                                <ul class="social-box mt-10">
+                                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-6">
+                        <div class="contact-message-area">
+                            <div class="contact-header">
+                                <h3 class="section-title">We’re always here for you</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia blanditiis
+                                    consequuntur rem, sit itaque impedit. Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Quam consequatur Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Sequi, perferendis?
+
+                                </p>
+                            </div>
+                            <form>
+                                <div class="row">
+                                    <div class="mb-3 col-md-6">
+                                        <input type="text" class="form-control" placeholder="Your Name">
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <input type="email" class="form-control" placeholder="E-mail Address">
+                                    </div>
+                                    <div class="mb-3 col-md-12">
+                                        <input type="text" class="form-control" placeholder="Your Subject">
+                                    </div>
+                                    <div class="mb  -3 col-12">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                            placeholder="Your Massage"></textarea>
+                                    </div>
+                                </div>
+                                <div class="btn-area d-flex justify-content-end">
+                                    <button type="submit" class="cmn-btn w-100"><span>Send a massage</span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact section end -->
+
+    <!-- Map section start -->
+    <div class="map-section">
+        <iframe class="shadow-none p-0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1668508535036!5m2!1sen!2sbd"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- Map section end -->
+
+
+    <!-- Footer Section start -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget-logo">
+                            <a href="index.html"><img class="logo" src="assets/img/logo/logo.png" alt="G2BulP"></a>
+                        </div>
+                        <ul class="mt-20">
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-circle-info"></i>
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-newspaper"></i>
+                                    G2Bulp News
+                                </a>
+                            </li>
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-headset"></i>
+                                    Support
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Customers</h5>
+                        <ul class="mt-20">
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-arrow-rotate-left"></i>
+                                    Return & Refund Policy
+                                </a>
+                            </li>
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-cookie-bite"></i>
+                                    Privacy and Cookies
+                                </a>
+                            </li>
+                            <li>
+                                <a class="widget-link" href="policy.html">
+                                    <i class="fa-light fa-file-contract"></i>
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Service</h5>
+                        <ul class="mt-20">
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-shield-check"></i>
+                                    100% Safety Guarantee
+                                </a>
+                            </li>
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-headset"></i>
+                                    24/7 Customer Support
+                                </a>
+                            </li>
+                            <li>
+                                <a class="widget-link" href="about.html">
+                                    <i class="fa-light fa-file-contract"></i>
+                                    Terms of Service
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 pt-sm-0 pt-3 ps-lg-5 lets-talk-col">
+                    <div class="footer-widget">
+                        <div class="lets-talk-box">
+                            <div class="text-box">Let’s Talk Us</div>
+                            <div class="icon-box"><i class="fa-solid fa-circle-phone"></i></div>
+                        </div>
+                        <div class="contact-box  mt-20">
+                            <p class="title"><i class="fa-light fa-envelope"></i>E-Mail</p>
+                            <p class="subtitle">example@gmail.com</p>
+                        </div>
+                        <div class="distribution-platforms">
+                            <img src="./assets/img/distribution-platforms/google-play.png" alt="">
+                            <img src="./assets/img/distribution-platforms/app-store.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section end -->
+
+    <!-- Copyright section start -->
+    <div class="copyright-section">
+        <div class="container">
+            <div class="copyright-inner">
+                <div class="row gy-4">
+                    <div class="col-sm-6">
+                        <p class="mb-0 text-center text-sm-start">Copyright ©2024 <a class="highlight"
+                                href="index.html">G2BulP</a> All Rights
+                            Reserved!
+                        </p>
+                    </div>
+                    <div class="col-sm-6 d-flex justify-content-center justify-content-sm-end">
+                        <div class="payment-gateway">
+                            <img src="./assets/img/gateway/1.png" alt="">
+                            <img src="./assets/img/gateway/2.png" alt="">
+                            <img src="./assets/img/gateway/3.png" alt="">
+                            <img src="./assets/img/gateway/4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright section end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Jquery_Js_link -->
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap_Js_link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl_carausel_Js_link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper_Js_link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- select2_Js_link -->
+    <script src="assets/js/select2.min.js"></script>
+
+
+    <!-- Main_Js_link -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

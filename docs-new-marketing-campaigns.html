@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bmail Template</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon">
+    <!-- Fontawesome6-Js-link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap5-Css-link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl-carousel-Css-link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Slick-slider-Css-link -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <!-- select2-Css-link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- Highlight-Editor-Css-link -->
+    <link rel="stylesheet" href="assets/css/darcula.min.css">
+
+    <!-- Style_Css_link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloaderFunction()" class="">
+    <!-- Preloader section start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Preloader section end -->
+
+    <!-- Nav section start -->
+    <nav class="navbar navbar-expand-lg docs-nav">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt="G2BulP" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <i class="fa-light fa-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo.png"
+                            alt="G2BulP" /></a>
+
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-light fa-arrow-right"></i></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="custom-nav">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link nav-regional-btn" href="#">EN</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <div class="language-box">
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <img src="./assets/img/language/en.png" alt="">
+                                    <span class="text">EN</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="" class="dropdown-item" type="button"><img
+                                                src="./assets/img/language/en.png" alt="">
+                                            English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="dropdown-item" type="button"><img
+                                                src="./assets/img/language/bn.png" alt="">
+                                            Bengali
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-login-btn" href="login.html">
+                            <div class="icon-box"><i class="fa-light fa-user"></i></div>
+                            <div class="text-box">
+                                log in <br>
+                                register
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-cart-btn" href="cart.html"><i class="fa-light fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+
+    <!--Sidebar section start-->
+    <div class="sidebar-section">
+        <nav class="nav-area">
+            <ul class="nav flex-column" id="sidebar-nav">
+                <li class="nav-item">
+                    <a class="nav-link collapsed" aria-current="page" href="#" data-bs-target="#getting-started"
+                        data-bs-toggle="collapse"><i class="fa-light fa-folder-open first"></i>Getting Started<i
+                            class="fa-sharp fa-regular fa-angle-down last"></i></a>
+                    <ul id="getting-started" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li>
+                            <a href="docs-authentication.html" class="active">
+                                <i class="fa-regular fa-circle"></i><span>Authentication</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-regular fa-circle"></i><span>Authorization</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-regular fa-circle"></i><span>Requests</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" aria-current="page" href="#" data-bs-target="#forms-nav"
+                        data-bs-toggle="collapse"><i class="fa-light fa-folder-open first"></i>Mail Send<i
+                            class="fa-sharp fa-regular fa-angle-down last"></i></a>
+                    <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li>
+                            <a href="user-panel-all-images.html">
+                                <i class="fa-regular fa-circle"></i><span>Authentication</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-regular fa-circle"></i><span>Authorization</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-regular fa-circle"></i><span>Requests</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" aria-current="page" href="#" data-bs-target="#New-Marketing-Campaigns"
+                        data-bs-toggle="collapse"><i class="fa-light fa-folder-open first"></i>New Marketing Campaigns<i
+                            class="fa-sharp fa-regular fa-angle-down last"></i></a>
+                    <ul id="New-Marketing-Campaigns" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li>
+                            <a href="docs-new-marketing-campaigns.html">
+                                <i class="fa-regular fa-circle"></i><span>Add or Update a Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-regular fa-circle"></i><span>Headers</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-regular fa-circle"></i><span>Request Body</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-light fa-folder-open first"></i>Feature</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- sidebar toggle btn start-->
+        <button onclick="toggleSideMenu()" class="toggle-sidebar-btn d-lg-none"><i
+                class="fa-light fa-list"></i></button>
+        <!-- sidebar toggle btn end -->
+    </div>
+    <!--Sidebar section end-->
+
+    <main>
+        <div class="main-wrapper">
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="api-reference-section">
+                        <div class="row">
+                            <div class="col-12 mb-4">
+                                <h3>Getting Started</h3>
+                                <p>
+                                    This document explains how to successfully call the API with your app and get an
+                                    successful call. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                                    ullam id ad ex ipsa ab similique aliquam cumque consectetur
+                                    iure nam expedita labore veritatis quae quis iste, dolorum, maiores quos!
+                                </p>
+                                <p class="d-flex align-items-center gap-2"><span class="badge text-bg-info">Base
+                                        Url</span><i>https://pay-secure.bugfinder.net</i></p>
+                            </div>
+                        </div>
+                        <div class="row g-4 mb-4">
+                            <div class="col-lg-6">
+                                <h4 class="mt-0">Initiate Payment</h4>
+                                <p>
+                                    To initiate the payment process follow the example code and be careful with the
+                                    parameters. Use this guide to make sure your chosen payment methods work for your
+                                    business and to determine how you want to add payment methods.
+                                </p>
+                                <p class="d-flex align-items-center gap-2"><span class="badge text-bg-success">Base
+                                        Url</span><i>https://pay-secure.bugfinder.net</i></p>
+                                <hr>
+                                <p>
+                                    <b>HTTP Method:</b>
+                                    <span>POST</span>
+                                </p>
+                                <p>
+                                    <b>API URL:</b>
+                                    <i class="text-primary">https://growfollows.com/api/v2</i>
+                                </p>
+                                <p>
+                                    <b>API Key:</b>
+                                    <span>Get an api key on the account page</span>
+                                </p>
+                                <p>
+                                    <b>Response format:</b>
+                                    <span>JSON</span>
+                                </p>
+                                <hr>
+                                <h5 class="mb-3">Body Params</h5>
+                                <div class="row g-2">
+                                    <div class="col-12">
+                                        <p class="mb-0">
+                                            <b>currency<span class="text-danger">*</span></b>
+                                            <span class="badge text-bg-info">string</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-8">
+                                                <p class="mb-0">
+                                                    Currency Code, Must be in Upper Case. e.g. USD, EUR </p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <input type="text" class="form-control" value="USD">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row g-2">
+                                    <div class="col-12">
+                                        <p class="mb-0">
+                                            <b>amount<span class="text-danger">*</span></b>
+                                            <span class="badge text-bg-info">int32</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-8">
+                                                <p class="mb-0">The amount you want to transaction </p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <input type="text" class="form-control" value="100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row g-2">
+                                    <div class="col-12">
+                                        <p class="mb-0">
+                                            <b>ipn_url<span class="text-danger">*</span></b>
+                                            <span class="badge text-bg-info">url</span>
+                                        </p>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-8">
+                                                <p class="mb-0">Instant payment notification url </p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <input type="text" class="form-control" value="https://bugfinder.net/">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="col-12">
+                                    <h4 class="mt-0">Service list</h4>
+                                    <p>
+                                        <b>Key:</b>
+                                        <span>Your API key</span>
+                                    </p>
+                                    <p>
+                                        <b>Action:</b>
+                                        <span>services</span>
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row g-4">
+                                    <div class="col-12">
+                                        <div class="editor-header">
+                                            <h4 class="editor-title">Add or Update a Contact</h4>
+                                            <div class="cmn-tabs2">
+                                                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link active" id="Node-js-tab"
+                                                            data-bs-toggle="pill" data-bs-target="#Node-js"
+                                                            type="button" role="tab" aria-controls="Node-js"
+                                                            aria-selected="true">Node.js</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="Python-tab" data-bs-toggle="pill"
+                                                            data-bs-target="#Python" type="button" role="tab"
+                                                            aria-controls="Python" aria-selected="false">Python</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="PHP-tab" data-bs-toggle="pill"
+                                                            data-bs-target="#PHP" type="button" role="tab"
+                                                            aria-controls="PHP" aria-selected="false">PHP</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="Java-tab" data-bs-toggle="pill"
+                                                            data-bs-target="#Java" type="button" role="tab"
+                                                            aria-controls="Java" aria-selected="false">Java</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="Go-tab" data-bs-toggle="pill"
+                                                            data-bs-target="#Go" type="button" role="tab"
+                                                            aria-controls="Go" aria-selected="false">Go</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="Ruby-tab" data-bs-toggle="pill"
+                                                            data-bs-target="#Ruby" type="button" role="tab"
+                                                            aria-controls="Ruby" aria-selected="false">Ruby</button>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="editor-content-area">
+                                            <div class="tab-content" id="pills-tabContent">
+                                                <div class="tab-pane fade show active" id="Node-js" role="tabpanel"
+                                                    aria-labelledby="Node-js-tab" tabindex="0">
+                                                    <div class="language-bash">
+                                                        <div class="language-bash-inner">
+                                                            <pre class="docs-pre">
+                                                    <code class="docs-code">
+const client = require("@sendgrid/client");
+client.setApiKey(process.env.SENDGRID_API_KEY);
+const data = {
+contacts: [
+{
+email: "annahamilton@example.org",
+custom_fields: {
+w1: "coffee",
+w33: "42",
+e2: "blue",
+},
+},
+],
+};
+
+const request = {
+url: `/v3/marketing/contacts`,
+method: "PUT",
+body: data,
+};
+
+client
+.request(request)
+.then(([response, body]) => {
+console.log(response.statusCode);
+console.log(response.body);
+})
+.catch((error) => {
+console.error(error);
+});
+
+                                                                </code></pre>
+                                                            <span class="line-numbers-rows">
+                                                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+                                                                <span>16</span>
+                                                                <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+                                                            </span>
+                                                        </div>
+
+                                                        <button onclick="copyTextFunc()" class="copy-code"
+                                                            type="button"><i class="fa-regular fa-copy"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="Python" role="tabpanel"
+                                                    aria-labelledby="Python-tab" tabindex="0">
+                                                    <div class="language-bash">
+                                                        <div class="language-bash-inner">
+                                                            <pre class="docs-pre"><code class="docs-code">
+const client = require('@sendgrid/client');
+client.setApiKey(process.env.SENDGRID_API_KEY);
+
+const data = {
+"contacts": [
+{
+"email": "annahamilton@example.org",
+"custom_fields": {
+"w1": "coffee",
+"w33": "42",
+"e2": "blue"
+}
+}
+]
+};
+
+const request = {
+url: `/v3/marketing/contacts`,
+method: 'PUT',
+body: data
+}
+
+client.request(request)
+.then(([response, body]) => {
+console.log(response.statusCode);
+console.log(response.body);
+})
+.catch(error => {
+console.error(error);
+});
+                                                            </code></pre>
+                                                            <span class="line-numbers-rows">
+                                                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+                                                                <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+                                                            </span>
+                                                        </div>
+                                                        <button onclick="copyTextFunc()" class="copy-code"
+                                                            type="button"><i class="fa-regular fa-copy"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="PHP" role="tabpanel"
+                                                    aria-labelledby="PHP-tab" tabindex="0">
+                                                    <div class="language-bash">
+                                                        <div class="language-bash-inner">
+                                                            <pre class="docs-pre"><code class="docs-code">
+const client = require('@sendgrid/client');
+client.setApiKey(process.env.SENDGRID_API_KEY);
+                                        
+const data = {
+    "contacts": [
+        {
+            "email": "annahamilton@example.org",
+            "custom_fields": {
+            "w1": "coffee",
+            "w33": "42",
+            "e2": "blue"
+        }
+    }
+    ]
+};
+                                        
+const request = {
+url: `/v3/marketing/contacts`,
+method: 'PUT',
+body: data
+}
+                                        
+client.request(request)
+.then(([response, body]) => {
+console.log(response.statusCode);
+console.log(response.body);
+})
+.catch(error => {
+console.error(error);
+});</code></pre>
+                                                            <span class="line-numbers-rows">
+                                                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+                                                                <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+                                                            </span>
+                                                        </div>
+                                                        <button onclick="copyTextFunc()" class="copy-code"
+                                                            type="button"><i class="fa-regular fa-copy"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="Java" role="tabpanel"
+                                                    aria-labelledby="Java-tab" tabindex="0">
+                                                    <div class="language-bash">
+                                                        <div class="language-bash-inner">
+                                                            <pre class="docs-pre"><code class="docs-code">
+const client = require('@sendgrid/client');
+client.setApiKey(process.env.SENDGRID_API_KEY);
+                                        
+const data = {
+    "contacts": [
+        {
+            "email": "annahamilton@example.org",
+            "custom_fields": {
+            "w1": "coffee",
+            "w33": "42",
+            "e2": "blue"
+        }
+    }
+    ]
+};
+                                        
+const request = {
+url: `/v3/marketing/contacts`,
+method: 'PUT',
+body: data
+}
+                                        
+client.request(request)
+.then(([response, body]) => {
+console.log(response.statusCode);
+console.log(response.body);
+})
+.catch(error => {
+console.error(error);
+});</code></pre>
+                                                            <span class="line-numbers-rows">
+                                                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+                                                                <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+                                                            </span>
+                                                        </div>
+                                                        <button onclick="copyTextFunc()" class="copy-code"
+                                                            type="button"><i class="fa-regular fa-copy"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="Go" role="tabpanel"
+                                                    aria-labelledby="Go-tab" tabindex="0">
+                                                    <div class="language-bash">
+                                                        <div class="language-bash-inner">
+                                                            <pre class="docs-pre"><code class="docs-code">
+const client = require('@sendgrid/client');
+client.setApiKey(process.env.SENDGRID_API_KEY);
+                                        
+const data = {
+    "contacts": [
+        {
+            "email": "annahamilton@example.org",
+            "custom_fields": {
+            "w1": "coffee",
+            "w33": "42",
+            "e2": "blue"
+        }
+    }
+    ]
+};
+                                        
+const request = {
+url: `/v3/marketing/contacts`,
+method: 'PUT',
+body: data
+}
+                                        
+client.request(request)
+.then(([response, body]) => {
+console.log(response.statusCode);
+console.log(response.body);
+})
+.catch(error => {
+console.error(error);
+});</code></pre>
+                                                            <span class="line-numbers-rows">
+                                                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+                                                                <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+                                                            </span>
+                                                        </div>
+                                                        <button onclick="copyTextFunc()" class="copy-code"
+                                                            type="button"><i class="fa-regular fa-copy"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="Ruby" role="tabpanel"
+                                                    aria-labelledby="Ruby-tab" tabindex="0">
+                                                    <div class="language-bash">
+                                                        <div class="language-bash-inner">
+                                                            <pre class="docs-pre"><code class="docs-code">
+const client = require('@sendgrid/client');
+client.setApiKey(process.env.SENDGRID_API_KEY);
+                                        
+const data = {
+    "contacts": [
+        {
+            "email": "annahamilton@example.org",
+            "custom_fields": {
+            "w1": "coffee",
+            "w33": "42",
+            "e2": "blue"
+        }
+    }
+    ]
+};
+                                        
+const request = {
+url: `/v3/marketing/contacts`,
+method: 'PUT',
+body: data
+}
+                                        
+client.request(request)
+.then(([response, body]) => {
+console.log(response.statusCode);
+console.log(response.body);
+})
+.catch(error => {
+console.error(error);
+});</code></pre>
+                                                            <span class="line-numbers-rows">
+                                                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+                                                                <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+                                                            </span>
+                                                        </div>
+                                                        <button onclick="copyTextFunc()" class="copy-code"
+                                                            type="button"><i class="fa-regular fa-copy"></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="editor-header">
+                                            <div class="cmn-tabs2">
+                                                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link active" id="OK-tab"
+                                                            data-bs-toggle="pill" data-bs-target="#OK" type="button"
+                                                            role="tab" aria-controls="OK" aria-selected="true">200
+                                                            OK</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="Bad-Request-tab"
+                                                            data-bs-toggle="pill" data-bs-target="#Bad-Request"
+                                                            type="button" role="tab" aria-controls="Bad-Request"
+                                                            aria-selected="false">400 Bad
+                                                            Request</button>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="editor-content-area">
+                                            <div class="tab-content" id="pills-tabContent">
+                                                <div class="tab-pane fade show active" id="OK" role="tabpanel"
+                                                    aria-labelledby="OK-tab" tabindex="0">
+                                                    <div class="language-bash">
+                                                        <div class="language-bash-inner">
+                                                            <pre class="docs-pre"><code class="docs-code">
+var axios = require('axios');
+var config = {
+'method': 'POST',
+'url': '{{BASE_API_URL}}/bills',
+'headers': {
+'Authorization': 'Bearer {SEC_KEY}',
+'Content-Type': 'application/json'
+},
+data: {
+country: 'NG',
+customer: '+23490803840303',
+amount: '500',
+recurrence: 'ONCE',
+type: 'AIRTIME',
+reference: '9300049404444',
+biller_name: 'DSTV, MTN VTU, TIGO VTU, VODAFONE VTU, VODAFONE POSTPAID PAYMENT'
+}
+};
+
+axios(config)
+.then(function (response) {
+console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+console.log(error);
+});
+});
+                                                        </code></pre>
+                                                            <span class="line-numbers-rows">
+                                                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
+                                                                <span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+                                                            </span>
+                                                        </div>
+                                                        <button onclick="copyTextFunc()" class="copy-code"
+                                                            type="button"><i class="fa-regular fa-copy"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="Bad-Request" role="tabpanel"
+                                                    aria-labelledby="Bad-Request-tab" tabindex="0">
+                                                    <div class="language-bash">
+                                                        <div class="language-bash-inner">
+                                                            <pre class="docs-pre"><code class="docs-code">
+{
+"status": "error",
+"error": [
+"The currency field is required.",
+"The amount field is required.",
+"The ipn url field is required.",
+"The callback url field is required.",
+"The order id field is required.",
+"The api key field is required.",
+"The secret key field is required."
+]
+}
+                                                            </code></pre>
+                                                            <span class="line-numbers-rows">
+                                                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+                                                            </span>
+                                                        </div>
+                                                        <button onclick="copyTextFunc()" class="copy-code"
+                                                            type="button"><i class="fa-regular fa-copy"></i></button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Jquery_Js_link -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- Bootstrap_Js_link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl_carausel_Js_link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper_Js_link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- select2_Js_link -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- Highlight Editor Js link -->
+    <script src="assets/js/highlight.min.js"></script>
+
+
+
+    <!-- Main_Js_link -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -56,7 +56,7 @@ $(document).ready(function () {
     // product-slider carousel
     $('.trending-offers-carousel').owlCarousel({
         loop: true,
-        // autoplay: true,
+        autoplay: true,
         margin: 20,
         autoplayTimeout: 2000,
         // rtl: true,
@@ -267,7 +267,7 @@ $(document).ready(function () {
             delay: 2500,
             disableOnInteraction: false
         },
-        autoplay: false,
+        // autoplay: false,
         pagination: {
             el: ".swiper-pagination",
             clickable: true

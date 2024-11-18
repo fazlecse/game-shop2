@@ -306,7 +306,7 @@ h4 {
 h5 {
     font-size: 20px;
     margin-bottom: 5px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h6 {
@@ -361,7 +361,7 @@ textarea.form-control {
 }
 
 .form-label {
-    color: rgb(var(--heading-color));
+    color: rgb(var(--white));
     text-transform: capitalize;
     font-size: 14px;
     margin-bottom: 5px;
@@ -392,6 +392,7 @@ option {
     &:focus {
         box-shadow: none;
         border: 1px solid rgb(var(--primary-color));
+        color: rgb(var(--white));
     }
 }
 
@@ -529,7 +530,7 @@ span.select2.select2-container.select2-container--default {
     height: 45px;
     display: flex;
     align-items: center;
-    background: rgb(var(--primary-color));
+    background: var(--bg-color2);
     font-size: 15px;
     padding: 0.375rem 15px;
 }
@@ -537,13 +538,12 @@ span.select2.select2-container.select2-container--default {
 .select2-container {
     .select2-dropdown {
         border: 1px solid var(--border-color2);
+        background-color: var(--bg-color2);
 
         .select2-search__field {
             border-radius: 5px;
             border: 1px solid var(--border-color2);
             outline: 0;
-
-
         }
     }
 }
@@ -551,12 +551,17 @@ span.select2.select2-container.select2-container--default {
 .select2-container .select2-selection--single:focus,
 .select2-container .select2-selection--multiple:focus {
     border: 1px solid var(--border-color1);
-    box-shadow: 0 0 1rem 0 rgba(140, 152, 164, 0.25);
+    box-shadow: none;
+}
+
+.select2-container .select2-dropdown .select2-search__field {
+    background-color: var(--bg-color1);
 }
 
 .select2-container .select2-dropdown .select2-search__field:focus-visible {
-    box-shadow: 0 0 1rem 0 rgba(140, 152, 164, 0.25);
+    box-shadow: none;
     border: 1px solid var(--border-color2);
+    color: rgb(var(--white));
 }
 
 .select2-results__option {
@@ -569,11 +574,11 @@ span.select2.select2-container.select2-container--default {
 
 .select2-container--default .select2-results__option--selected {
     background: rgb(var(--primary-color));
-    color: rgb(var(--primary-color));
+    color: rgb(var(--white));
 
     &:hover {
         background-color: rgb(var(--primary-color));
-        color: rgb(var(--primary-color));
+        color: rgb(var(--white));
     }
 }
 
@@ -599,6 +604,7 @@ span.select2.select2-container.select2-container--default {
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     padding-right: 10px;
     text-transform: capitalize;
+    color: rgb(var(--white));
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -773,7 +779,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .modal-header {
-    border-bottom: 1px solid var(--border-color1);
+    border-bottom: 1px solid var(--border-color2);
     padding: 12px 16px;
 
     .modal-title {
@@ -2259,7 +2265,7 @@ section {
     display: inline-flex;
     align-items: center;
     font-size: 16px;
-    color: rgb(var(--primary-color));
+    color: rgb(var(--white));
     font-weight: 600;
     text-transform: capitalize;
     gap: 5px;
@@ -2279,19 +2285,19 @@ section {
 // Social area start
 .social-box {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 
     li {
         a {
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: var(--bg-color1);
             color: rgb(var(--primary-color));
             border: 1px solid var(--border-color1);
-            border-radius: 50%;
+            border-radius: 8px;
 
             &:hover {
                 background-color: rgb(var(--primary-color));
@@ -2648,39 +2654,27 @@ hr.divider:after {
 // Multi step progress section end
 
 // Cmn list section start
-.cmn-list-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    i {
-        color: rgb(var(--primary-color));
-    }
-
-
-}
 
 .cmn-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 
     .item {
         display: flex;
-        align-items: center;
         gap: 15px;
 
         .icon-box {
-            width: 50px;
-            min-width: 50px;
-            height: 50px;
+            width: 60px;
+            min-width: 60px;
+            height: 60px;
             color: rgb(var(--primary-color));
             font-size: 24px;
-            background-color: var(--bg-color2);
+            background-color: var(--bg-color3);
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 5px;
+            border-radius: 8px;
         }
     }
 
@@ -4575,7 +4569,7 @@ Cmn table end
         font-size: 16px;
 
         &:hover {
-            color: var(--primary-color);
+            color: rgb(var(--primary-color));
             box-shadow: var(--shadow2);
         }
 
@@ -4592,7 +4586,6 @@ Cmn table end
 }
 
 // Isotope section end
-
 /*----------------------------------------------
 /*----------------------------------------------
 Reusable style section end
@@ -4903,6 +4896,7 @@ Padding bottom
                 width: 30px;
                 height: 30px;
                 font-size: 13px;
+                border-radius: 50%;
             }
 
             .cmn-btn {
@@ -4959,14 +4953,12 @@ Padding bottom
 }
 
 
-nav.active {
-    background-color: var(--bg-color2);
-    box-shadow: var(--shadow1);
-    z-index: 9999;
-}
 
 nav.active .desktop-view {
     padding: 20px 0;
+    background-color: var(--bg-color3);
+    box-shadow: var(--shadow1);
+    z-index: 9999;
 }
 
 .desktop-view {
@@ -5222,16 +5214,12 @@ Nav end
     background-color: var(--bg-color2);
     padding: 40px;
     border-radius: 20px;
-    color: rgb(var(--heading-color));
+    color: rgb(var(--white));
     position: relative;
     z-index: 0;
     display: flex;
     align-items: center;
-    // height: 400px;
-    // height: 100%;
 
-
-    // clip-path: polygon(calc(100% - 92.41px) 0px, calc(100% - 90.8262px) .0628px, calc(100% - 89.2621px) .2491px, calc(100% - 87.7246px) .5564px, calc(100% - 86.2203px) .9818px, calc(100% - 84.7559px) 1.5224px, calc(100% - 83.3381px) 2.1756px, calc(100% - 81.9738px) 2.9385px, calc(100% - 80.6695px) 3.8084px, calc(100% - 79.432px) 4.7824px, calc(100% - 78.268px) 5.8579px, calc(100% - 5.86px) 78.2677px, calc(100% - 5.86px) 78.2677px, calc(100% - 4.7847px) 79.4319px, calc(100% - 3.8106px) 80.6695px, calc(100% - 2.9405px) 81.9739px, calc(100% - 2.1773px) 83.3384px, calc(100% - 1.5238px) 84.7562px, calc(100% - .9827px) 86.2205px, calc(100% - .557px) 87.7248px, calc(100% - .2494px) 89.2622px, calc(100% - .0628px) 90.8261px, calc(100% + -0px) 92.4098px, 100% 100%, 91.8643px calc(100% + -0px), 91.8643px calc(100% + -0px), 90.2806px calc(100% - .0627px), 88.7167px calc(100% - .2491px), 87.1793px calc(100% - .5564px), 85.675px calc(100% - .9817px), 84.2107px calc(100% - 1.5224px), 82.7929px calc(100% - 2.1756px), 81.4284px calc(100% - 2.9385px), 80.124px calc(100% - 3.8084px), 78.8864px calc(100% - 4.7825px), 77.7222px calc(100% - 5.858px), 5.8579px calc(100% - 77.722px), 5.8579px calc(100% - 77.722px), 4.7824px calc(100% - 78.8863px), 3.8084px calc(100% - 80.124px), 2.9385px calc(100% - 81.4284px), 2.1756px calc(100% - 82.7929px), 1.5224px calc(100% - 84.2106px), .9818px calc(100% - 85.675px), .5564px calc(100% - 87.1792px), .2491px calc(100% - 88.7166px), .0628px calc(100% - 90.2804px), .0779px calc(100% - 91.864px), 0% 0%);
 
     &::after {
         content: "";
@@ -5253,7 +5241,7 @@ Nav end
         .title {
             margin-top: 20px;
             text-transform: uppercase;
-            color: rgb(var(--heading-color));
+            color: rgb(var(--white));
         }
 
         .description {
@@ -5270,8 +5258,9 @@ Nav end
     }
 }
 
-.very-soft-violet-box {
+.lime-green-box {
     background-color: #EABBFD;
+    background-color: #0E644D;
 
     &::after {
         background-image: url(../img/hero/shalnark_ryuseih_by_otaku_zonee_dhjavfg-375w-2x.png);
@@ -5279,7 +5268,7 @@ Nav end
 
     .text-box {
         .section-subtitle {
-            background-color: #f2d4fe;
+            background-color: #117a79;
         }
     }
 }
@@ -5288,11 +5277,12 @@ Nav end
     background-color: #9ac4ff;
 }
 
-.very-light-orange-box {
+.dark-moderate-blue-box {
     background-color: #ffc979;
+    background-color: #547b9b;
 
     .section-subtitle {
-        background-color: #ffbf60;
+        background-color: #4b6e8a;
     }
 
     .kew-btn {
@@ -5314,7 +5304,6 @@ Nav end
     .text-box {
         .section-subtitle {
             background-color: #7ab4ff;
-            color: rgb(var(--white));
         }
     }
 
@@ -5380,25 +5369,30 @@ Bottom Mobile, Tab nav end
 }
 
 /*----------------------------------------------
-00. Why choose us section start
-----------------------------------------------*/
-.why-choose-us-section {
-    background-color: var(--bg-color1);
-}
-
-/*----------------------------------------------
-Why choose us section end
-----------------------------------------------*/
-
-/*----------------------------------------------
 Exclusive offer section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-Flash deal trending category section end
+00. About section start
 ----------------------------------------------*/
-.flash-deal-trending-offer-section {
+.about-section {
     background-color: var(--bg-color1);
+
+    .img-box {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/*----------------------------------------------
+About section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Flash deal section end
+----------------------------------------------*/
+.flash-deal-section {
+    background-color: var(--bg-color2);
 
     .left-side {
         .img-box {
@@ -5419,6 +5413,7 @@ Flash deal trending category section end
 
         .single-countdown {
             text-align: center;
+            font-weight: 700;
         }
 
         h5 {
@@ -5430,8 +5425,8 @@ Flash deal trending category section end
     }
 }
 
-.flash-deal-trending-offer-section-inner {
-    background-color: var(--bg-color2);
+.flash-deal-section-inner {
+    background-color: var(--bg-color1);
     padding: 40px;
     border-radius: 15px;
 }
@@ -5636,15 +5631,15 @@ Flash deal trending category section end
     }
 }
 
-// Responsive flash deal trending category start
+// Responsive flash deal section start
 @media(max-width: 991px) {
-    .flash-deal-trending-offer-section .countdown h5 {
+    .flash-deal-section .countdown h5 {
         font-size: 25px;
     }
 }
 
 @media(max-width: 575px) {
-    .flash-deal-trending-offer-section-inner {
+    .flash-deal-section-inner {
         padding: 20px;
     }
 
@@ -5668,8 +5663,9 @@ Flash deal trending category section end
     }
 }
 
-// Responsive flash deal trending category end
-// Rtl flash deal trending category start
+// Responsive flash deal section end
+
+// Rtl flash deal section start
 .rtl {
     .trending-offers-carousel {
         .owl-nav {
@@ -5687,27 +5683,156 @@ Flash deal trending category section end
     }
 }
 
-// Rtl flash deal trending category end
+// Rtl flash deal section end
 /*----------------------------------------------
-Flash deal trending category section end
+Flash deal section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+00. Trending game section start
+----------------------------------------------*/
+.trending-game-section {
+    background-color: var(--bg-color1);
+}
+
+.category-box {
+    background-color: var(--bg-color2);
+    border: 1px solid var(--border-color1);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &:hover {
+        .img-box {
+            img {
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    .img-box {
+        overflow: hidden;
+        border-radius: 5px;
+        height: 170px;
+
+        img {
+            border-radius: 5px;
+            transition: var(--transition);
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .text-box {
+        .title {
+            font-weight: 500;
+            font-size: 17px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+        }
+    }
+}
+
+/*----------------------------------------------
+Trending game section end
 ----------------------------------------------*/
 
 
+/*----------------------------------------------
+00. Why choose us section start
+----------------------------------------------*/
+.why-choose-us-section {
+    background-color: var(--bg-color2);
+
+    .img-box {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/*----------------------------------------------
+Why choose us section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Buy game id section start
+----------------------------------------------*/
+.buy-game-id-section {
+    background-color: var(--bg-color1);
+}
+
+/*----------------------------------------------
+Buy game id section end
+----------------------------------------------*/
+
+
+/*----------------------------------------------
+08. Testimonial section start
+----------------------------------------------*/
+.testimonial-section {
+    background-color: var(--bg-color2);
+}
+
+.testimonial-box {
+    display: flex;
+    gap: 25px;
+
+    .img-box {
+        width: 350px;
+        max-width: 350px;
+        min-width: 350px;
+        height: 410px;
+
+        img {
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .quote-icon {
+        font-size: 40px;
+        color: rgb(var(--primary-color), 0.5);
+    }
+
+    .reviews li .active {
+        color: rgb(var(--primary-color));
+    }
+
+}
+
+.testimonial-carousel {
+    .owl-nav {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+/*----------------------------------------------
+Testimonial end
+----------------------------------------------*/
 
 /*----------------------------------------------
 18. Blog section start
 ----------------------------------------------*/
 .blog-section {
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color1);
     z-index: 0;
     position: relative;
 }
 
 .blog-box {
-    border: 1px solid var(--border-color1);
     border-radius: 16px;
-    background-color: var(--bg-color2);
-    padding: 24px;
+    background-color: var(--bg-color3);
+    padding: 20px;
 
     &:hover {
         .img-box {
@@ -5721,7 +5846,7 @@ Flash deal trending category section end
     .img-box {
         overflow: hidden;
         border-radius: 15px;
-        margin-top: 24px;
+        margin-bottom: 24px;
         display: flex;
         height: 275px;
 
@@ -5736,7 +5861,6 @@ Flash deal trending category section end
 
     .text-box {
         .title {
-            margin-bottom: 10px;
             overflow: hidden;
             text-overflow: ellipsis;
             -webkit-box-orient: vertical;
@@ -5744,9 +5868,9 @@ Flash deal trending category section end
             -webkit-line-clamp: 2;
             line-clamp: 2;
             font-size: 20px;
-            font-weight: 400;
+            font-weight: 500;
             margin-bottom: 0;
-            margin-top: 16px;
+            margin-top: 20px;
         }
     }
 }
@@ -5761,15 +5885,26 @@ Flash deal trending category section end
     .item {
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 10px;
         text-transform: capitalize;
         position: relative;
         font-weight: 500;
+        font-size: 14px;
 
         a {
             display: flex;
             align-items: center;
             gap: 5px;
+        }
+
+        &.tag {
+            background-color: rgb(var(--primary-color), 0.5);
+            padding: 2px 10px;
+            border-radius: 4px;
+
+            &:hover a {
+                color: rgb(var(--white));
+            }
         }
     }
 }
@@ -6262,54 +6397,142 @@ Author section end
 /*----------------------------------------------
 19. Newsletter section start
 ----------------------------------------------*/
-.newsletter-form {
-    margin-top: 30px;
+.newsletter-section {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px;
 
-    .form-control {
-        border-radius: 16px;
-        height: 60px;
-        padding: 15px;
-        border-color: var(--border-color1);
+    .content-area {
+        font-family: var(--heading-font);
+        color: hsl(var(--white));
+        line-height: 40px;
+        font-weight: 500;
 
-        &:focus {
-            border-color: rgb(var(--primary-color));
+        .subscribe-normal-text {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 0;
+            color: hsl(var(--white));
         }
     }
 
-    .subscribe-btn {
-        transition: var(--transition);
-        background-color: rgb(var(--primary-color));
-        color: rgb(var(--white));
+    .newsletter-form {
+        position: relative;
         display: flex;
         align-items: center;
-        justify-content: center;
-        border-radius: 16px;
-        width: 100%;
-        height: 60px;
-        margin-top: 30px;
-        font-weight: 700;
-        font-size: 16px;
 
-        &:hover {
-            background-color: rgb(var(--primary-color), 0.8);
+        .form-control {
+            border-radius: 9999px;
+            height: 55px;
+            background-color: var(--bg-color1);
+            padding: 10px 165px 10px 20px;
+            border-color: transparent;
+
+            &:focus {
+                border-color: rgb(var(--primary-color));
+            }
+        }
+
+        .subscribe-btn {
+            transition: var(--transition);
+            position: absolute;
+            right: 5px;
+            background-color: rgb(var(--primary-color));
+            height: calc(100% - 10px);
+            border-radius: 9999px;
+            padding: 10px 40px;
             color: rgb(var(--white));
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+
+            &:hover {
+                background-color: rgb(var(--primary-color), 0.8);
+                color: var(--white);
+            }
         }
     }
 }
 
+.newsletter-section-inner {
+    background-color: var(--bg-color3);
+    padding: 50px 40px;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+// Responsive neswletter section start
+@media (max-width: 991px) {
+    .newsletter-section {
+
+        .content-area {
+            .subscribe-small-text {
+                font-size: 20px;
+            }
+
+            .subscribe-normal-text {
+                font-size: 34px;
+            }
+        }
+
+        .newsletter-form {
+            .subscribe-btn {
+                padding: 10px 15px;
+            }
+
+            .form-control {
+                padding: 10px 110px 10px 10px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 767px) {
+    .newsletter-section .content-area {
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .newsletter-section {
+        .newsletter-section-inner {
+            padding: 20px;
+        }
+
+        .newsletter-form .form-control {
+            height: 50px;
+        }
+    }
+
+}
+
+// Responsive neswletter section end
 // Rtl newsletter section start 
 .rtl {
-    .newsletter-form {
+    .newsletter-section .newsletter-form {
         .form-control {
-            padding: 10px 10px 10px 50px;
+            padding: 10px 20px 10px 165px;
         }
 
         .subscribe-btn {
             left: 5px;
             right: auto;
+        }
+    }
 
-            i {
-                transform: rotatey(180deg);
+    @media (max-width: 991px) {
+        .newsletter-section {
+            .newsletter-form .form-control {
+                padding: 10px 10px 10px 110px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .newsletter-section .newsletter-form {
+            .subscribe-btn {
+                left: 3px;
             }
         }
     }
@@ -6320,21 +6543,25 @@ Author section end
 Newsletter end
 ----------------------------------------------*/
 
+
 /*----------------------------------------------
 20. Footer section start
 ----------------------------------------------*/
 .footer-section {
     position: relative;
     z-index: 0;
+    padding-bottom: 40px;
     background-color: var(--bg-color2);
-    padding: 50px 0 40px 0;
+    color: rgb(var(--white-rgb), 0.9);
 
     .footer-widget {
         .widget-title {
+            position: relative;
+            margin-bottom: 20px;
             text-transform: capitalize;
-            font-size: 24px;
+            font-size: 20px;
             font-family: var(--heading-font);
-
+            color: var(--white);
         }
 
         input[type=email] {
@@ -6345,7 +6572,7 @@ Newsletter end
             border-radius: 15px;
 
             &:focus {
-                border-bottom: 1px solid rgb(var(--primary-color));
+                border-bottom: 1px solidrgb(var(--primary-color));
                 box-shadow: none;
             }
         }
@@ -6354,85 +6581,54 @@ Newsletter end
 
 .footer-widget {
     .widget-logo {
+        margin-bottom: 20px;
         display: inline-flex;
     }
 
     ul {
         li {
-            line-height: 2.2;
+            line-height: 2.5;
         }
     }
 
     .widget-link {
-        font-size: 18px;
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
+        margin-left: 18px;
+        position: relative;
 
         &:hover {
             color: rgb(var(--primary-color));
         }
-    }
 
-
-}
-
-.lets-talk-box {
-    background-color: var(--bg-color1);
-    border-radius: 8px;
-    border: 1px solid var(--border-color1);
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
-    color: rgb(var(--heading-color));
-
-    .icon-box {
-        height: 30px;
-        width: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        i {
-            font-size: 30px;
-            color: rgb(var(--primary-color));
+        &::before {
+            border-radius: 2px;
+            height: 7px;
+            width: 7px;
+            content: '';
+            left: -17px;
+            top: 6px;
+            position: absolute;
+            background-color: rgb(var(--primary-color));
         }
     }
+
+
 }
 
 .contact-box {
-    .title {
-        margin-bottom: 0;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        gap: 7px;
-    }
-
-    .subtitle {
-        color: rgb(var(--heading-color));
-        margin-top: 5px;
-    }
-}
-
-.distribution-platforms {
-    margin-top: 24px;
     display: flex;
-    align-items: center;
-    gap: 12px;
+    flex-direction: column;
+    gap: 10px;
 }
 
-// Responsive footer section start
-@media(min-width: 992px) {
-    .lets-talk-col {
-        padding-left: 50px;
-        border-left: 1px solid var(--border-color2);
+.contact-item {
+    display: flex;
+    gap: 10px;
+
+    i {
+        color: rgb(var(--primary-color));
     }
 }
 
-// Responsive footer section end
 //Rtl Footer section start
 .rtl {
     .footer-section .footer-widget {
@@ -6460,17 +6656,7 @@ Newsletter end
             margin-left: 10px;
         }
     }
-
-    @media(min-width: 992px) {
-        .lets-talk-col {
-            padding-left: 0;
-            padding-right: 50px;
-            border-left: none;
-            border-right: 1px solid var(--border-color2);
-        }
-    }
 }
-
 
 
 //Rtl Footer section end
@@ -6483,20 +6669,24 @@ Footer section end
 21. Copyright section start
 ----------------------------------------------*/
 .copyright-section {
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color3);
     font-size: 16px;
 }
 
 .copyright-inner {
-    border-top: 1px solid var(--border-color2);
     padding: 20px 0;
 }
 
 .payment-gateway {
     display: flex;
-    // justify-content: end;
     align-items: center;
-    gap: 6px;
+    gap: 10px;
+
+    img {
+        width: 42px;
+        height: 28px;
+        border-radius: 4px;
+    }
 }
 
 // Responsive copyright start
@@ -7714,7 +7904,7 @@ Cart section end
 
 // Sidebar section start
 .navbar-toggler {
-    background: var(--primary-color);
+    background: rgb(var(--primary-color));
     color: rgb(var(--white));
     height: 40px;
     width: 40px;
@@ -7722,14 +7912,14 @@ Cart section end
     align-items: center;
     justify-content: center;
     font-size: 22px;
-    border: 1px solid var(--primary-color);
+    border: 1px solidrgb(var(--primary-color));
     border-radius: 10px;
     box-shadow: none;
 }
 
 .cmn-btn-close {
     font-size: 18px;
-    background: var(--primary-color);
+    background: rgb(var(--primary-color));
     width: 40px;
     height: 40px;
     border-radius: 10px;
@@ -7745,7 +7935,7 @@ Cart section end
     height: 40px;
     border-radius: 5px;
     color: rgb(var(--white));
-    background-color: var(--primary-color);
+    background-color: rgb(var(--primary-color));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7778,7 +7968,7 @@ Cart section end
                         font-size: 14px;
 
                         &.active {
-                            color: var(--primary-color);
+                            color: rgb(var(--primary-color));
                         }
 
                         i {

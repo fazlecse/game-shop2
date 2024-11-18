@@ -263,7 +263,7 @@ $(document).ready(function () {
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: {
-            false:true,
+            false: true,
             delay: 2500,
             disableOnInteraction: false
         },

@@ -93,7 +93,6 @@ $(document).ready(function () {
         templateResult: formatState,
         templateSelection: formatState
     });
-    // select2 function
     function formatState(state) {
         if (!state.id) {
             return state.text;
@@ -114,7 +113,6 @@ $(document).ready(function () {
             '<span><img class="img-flag" /> <span></span></span>'
         );
 
-        // Use .text() instead of HTML string concatenation to avoid script injection issues
         $state.find("span").text(state.text);
         $state.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".svg");
 
@@ -122,52 +120,47 @@ $(document).ready(function () {
     };
     // cmn-select2 with image end
 
+    // Modal select2 with image start
+    $('.modal-select2-image').select2({
+        dropdownParent: $("#formModal"),
+        templateResult: formatState,
+        templateSelection: formatState
+    });
+    function formatState(state) {
+        if (!state.id) {
+            return state.text;
+        }
+        var baseUrl = "assets/img/mini-flag";
+        var $state = $(
+            '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.svg" class="img-flag" /> ' + state.text + '</span>'
+        );
+        return $state;
+    };
+    function formatState(state) {
+        if (!state.id) {
+            return state.text;
+        }
+
+        var baseUrl = "assets/img/mini-flag";
+        var $state = $(
+            '<span><img class="img-flag" /> <span></span></span>'
+        );
+
+        $state.find("span").text(state.text);
+        $state.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".svg");
+
+        return $state;
+    };
+    // MOdal select2 with image end
+
     // Cmn select2 tags start
     $(".cmn-select2-tags").select2({
         tags: true
     });
     // Cmn select2 tags end
 
-
-
-    // Payment method with image2 start
-    $(document).ready(function () {
-        $('.payment-method-select2-image').select2({
-            templateResult: paymentMethod,
-            templateSelection: paymentMethod
-        });
-    });
-    // select2 function
-    function paymentMethod(state) {
-        if (!state.id) {
-            return state.text;
-        }
-        var baseUrl = "assets/img/gateway";
-        var $state = $(
-            '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.jpg" class="img-flag" /> ' + state.text + '</span>'
-        );
-        return $state;
-    };
-    function paymentMethod(state) {
-        if (!state.id) {
-            return state.text;
-        }
-
-        var baseUrl = "assets/img/gateway";
-        var $state = $(
-            '<span><img class="img-flag" /> <span></span></span>'
-        );
-
-        // Use .text() instead of HTML string concatenation to avoid script injection issues
-        $state.find("span").text(state.text);
-        $state.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".jpg");
-
-        return $state;
-    };
-    // Payment method with image2 start
-
     // cmn select2 modal start
-    $(".modal-select").select2({
+    $(".modal-select2").select2({
         dropdownParent: $("#formModal"),
     });
     // cmn select2 modal start
@@ -403,9 +396,6 @@ if ($("#shareBlock").length) {
 }
 // Social share end
 
-
-
-
 // Nice select start
 if ($(".nice-select").length) {
     $('.nice-select').niceSelect();
@@ -519,3 +509,12 @@ if (document.querySelector('.login-signup-form')) {
 }
 
 // input field show hide password end
+
+// mobile menu start
+jQuery('#mobile-menu').meanmenu({
+    meanScreenWidth: "991",
+    meanMenuContainer: '.mobile-menu',
+    meanMenuOpen: "<i class='fal fa-bars'></i>",
+    meanMenuClose: "<i class='far fa-times-circle'></i>"
+});
+// mobile menu end

@@ -56,7 +56,7 @@ $(document).ready(function () {
     // product-slider carousel
     $('.trending-offers-carousel').owlCarousel({
         loop: true,
-        autoplay: true,
+        // autoplay: true,
         margin: 20,
         autoplayTimeout: 2000,
         // rtl: true,
@@ -518,3 +518,55 @@ jQuery('#mobile-menu').meanmenu({
     meanMenuClose: "<i class='far fa-times-circle'></i>"
 });
 // mobile menu end
+
+// Dropdown select with Filter end
+if ($(".search-box2").length) {
+    function handleSelect(searchBox2, searchInput, searchItem) {
+        searchInput.addEventListener('click', function (event) {
+            searchBox2.classList.add('active');
+            event.stopPropagation();
+        });
+
+        window.addEventListener('click', function () {
+            searchBox2.classList.remove('active');
+        });
+
+        searchItem.forEach(function (searchItemSingle) {
+            searchItemSingle.addEventListener('click', function () {
+                const text = searchItemSingle.querySelector(".title");
+                const textContent = text.textContent;
+                searchInput.value = textContent;
+                searchBox2.classList.remove('active');
+            });
+        });
+    }
+
+    const searchBox2 = document.querySelector('#search-box2');
+    const searchInput = document.querySelector('#search-input');
+    const searchItem = document.querySelectorAll('#search-result .search-item');
+    handleSelect(searchBox2, searchInput, searchItem);
+
+    // filter start 
+    function filterItems(inputId, items) {
+        const input = document.getElementById(inputId);
+        const filter = input.value.toUpperCase();
+
+        items.forEach((item) => {
+            const title = item.querySelector(".title");
+            const txtValue = title.textContent || title.innerText;
+
+            if (txtValue.toUpperCase().includes(filter)) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    }
+    const filterSearchInputId = "search-input";
+    const filterSearchInput = document.getElementById(filterSearchInputId);
+    const items = document.querySelectorAll("#search-result .search-item");
+    filterSearchInput.addEventListener("keyup", function () {
+        filterItems(filterSearchInputId, items);
+    })
+}
+// Dropdown select with Filter end

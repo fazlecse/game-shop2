@@ -81,7 +81,7 @@ Typography
   --bg-color3: #2F3448;
   --bg-color4: #242C50;
   --border-color1: #2e3347;
-  --border-color2: #1f2235;
+  --border-color2: #3d4153;
   --shadow1: 0 0.375rem 0.75rem rgba(140, 152, 164, .075);
   --shadow2: 0 .1875rem .75rem rgba(140, 152, 164, .25);
   --shadow3: 0 0.6125rem 2.5rem 0.6125rem rgba(140, 152, 164, .175);
@@ -635,7 +635,7 @@ Breadcrumb start
 Breadcrumb end
 ----------------------------------------------*/
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
   height: 6px;
   background-color: var(--border-color1);
 }
@@ -643,6 +643,13 @@ Breadcrumb end
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: rgb(var(--primary-color), 0.8);
+  visibility: hidden;
+  opacity: 0;
+}
+
+:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+  opacity: 1;
 }
 
 body::-webkit-scrollbar {
@@ -1028,6 +1035,11 @@ Reusable style section start
   display: flex;
   align-items: center;
 }
+.search-box2.active .search-result {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
 .search-box2 .form-control {
   background-color: var(--bg-color1);
   border-radius: 4px;
@@ -1049,7 +1061,86 @@ Reusable style section start
   gap: 10px;
   font-size: 16px;
 }
+.search-box2 .search-result {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background-color: var(--bg-color3);
+  box-shadow: var(--shadow1);
+  border-radius: 3px;
+  z-index: 1;
+  border: 1px solid var(--border-color2);
+  color: var(--body-color);
+  max-height: 346px;
+  overflow: auto;
+  transform-origin: 0 0;
+  transform: scaleY(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+.search-box2 .search-result .search-item {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.search-box2 .search-result .search-item:hover {
+  background-color: rgb(var(--primary-color));
+}
+.search-box2 .search-result .search-item .icon-area {
+  font-size: 22px;
+  color: rgb(var(--primary-color));
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-box2 .search-result .search-item .img-area img {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 3px;
+}
+.search-box2 .search-result .search-item .title {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: rgb(var(--white));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+.search-box2 .search-result .search-item .sub-title {
+  margin-top: 5px;
+  font-size: 12px;
+  text-transform: capitalize;
+  color: rgb(var(--white));
+}
+.search-box2 .search-result .search-item:not(:last-child) {
+  border-bottom: 1px solid var(--border-color2);
+}
+.search-box2 .search-result .recent-clear {
+  border-bottom: 1px solid var(--border-color1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  padding: 10px 20px;
+}
 
+@media (min-width: 768px) {
+  .search-box2 .form-control {
+    width: 350px;
+  }
+}
 .rtl .search-box2 .form-control {
   padding: 6px 12px 6px 115px;
 }
@@ -1910,7 +2001,7 @@ section {
   font-weight: 600;
   text-transform: capitalize;
   gap: 5px;
-  background-color: var(--bg-color3);
+  background-color: var(--bg-color2);
   padding: 4px 15px;
   border-radius: 9999px;
 }
@@ -2419,6 +2510,7 @@ hr.divider:after {
 
 .nice-select .list {
   min-width: 200px;
+  background-color: var(--bg-color3);
 }
 
 .nice-select .option:hover,
@@ -2467,21 +2559,23 @@ hr.divider:after {
 }
 
 .checkbox-categories-area .categories-list {
-  max-height: 250px;
-  overflow: auto;
   padding-right: 5px;
 }
 .checkbox-categories-area .category-link {
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: capitalize;
-  padding: 6px 16px;
+  padding: 7px 16px;
   transition: var(--transition);
   border-radius: 40px;
+  font-weight: 500;
 }
 .checkbox-categories-area .category-link:hover {
   background-color: rgb(var(--primary-color), 0.1);
+}
+.checkbox-categories-area .category-link:not(:last-child) {
+  margin-bottom: 10px;
 }
 .checkbox-categories-area .form-check {
   margin: 10px 0;
@@ -2590,7 +2684,7 @@ user nav Profile start
 .profile-box:hover .user-dropdown {
   opacity: 1;
   visibility: visible;
-  top: 55px;
+  top: calc(100% + 10px);
   transform: scaleY(1);
 }
 .profile-box .profile {
@@ -2607,7 +2701,7 @@ user nav Profile start
   border-radius: 50%;
 }
 .profile-box .user-dropdown {
-  background: var(--bg-color2);
+  background: var(--bg-color3);
   width: 200px;
   overflow: hidden;
   padding-top: 0;
@@ -2838,7 +2932,7 @@ user nav Profile end
   position: relative;
 }
 .shopping-cart:hover .cart-dropdown {
-  top: 50px;
+  top: calc(100% + 15px);
   transform: scale(1);
   visibility: visible;
   opacity: 1;
@@ -2965,7 +3059,7 @@ user nav Profile end
 @media (max-width: 575px) {
   .shopping-cart .cart-dropdown {
     width: 290px;
-    right: -75px;
+    right: -150px;
   }
   .shopping-cart .cart-dropdown li a {
     padding: 15px;
@@ -3983,7 +4077,7 @@ Padding bottom
   background-color: var(--bg-color2);
   transition: var(--transition);
 }
-.desktop-view .container {
+.desktop-view .desktop-view-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -4174,12 +4268,24 @@ Padding bottom
 }
 
 @media (max-width: 991px) {
-  .cusotm-nav.active .desktop-view .container {
+  .cusotm-nav.active .desktop-view .desktop-view-wrapper {
     z-index: 9999;
     position: relative;
+    margin-right: 30px;
+  }
+  .desktop-view .desktop-view-wrapper {
+    margin-right: 30px;
   }
 }
 @media (max-width: 575px) {
+  .cusotm-nav.active .desktop-view .desktop-view-wrapper {
+    z-index: 9999;
+    position: relative;
+    margin-right: 50px;
+  }
+  .desktop-view .desktop-view-wrapper {
+    margin-right: 50px;
+  }
   .search-box2 {
     display: none;
   }
@@ -4304,12 +4410,32 @@ Nav section end
   background-image: url(../img/hero/dai_dragon_quest_png_render_by_marcopolo157_dhbmv1a-pre.png);
 }
 
-@media (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .slider-box .text-box {
     width: 80%;
   }
   .slider-box .text-box .title {
     font-size: 36px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .slider-box .text-box .section-subtitle {
+    font-size: 14px;
+  }
+  .slider-box .text-box .title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .slider-box .text-box .description {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .slider-box {
+    padding: 20px;
+  }
+  .slider-box .text-box {
+    width: 100%;
   }
 }
 /*----------------------------------------------
@@ -4372,6 +4498,14 @@ Exclusive offer section end
   margin: 0 auto;
 }
 
+@media (max-width: 991px) {
+  .about-section .text-box {
+    text-align: center;
+  }
+  .about-section .img-box {
+    max-width: 450px;
+  }
+}
 /*----------------------------------------------
 About section end
 ----------------------------------------------*/
@@ -4403,6 +4537,10 @@ Flash deal section end
   padding: 15px;
   background-color: var(--bg-color3);
   border-radius: 12px;
+}
+.flash-deal-section .product-box .text-box .price .promo-price {
+  font-size: 18px;
+  color: rgb(var(--white));
 }
 
 .flash-deal-section-inner {
@@ -4493,7 +4631,9 @@ Flash deal section end
 }
 .product-box .text-box .price .promo-price {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
+}
+.product-box .text-box .price .promo-price .number {
   color: rgb(var(--white));
 }
 .product-box .text-box .price .discount {
@@ -4593,18 +4733,11 @@ Flash deal section end
   .flash-deal-section-inner {
     padding: 20px;
   }
-  .product-box {
-    flex-direction: column;
-  }
-  .product-box .img-box {
-    max-width: 100%;
-    height: 150px;
-  }
   .product-box .text-box .title {
     font-size: 14px;
   }
   .product-box .text-box .price .promo-price {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 .rtl .trending-offers-carousel .owl-nav {
@@ -4678,6 +4811,11 @@ Trending game section end
   margin: 0 auto;
 }
 
+@media (max-width: 991px) {
+  .why-choose-us-section .img-box {
+    max-width: 450px;
+  }
+}
 /*----------------------------------------------
 Why choose us section end
 ----------------------------------------------*/
@@ -4703,7 +4841,6 @@ Buy game id section end
   gap: 25px;
 }
 .testimonial-box .img-box {
-  width: 350px;
   max-width: 350px;
   min-width: 350px;
   height: 410px;
@@ -4727,6 +4864,25 @@ Buy game id section end
   bottom: 0;
 }
 
+@media (max-width: 767px) {
+  .testimonial-box {
+    gap: 10px;
+    flex-direction: column;
+  }
+  .testimonial-box .img-box {
+    margin: 0 auto;
+  }
+  .testimonial-box .quote-icon {
+    font-size: 25px;
+  }
+}
+@media (max-width: 575px) {
+  .testimonial-box .img-box {
+    max-width: 350px;
+    min-width: 272px;
+    height: 324px;
+  }
+}
 /*----------------------------------------------
 Testimonial end
 ----------------------------------------------*/
@@ -4778,7 +4934,7 @@ Testimonial end
 .meta {
   display: flex;
   justify-content: space-between;
-  gap: 50px;
+  gap: 10px;
   font-size: 16px;
 }
 .meta .item {
@@ -5698,11 +5854,9 @@ Login Signup end
 
 .sidebar-widget-area {
   padding: 25px;
-  background-color: var(--bg-color1);
-  border-radius: 10px;
+  background-color: var(--bg-color2);
+  border-radius: 15px;
   margin-bottom: 25px;
-  box-shadow: var(--shadow1);
-  border: 1px solid var(--border-color1);
 }
 .sidebar-widget-area .title {
   margin-bottom: 15px;
@@ -5765,7 +5919,7 @@ Login Signup end
 }
 .sidebar-widget-area .widget-title::before {
   content: "";
-  width: 7px;
+  width: 5px;
   border-radius: 6px;
   background-color: rgb(var(--primary-color));
 }
@@ -5849,12 +6003,12 @@ Blog details end
   width: 40px;
   height: 40px;
   border-radius: 8px !important;
-  color: rgb(var(--heading-color));
-  background-color: rgb(var(--white));
+  color: rgb(var(--white));
+  background-color: var(--bg-color3);
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--border-color2);
+  border: 1px solid var(--border-color1);
   box-shadow: none;
 }
 .pagination-section nav .pagination .page-item .page-link:hover, .pagination-section nav .pagination .page-item .page-link:focus {
@@ -5994,6 +6148,16 @@ Error end
 
 /*----------------------------------------------
 Author section end
+----------------------------------------------*/
+/*----------------------------------------------
+Products section start
+----------------------------------------------*/
+.products-section {
+  background-color: var(--bg-color1);
+}
+
+/*----------------------------------------------
+Products section end
 ----------------------------------------------*/
 /*----------------------------------------------
 Product details section start

@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMOT</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon">
+    <!-- Fontawesome6-Js-link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Bootstrap5-Css-link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl-carousel-Css-link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- select2-Css-link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- Nice select Css-link -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- Meanmenu css link -->
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloaderFunction()" class="">
+    <!-- Preloader section start -->
+    <div id="preloader">
+        <img src="./assets/img/preloader/game.png" alt="">
+    </div>
+    <!-- Preloader section end -->
+
+    <!-- Header top section start -->
+    <div class="header-top-section">
+        <div class="container">
+            <div class="top-bar">
+                <ul class="contact-info">
+                    <li><a href="tel:+881234587"><i class="fa-regular fa-headphones"></i><span>+881234587</span></a>
+                    </li>
+                    <li><a href="mailto:someone@example.com"><i
+                                class="fa-regular fa-envelope-open"></i><span>demo@example.com</span></a>
+                    </li>
+                </ul>
+                <div class="right-side ">
+                    <ul class="social-box">
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                    <a href="" class="lang-currency-btn" data-bs-toggle="modal" data-bs-target="#lang-currency-modal">
+                        <img src="./assets/img/language/en.png" alt="">
+                        EN/USD</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header top section end -->
+
+    <!-- Nav section start -->
+    <nav class="cusotm-nav sticky-top">
+        <div class="mobile-menu d-lg-none">
+            <nav id="mobile-menu">
+                <ul>
+                    <li><a href="products-game.html" class="nav-link active">
+                            Game
+                        </a>
+                        <div class="mega-menu">
+                            <ul>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-regular fa-laptop"></i></div>
+
+                                        <div class="text-box">PC<span>(0)</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-brands fa-playstation"></i></div>
+
+                                        <div class="text-box">Playstation<span>(15)</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-regular fa-globe"></i></div>
+                                        <div class="text-box">Webgame<span>(0)</span></div>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-regular fa-mobile"></i></div>
+                                        <div class="text-box">Mobile <span>(1)</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-brands fa-xbox"></i></div>
+                                        <div class="text-box">Xbox <span>(5)</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-regular fa-light-switch"></i></div>
+                                        <div class="text-box">Nintendo Switch <span>(10)</span></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="products-cards.html" class="nav-link">
+                            card
+                        </a>
+                        <div class="mega-menu">
+                            <ul>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-regular fa-laptop"></i></div>
+
+                                        <div class="text-box">PC<span>(0)</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-brands fa-playstation"></i></div>
+
+                                        <div class="text-box">Playstation<span>(15)</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-regular fa-globe"></i></div>
+                                        <div class="text-box">Webgame<span>(0)</span></div>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-regular fa-mobile"></i></div>
+                                        <div class="text-box">Mobile <span>(1)</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-brands fa-xbox"></i></div>
+                                        <div class="text-box">Xbox <span>(5)</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-regular fa-light-switch"></i></div>
+                                        <div class="text-box">Nintendo Switch <span>(10)</span></div>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="products-topup.html" class="nav-link">
+                            direct top up
+                        </a>
+                        <div class="mega-menu">
+                            <ul>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-regular fa-laptop"></i></div>
+
+                                        <div class="text-box">PC<span>(0)</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-brands fa-playstation"></i></div>
+
+                                        <div class="text-box">Playstation<span>(15)</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-regular fa-globe"></i></div>
+                                        <div class="text-box">Webgame<span>(0)</span></div>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-regular fa-mobile"></i></div>
+                                        <div class="text-box">Mobile <span>(1)</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-brands fa-xbox"></i></div>
+                                        <div class="text-box">Xbox <span>(5)</span></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="nav-link">
+                                        <div class="icon-box"><i class="fa-regular fa-light-switch"></i></div>
+                                        <div class="text-box">Nintendo Switch <span>(10)</span></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- <li><a href="" class="nav-link">buy id</a></li> -->
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="desktop-view">
+            <div class="container">
+                <div class="desktop-view-wrapper">
+                    <a href="index.html" class="logo"><img src="assets/img/logo/logo.avif" alt=""></a>
+                    <div class="main-menu d-none d-lg-block">
+                        <nav>
+                            <ul>
+                                <li><a href="products-game.html" class="nav-link active">
+                                        Game
+                                        <i class="fa-regular fa-angle-down"></i>
+                                    </a>
+                                    <div class="mega-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-regular fa-laptop"></i></div>
+
+                                                    <div class="text-box">PC<span>(0)</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-brands fa-playstation"></i></div>
+
+                                                    <div class="text-box">Playstation<span>(15)</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-regular fa-globe"></i></div>
+                                                    <div class="text-box">Webgame<span>(0)</span></div>
+
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-regular fa-mobile"></i></div>
+                                                    <div class="text-box">Mobile <span>(1)</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-brands fa-xbox"></i></div>
+                                                    <div class="text-box">Xbox <span>(5)</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-regular fa-light-switch"></i>
+                                                    </div>
+                                                    <div class="text-box">Nintendo Switch <span>(10)</span></div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="products-cards.html" class="nav-link">
+                                        card
+                                        <i class="fa-regular fa-angle-down"></i>
+                                    </a>
+                                    <div class="mega-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-regular fa-laptop"></i></div>
+
+                                                    <div class="text-box">PC<span>(0)</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-brands fa-playstation"></i></div>
+
+                                                    <div class="text-box">Playstation<span>(15)</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-regular fa-globe"></i></div>
+                                                    <div class="text-box">Webgame<span>(0)</span></div>
+
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-regular fa-mobile"></i></div>
+                                                    <div class="text-box">Mobile <span>(1)</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-brands fa-xbox"></i></div>
+                                                    <div class="text-box">Xbox <span>(5)</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-regular fa-light-switch"></i>
+                                                    </div>
+                                                    <div class="text-box">Nintendo Switch <span>(10)</span></div>
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="products-topup.html" class="nav-link">
+                                        direct top up
+                                        <i class="fa-regular fa-angle-down"></i>
+                                    </a>
+                                    <div class="mega-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-regular fa-laptop"></i></div>
+
+                                                    <div class="text-box">PC<span>(0)</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-brands fa-playstation"></i></div>
+
+                                                    <div class="text-box">Playstation<span>(15)</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-regular fa-globe"></i></div>
+                                                    <div class="text-box">Webgame<span>(0)</span></div>
+
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-regular fa-mobile"></i></div>
+                                                    <div class="text-box">Mobile <span>(1)</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-brands fa-xbox"></i></div>
+                                                    <div class="text-box">Xbox <span>(5)</span></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="product.html" class="nav-link">
+                                                    <div class="icon-box"><i class="fa-regular fa-light-switch"></i>
+                                                    </div>
+                                                    <div class="text-box">Nintendo Switch <span>(10)</span></div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!-- <li><a href="" class="nav-link">buy id</a></li> -->
+                                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <ul class="custom-nav">
+                        <div class="search-box2" id="search-box2">
+                            <input type="text" id="search-input" class="form-control" placeholder="Search here...">
+                            <a class="search-btn2"><i class="far fa-search"></i></a>
+                            <div class="search-result" id="search-result">
+
+                                <a href="" class="search-item">
+                                    <div class="img-area">
+                                        <img src="./assets/img/products/clash-of-clan.webp" alt="">
+                                    </div>
+                                    <div class="text-area">
+                                        <div class="title">Clash of Clans Gold Pass</div>
+                                        <div class="sub-title">Direct Top Up</div>
+                                    </div>
+                                </a>
+                                <a href="" class="search-item">
+                                    <div class="img-area">
+                                        <img src="./assets/img/products/league-of-legend.webp" alt="">
+                                    </div>
+                                    <div class="text-area">
+                                        <div class="title">Mobile Legends</div>
+                                        <div class="sub-title">Direct Top Up</div>
+                                    </div>
+                                </a>
+                                <a href="" class="search-item">
+                                    <div class="img-area">
+                                        <img src="./assets/img/products/1.png" alt="">
+                                    </div>
+                                    <div class="text-area">
+                                        <div class="title">PUBG Mobile</div>
+                                        <div class="sub-title">Direct Top Up</div>
+                                    </div>
+                                </a>
+                                <a href="" class="search-item">
+                                    <div class="img-area">
+                                        <img src="./assets/img/products/2.png" alt="">
+                                    </div>
+                                    <div class="text-area">
+                                        <div class="title">Free Fire Mobile</div>
+                                        <div class="sub-title">Direct Top Up</div>
+                                    </div>
+                                </a>
+                                <a href="" class="search-item">
+                                    <div class="img-area">
+                                        <img src="./assets/img/products/google-card.webp" alt="">
+                                    </div>
+                                    <div class="text-area">
+                                        <div class="title">Google Play Gift Card (IN)</div>
+                                        <div class="sub-title">Card</div>
+                                    </div>
+                                </a>
+                                <a href="" class="search-item">
+                                    <div class="img-area">
+                                        <img src="./assets/img/products/itunes.webp" alt="">
+                                    </div>
+                                    <div class="text-area">
+                                        <div class="title">Apple Gift Card (UK)</div>
+                                        <div class="sub-title">Card</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <li class="nav-item">
+                            <div class="shopping-cart">
+                                <button class="dropdown-toggle">
+                                    <div class="icon"><i class="fal fa-shopping-cart" aria-hidden="true"></i></div>
+                                    <span class="count">2</span>
+                                </button>
+                                <ul class="cart-dropdown">
+                                    <div class="menu-cart-top">
+                                        <h5 class="mb-0">Products in cart</h5>
+                                        <h5 class="menu-cart-top-count mb-0">4</h5>
+                                    </div>
+                                    <div class="dropdown-box">
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/img/cards/1.webp" alt="">
+                                                <div class="text">
+                                                    <h6 class="title active">Swift Send - A SAAS Based Email Marketing
+                                                        Platform</h6>
+                                                    <small class="price-quantity">2 × $370.00</small>
+                                                </div>
+                                                <button class="close">
+                                                    <i class="fal fa-times" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/img/cards/2.webp" alt="">
+                                                <div class="text">
+                                                    <h6 class="title">BillPay - Topup, Recharge and Utility Bill Payment
+                                                        Solution</h6>
+                                                    <small class="price-quantity">2 × $370.00</small>
+                                                </div>
+                                                <button class="close">
+                                                    <i class="fal fa-times" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/img/cards/3.webp" alt="">
+                                                <div class="text">
+                                                    <h6 class="title">HYIP PRO - Cross Platform Mobile Application</h6>
+                                                    <small class="price-quantity">2 × $370.00</small>
+                                                </div>
+                                                <button class="close">
+                                                    <i class="fal fa-times" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <img src="assets/img/cards/4.webp" alt="">
+                                                <div class="text">
+                                                    <h6 class="title">Gamers Arena - On Demand Game Shop Cross Platform
+                                                        Mobile Application</h6>
+                                                    <small class="price-quantity">2 × $370.00</small>
+                                                </div>
+                                                <button class="close">
+                                                    <i class="fal fa-times" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                        </li>
+                                    </div>
+                                    <div class="cart-bottom">
+                                        <div class="sub-total">Subtotal: <span>$50</span></div>
+                                        <div class="btn-area d-flex justify-content-between gap-2">
+                                            <a href="cart.html" class="cmn-btn w-100"><span>View cart</span></a>
+                                            <a href="checkout.html" class="cmn-btn2 w-100">checkout</a>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link login-btn" href="login.html">
+                                <span class="icon"><i class="fa-regular fa-user"></i></span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="profile-box">
+                                <div class="profile">
+                                    <img src="./assets/img/person/1.jpg" class="img-fluid" alt="GEMOt">
+                                </div>
+                                <ul class="user-dropdown">
+                                    <li>
+                                        <a href="user-panel.html"> <i class="fal fa-user"></i> View Profile </a>
+                                    </li>
+                                    <li>
+                                        <a href="support-ticket.html"> <i class="fal fa-user-headset"></i> Support </a>
+                                    </li>
+                                    <li>
+                                        <a href="edit-profile.html"> <i class="fal fa-user-cog"></i> Account Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Products section start -->
+    <section class="products-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="sidebar-widget-area">
+                        <h4 class="widget-title">Categories</h4>
+
+                        <div class="checkbox-categories-area">
+                            <div class="section-inner">
+                                <div class="categories-list">
+                                    <a href="" class="category-link">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-regular fa-laptop"></i>
+                                            PC
+                                        </div>
+                                        <span>02</span>
+                                    </a>
+                                    <a href="" class="category-link">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-brands fa-playstation"></i>
+                                            Playstation
+                                        </div>
+                                        <span>12</span>
+                                    </a>
+                                    <a href="" class="category-link">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-regular fa-globe"></i>
+                                            Webgame
+                                        </div>
+                                        <span>22</span>
+                                    </a>
+                                    <a href="" class="category-link">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-regular fa-mobile"></i>
+                                            Mobile
+                                        </div>
+                                        <span>15</span>
+                                    </a>
+                                    <a href="" class="category-link">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-brands fa-xbox"></i>
+                                            Xbox
+                                        </div>
+                                        <span>08</span>
+                                    </a>
+                                    <a href="" class="category-link">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fa-regular fa-light-switch"></i>
+                                            Nintendo Switch
+                                        </div>
+                                        <span>10</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row justify-content-between align-items-center gap-2">
+                        <div class="col-auto">
+                            <h6>04 Items found</h6>
+                        </div>
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center gap-2">
+                                <span>Sort By</span>
+                                <div class="nice-select-section">
+                                    <select class="nice-select right">
+                                        <option data-display="All Type">All Type</option>
+                                        <option value="1">Popular</option>
+                                        <option value="2">Latest</option>
+                                        <option value="3">Featured</option>
+                                        <option value="4">Featured</option>
+                                        <option value="4">Discount</option>
+                                        <option value="4">Date</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-20">
+                        <div class="row g-3 g-sm-4">
+                            <div class="col-lg-6 col-6">
+                                <a href="product-details.html" class="product-box">
+                                    <div class="img-box">
+                                        <img src="./assets/img/products/big/clash-of-clan.webp" alt="" />
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="top-info">
+                                            <div class="review">
+                                                <ul class="reviews d-flex align-items-center gap-2">
+                                                    <li>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                    <span>(5 reviews)</span>
+                                                </ul>
+                                            </div>
+                                            <div class="title mt-10">
+                                                Clash of Clans Gold Pass
+                                            </div>
+                                            <p class="name mt-1">PC</p>
+                                        </div>
+                                        <div class="bottom-info">
+                                            <div class="region"><img src="./assets/img/mini-flag/us.svg" alt="">united
+                                                states
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-6 col-6">
+                                <a href="product-details.html" class="product-box">
+                                    <div class="img-box">
+                                        <img src="./assets/img/products/big/6.png" alt="" />
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="top-info">
+                                            <div class="review">
+                                                <ul class="reviews d-flex align-items-center gap-2">
+                                                    <li>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                    <span>(5 reviews)</span>
+                                                </ul>
+                                            </div>
+                                            <div class="title mt-10">
+                                                PUBG
+                                            </div>
+                                            <p class="name mt-1">Mobile</p>
+                                        </div>
+                                        <div class="bottom-info">
+                                            <div class="region"><img src="./assets/img/mini-flag/globe-svgrepo-com.svg"
+                                                    alt="">global</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-6 col-6">
+                                <a href="product-details.html" class="product-box">
+                                    <div class="img-box">
+                                        <img src="./assets/img/products/big/5.png" alt="" />
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="top-info">
+                                            <div class="review">
+                                                <ul class="reviews d-flex align-items-center gap-2">
+                                                    <li>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                    <span>(5 reviews)</span>
+                                                </ul>
+                                            </div>
+                                            <div class="title mt-10">
+                                                Free Fire
+                                            </div>
+                                            <p class="name mt-1">Mobile</p>
+                                        </div>
+                                        <div class="bottom-info">
+                                            <div class="region"><img src="./assets/img/mini-flag/globe-svgrepo-com.svg"
+                                                    alt="">global
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-6 col-6">
+                                <a href="product-details.html" class="product-box">
+                                    <div class="img-box">
+                                        <img src="./assets/img/products/big/league-of-legends.png" alt="" />
+                                    </div>
+                                    <div class="text-box">
+                                        <div class="top-info">
+                                            <div class="review">
+                                                <ul class="reviews d-flex align-items-center gap-2">
+                                                    <li>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="active fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </li>
+                                                    <span>(5 reviews)</span>
+                                                </ul>
+                                            </div>
+                                            <div class="title mt-10">
+                                                League of Legends
+                                            </div>
+                                            <p class="name mt-1">PC</p>
+                                        </div>
+                                        <div class="bottom-info">
+                                            <div class="region"><img src="./assets/img/mini-flag/gb-eng.svg" alt="">UK
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- pagination section start -->
+                    <div class="pagination-section mt-20">
+                        <nav aria-label="...">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fal fa-long-arrow-left"></i></a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active" aria-current="page">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fal fa-long-arrow-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- pagination section end -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Products section end -->
+
+    <!-- Footer Section start -->
+    <section class="footer-section">
+        <!-- Newsletter section start -->
+        <div class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-section-inner">
+                    <div class="row align-items-center g-4 g-sm-5">
+                        <div class="col-lg-6 col-md-5">
+                            <div class="content-area">
+                                <h2 class="subscribe-normal-text">Subscribe Newsletter</h2>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 col-md-7">
+                            <form class="newsletter-form">
+                                <input type="text" class="form-control" placeholder="Enter your mail">
+                                <button type="button" class="subscribe-btn">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Newsletter section end -->
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget-logo">
+                            <a href="#nav_area"><img class="footer-logo" src="assets/img/logo/logo.avif"
+                                    alt="GEMOT"></a>
+                        </div>
+                        <p>
+                            Experience the GEMOT Advantage - Empowering Social Success with Advanced, Data-Driven
+                            Solutions and Innovative Strategies.
+                        </p>
+
+                        <ul class="social-box mt-30">
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Quick Links</h5>
+                        <ul>
+                            <li><a class="widget-link" href="about.html">About</a></li>
+                            <li><a class="widget-link" href="faq.html">FAQ</a></li>
+                            <li><a class="widget-link" href="index.html">Home</a></li>
+                            <li><a class="widget-link" href="blog.html">Blog</a></li>
+                            <li><a class="widget-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Company Policy</h5>
+                        <ul>
+                            <li><a class="widget-link" href="policy.html">Privacy Policy</a></li>
+                            <li><a class="widget-link" href="">Refund Policy</a></li>
+                            <li><a class="widget-link" href="">Terms of use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Contact Us</h5>
+                        <p class="contact-item"><i class="fa-regular fa-location-dot"></i> 10714 163rd Pl, Orland Park,
+                            IL 60467, United States</p>
+                        <p class="contact-item"><i class="fa-regular fa-envelope"></i> email@website.com</p>
+                        <p class="contact-item"><i class="fa-regular fa-phone"></i> 354-4156745674</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section end -->
+
+    <!-- Copyright section start -->
+    <div class="copyright-section">
+        <div class="container">
+            <div class="copyright-inner">
+                <div class="row gy-4 align-items-center">
+                    <div class="col-sm-6">
+                        <p class="mb-0 text-center text-sm-start">Copyright ©2024 <a class="highlight"
+                                href="index.html">GAMOT</a> All Rights
+                            Reserved!
+                        </p>
+                    </div>
+                    <div class="col-sm-6 d-flex justify-content-center justify-content-sm-end">
+                        <div class="payment-gateway">
+                            <img src="./assets/img/gateway/small/396d4ffb14c64be61694621c480d9917.png" alt="">
+                            <img src="./assets/img/gateway/small/9862aeaf448f32090a4c61dced07ae74.png" alt="">
+                            <img src="./assets/img/gateway/small/98e2d9681b5a058a3eed7ea018a70269.png" alt="">
+                            <img src="./assets/img/gateway/small/c1e8cfdb317c02f0892c59027811a97e.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright section end -->
+
+
+
+
+
+    <!-- Modal section start -->
+    <div class="modal fade" id="lang-currency-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="staticBackdropLabel">Select Language and Currency</h4>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-light fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div id="formModal">
+                                <label class="form-label">Select language</label>
+                                <select class="modal-select2-image" name="state">
+                                    <option value="us">English</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="bd">bangla</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div id="formModal">
+                                <label class="form-label">Select currency</label>
+                                <select class="modal-select2-image" name="state">
+                                    <option value="es">EUR</option>
+                                    <option value="us">USD</option>
+                                    <option value="bd">BDT</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer mt-10">
+                    <!-- <button type="button" class="cmn-btn2" data-bs-dismiss="modal">Close</button> -->
+                    <a href="" class="cmn-btn w-100 mt-10">save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal section end -->
+
+
+
+
+
+
+
+    <!-- Jquery Js link -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap Js link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl carausel Js link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper Js link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- select2 Js link -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- Nice select Js link -->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!-- Meanmenu Js link -->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+
+
+    <!-- Main Js link -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

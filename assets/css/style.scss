@@ -88,7 +88,7 @@ Typography
 
 
     --border-color1: #2e3347;
-    --border-color2: #1f2235;
+    --border-color2: #3d4153;
     // --border-color3: rgba(255, 255, 255, .06);
 
     --shadow1: 0 0.375rem 0.75rem rgba(140, 152, 164, .075);
@@ -705,7 +705,7 @@ Breadcrumb end
 // Scroll bar section start
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
     height: 6px;
     background-color: var(--border-color1);
 }
@@ -713,15 +713,15 @@ Breadcrumb end
 ::-webkit-scrollbar-thumb {
     border-radius: 4px;
     background-color: rgb(var(--primary-color), 0.8);
-    // visibility: hidden;
-    // opacity: 0;
+    visibility: hidden;
+    opacity: 0;
 
 }
 
-// :hover::-webkit-scrollbar-thumb {
-//     visibility: visible;
-//     opacity: 1;
-// }
+:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+    opacity: 1;
+}
 
 body::-webkit-scrollbar {
     width: 8px;
@@ -1214,6 +1214,14 @@ Reusable style section start
     display: flex;
     align-items: center;
 
+    &.active {
+        .search-result {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+    }
+
     .form-control {
         background-color: var(--bg-color1);
         border-radius: 4px;
@@ -1236,8 +1244,102 @@ Reusable style section start
         gap: 10px;
         font-size: 16px;
     }
+
+    .search-result {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background-color: var(--bg-color3);
+        box-shadow: var(--shadow1);
+        border-radius: 3px;
+        z-index: 1;
+        border: 1px solid var(--border-color2);
+        color: var(--body-color);
+        max-height: 346px;
+        overflow: auto;
+        transform-origin: 0 0;
+        transform: scaleY(0);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+
+        .search-item {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            line-height: 1.2;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(var(--primary-color));
+            }
+
+            .icon-area {
+                font-size: 22px;
+                color: rgb(var(--primary-color));
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .img-area {
+                img {
+                    width: 50px;
+                    height: 50px;
+                    min-width: 50px;
+                    border-radius: 3px;
+                }
+            }
+
+            .title {
+                font-size: 16px;
+                text-transform: capitalize;
+                color: rgb(var(--white));
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                line-clamp: 1;
+            }
+
+            .sub-title {
+                margin-top: 5px;
+                font-size: 12px;
+                text-transform: capitalize;
+                color: rgb(var(--white));
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid var(--border-color2);
+            }
+        }
+
+        .recent-clear {
+            border-bottom: 1px solid var(--border-color1);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-transform: capitalize;
+            padding: 10px 20px;
+            // color: var(--body-color);
+        }
+    }
 }
 
+// Responsive search box start
+@media(min-width:768px) {
+    .search-box2 .form-control {
+        width: 350px;
+    }
+}
+
+// Responsive search box end
 // Rtl search box2 start
 .rtl {
     .search-box2 {
@@ -1250,6 +1352,7 @@ Reusable style section start
             left: 5px;
         }
     }
+
 
     @media (max-width: 575px) {
         .search-box2 .form-control {
@@ -2302,7 +2405,7 @@ section {
     font-weight: 600;
     text-transform: capitalize;
     gap: 5px;
-    background-color: var(--bg-color3);
+    background-color: var(--bg-color2);
     padding: 4px 15px;
     border-radius: 9999px;
 }
@@ -2981,6 +3084,7 @@ hr.divider:after {
 
 .nice-select .list {
     min-width: 200px;
+    background-color: var(--bg-color3);
 }
 
 .nice-select .option:hover,
@@ -3048,22 +3152,25 @@ hr.divider:after {
 // checkbox categories area start
 .checkbox-categories-area {
     .categories-list {
-        max-height: 250px;
-        overflow: auto;
         padding-right: 5px;
     }
 
     .category-link {
         display: flex;
         justify-content: space-between;
-        font-size: 18px;
+        font-size: 16px;
         text-transform: capitalize;
-        padding: 6px 16px;
+        padding: 7px 16px;
         transition: var(--transition);
         border-radius: 40px;
+        font-weight: 500;
 
         &:hover {
             background-color: rgb(var(--primary-color), 0.1);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
         }
     }
 
@@ -3199,7 +3306,7 @@ user nav Profile start
         .user-dropdown {
             opacity: 1;
             visibility: visible;
-            top: 55px;
+            top: calc(100% + 10px);
             transform: scaleY(1);
         }
     }
@@ -3220,7 +3327,7 @@ user nav Profile start
     }
 
     .user-dropdown {
-        background: var(--bg-color2);
+        background: var(--bg-color3);
         // box-shadow: var(--shadow1);
         width: 200px;
         overflow: hidden;
@@ -3516,7 +3623,7 @@ user nav Profile end
 
     &:hover {
         .cart-dropdown {
-            top: 50px;
+            top: calc(100% + 15px);
             transform: scale(1);
             visibility: visible;
             opacity: 1;
@@ -3668,7 +3775,7 @@ user nav Profile end
     .shopping-cart {
         .cart-dropdown {
             width: 290px;
-            right: -75px;
+            right: -150px;
 
             li {
                 a {
@@ -4989,7 +5096,7 @@ Padding bottom
     background-color: var(--bg-color2);
     transition: var(--transition);
 
-    .container {
+    .desktop-view-wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -5193,20 +5300,30 @@ Padding bottom
 // Responsiv nav sectioin start
 @media(max-width: 991px) {
     .cusotm-nav.active {
-        .desktop-view .container {
+        .desktop-view .desktop-view-wrapper {
             z-index: 9999;
             position: relative;
+            margin-right: 30px;
         }
     }
 
-    .desktop-view .container {
-        // .custom-nav {
-        //     padding-right: 32px;
-        // }
+    .desktop-view .desktop-view-wrapper {
+        margin-right: 30px;
     }
 }
 
 @media(max-width: 575px) {
+    .cusotm-nav.active {
+        .desktop-view .desktop-view-wrapper {
+            z-index: 9999;
+            position: relative;
+            margin-right: 50px;
+        }
+    }
+
+    .desktop-view .desktop-view-wrapper {
+        margin-right: 50px;
+    }
 
     .search-box2 {
         display: none;
@@ -5388,7 +5505,7 @@ Nav section end
 }
 
 // Responsive hero section start
-@media(max-width: 1199px) {
+@media(min-width:768px) and (max-width: 1199px) {
     .slider-box {
         .text-box {
             width: 80%;
@@ -5396,6 +5513,35 @@ Nav section end
             .title {
                 font-size: 36px;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .slider-box {
+        .text-box {
+            .section-subtitle {
+                font-size: 14px;
+            }
+
+            .title {
+                font-size: 30px;
+                line-height: 40px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .slider-box {
+        padding: 20px;
+
+        .text-box {
+            width: 100%;
         }
     }
 }
@@ -5476,6 +5622,20 @@ Exclusive offer section end
     }
 }
 
+// Responsive about section start
+@media(max-width: 991px) {
+    .about-section {
+        .text-box {
+            text-align: center;
+        }
+
+        .img-box {
+            max-width: 450px;
+        }
+    }
+}
+
+// Responsive about section end
 /*----------------------------------------------
 About section end
 ----------------------------------------------*/
@@ -5514,6 +5674,10 @@ Flash deal section end
             background-color: var(--bg-color3);
             border-radius: 12px;
         }
+    }
+    .product-box .text-box .price .promo-price{
+        font-size: 18px;
+        color: rgb(var(--white));
     }
 }
 
@@ -5617,8 +5781,11 @@ Flash deal section end
 
             .promo-price {
                 font-weight: 500;
-                font-size: 18px;
-                color: rgb(var(--white));
+                font-size: 14px;
+
+                .number {
+                    color: rgb(var(--white));
+                }
             }
 
             .discount {
@@ -5741,12 +5908,6 @@ Flash deal section end
     }
 
     .product-box {
-        flex-direction: column;
-
-        .img-box {
-            max-width: 100%;
-            height: 150px;
-        }
 
         .text-box {
             .title {
@@ -5754,7 +5915,7 @@ Flash deal section end
             }
 
             .price .promo-price {
-                font-size: 18px;
+                font-size: 16px;
             }
         }
     }
@@ -5854,6 +6015,16 @@ Trending game section end
     }
 }
 
+// Responsive about section start
+@media(max-width: 991px) {
+    .why-choose-us-section {
+        .img-box {
+            max-width: 450px;
+        }
+    }
+}
+
+// Responsive about section end
 /*----------------------------------------------
 Why choose us section end
 ----------------------------------------------*/
@@ -5882,7 +6053,7 @@ Buy game id section end
     gap: 25px;
 
     .img-box {
-        width: 350px;
+        // width: 350px;
         max-width: 350px;
         min-width: 350px;
         height: 410px;
@@ -5913,6 +6084,31 @@ Buy game id section end
     }
 }
 
+// Respoinsive testimonial section start
+@media(max-width: 767px) {
+    .testimonial-box {
+        gap: 10px;
+        flex-direction: column;
+
+        .img-box {
+            margin: 0 auto;
+        }
+
+        .quote-icon {
+            font-size: 25px;
+        }
+    }
+}
+
+@media(max-width: 575px) {
+    .testimonial-box .img-box {
+        max-width: 350px;
+        min-width: 272px;
+        height: 324px;
+    }
+}
+
+// Respoinsive testimonial section end
 /*----------------------------------------------
 Testimonial end
 ----------------------------------------------*/
@@ -5976,7 +6172,7 @@ Testimonial end
 .meta {
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    gap: 10px;
     font-size: 16px;
 
     .item {
@@ -7189,11 +7385,10 @@ Login Signup end
 
 .sidebar-widget-area {
     padding: 25px;
-    background-color: var(--bg-color1);
-    border-radius: 10px;
+    background-color: var(--bg-color2);
+    border-radius: 15px;
     margin-bottom: 25px;
-    box-shadow: var(--shadow1);
-    border: 1px solid var(--border-color1);
+    // box-shadow: var(--shadow1);
 
     .title {
         margin-bottom: 15px;
@@ -7274,7 +7469,7 @@ Login Signup end
 
         &::before {
             content: "";
-            width: 7px;
+            width: 5px;
             border-radius: 6px;
             background-color: rgb(var(--primary-color));
         }
@@ -7398,12 +7593,12 @@ Blog details end
                     width: 40px;
                     height: 40px;
                     border-radius: 8px !important;
-                    color: rgb(var(--heading-color));
-                    background-color: rgb(var(--white));
+                    color: rgb(var(--white));
+                    background-color: var(--bg-color3);
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border: 1px solid var(--border-color2);
+                    border: 1px solid var(--border-color1);
                     box-shadow: none;
 
                     &:hover,
@@ -7590,6 +7785,17 @@ Error end
 
 /*----------------------------------------------
 Author section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Products section start
+----------------------------------------------*/
+.products-section {
+    background-color: var(--bg-color1);
+}
+
+/*----------------------------------------------
+Products section end
 ----------------------------------------------*/
 
 /*----------------------------------------------

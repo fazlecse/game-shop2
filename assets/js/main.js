@@ -56,7 +56,7 @@ $(document).ready(function () {
     // product-slider carousel
     $('.trending-offers-carousel').owlCarousel({
         loop: true,
-        // autoplay: true,
+        autoplay: true,
         margin: 20,
         autoplayTimeout: 2000,
         // rtl: true,
@@ -488,7 +488,7 @@ if ($('#copyBtn').length) {
 
 // Copy page url end
 // input field show hide password start
-if (document.querySelector('.login-signup-form')) {
+if (document.querySelector('.login-register-form')) {
     const passwordBoxes = document.querySelectorAll('.password-box');
     passwordBoxes.forEach((passwordBox) => {
         const passwordInput = passwordBox.querySelector('.password');

@@ -98,7 +98,7 @@ Typography
 
 }
 
-// primary: #32c36c
+// primary: #6f4ff2
 
 
 /*----------------------------------------------
@@ -341,6 +341,7 @@ body {
     line-height: 1.5;
     color: var(--body-color);
     font-size: 16px;
+    padding: 0 !important;
 }
 
 
@@ -358,6 +359,7 @@ html {
 
 textarea.form-control {
     height: initial;
+    border-radius: 15px;
 }
 
 .form-label {
@@ -380,7 +382,7 @@ option {
 
 .form-control,
 .form-select {
-    border-radius: 5px;
+    border-radius: 9999px;
     background-color: var(--input-color);
     border: 1px solid var(--border-color1);
     height: 45px;
@@ -388,6 +390,7 @@ option {
 
     &::placeholder {
         text-transform: capitalize;
+        color: var(--body-color);
     }
 
     &:focus {
@@ -456,6 +459,7 @@ intlTelInput section start
     box-shadow: var(--shadow1);
     border: 1px solid var(--border-color2);
     border-radius: 5px;
+    background-color: var(--bg-color3);
 }
 
 .iti-mobile .iti__country-list {
@@ -464,10 +468,19 @@ intlTelInput section start
 
 .iti--separate-dial-code .iti__selected-flag {
     background-color: rgb(var(--primary-color), 0.1);
+    border-radius: 9999px;
 }
 
 .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
     background-color: rgb(var(--primary-color), 0.1);
+}
+
+.iti__arrow {
+    border-top: 4px solid rgb(var(--white));
+}
+.iti__arrow--up {
+    border-top: none;
+    border-bottom: 4px solid rgb(var(--white));
 }
 
 // Rtl intlTelInput section start
@@ -843,12 +856,12 @@ body::-webkit-scrollbar-thumb {
     border-radius: 6px;
     transition: var(--transition);
     background-color: var(--bg-color3);
-    color: rgb(var(--white));
+    color: var(--body-color);
 }
 
 .cmn-btn-close:hover {
     background-color: rgb(var(--primary-color), 0.1);
-    color: rgb(var(--primary-color));
+    color: rgb(var(--white));
 }
 
 // Cmn btn end
@@ -1365,6 +1378,67 @@ Reusable style section start
 // Rtl search box2 end
 // Search box2 section end
 
+// Search box2 section start
+.search-box3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+
+    .form-control {
+        background-color: var(--bg-color1);
+        border-radius: 4px;
+        height: 50px;
+        border-radius: 9999px;
+        padding: 6px 115px 6px 12px;
+    }
+
+    .search-btn {
+        transition: var(--transition);
+        position: absolute;
+        right: 6px;
+        background-color: rgb(var(--primary-color));
+        height: calc(100% - 12px);
+        border-radius: 9999px;
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(var(--white));
+        text-transform: capitalize;
+        gap: 10px;
+        font-size: 16px;
+
+        &:hover {
+            background-color: rgb(var(--primary-color), 0.8);
+            color: rgb(var(--white));
+        }
+    }
+}
+
+// Rtl search box2 start
+.rtl {
+    .search-box2 {
+        .form-control {
+            padding: 6px 12px 6px 115px;
+        }
+
+        .search-btn2 {
+            right: auto;
+            left: 5px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .search-box2 .form-control {
+            padding: 6px 12px 6px 85px;
+        }
+    }
+}
+
+// Rtl search box2 end
+// Search box2 section end
+
 // Multiple search box section start
 .multiple-search-section {
     margin-top: 50px;
@@ -1814,6 +1888,7 @@ Offcanvas end
     text-transform: capitalize;
     gap: 5px;
     border-radius: 40px;
+    font-weight: 600;
 
     &:hover {
         background-color: rgb(var(--primary-color), 0.8);
@@ -1844,25 +1919,6 @@ Offcanvas end
     }
 }
 
-.cmn-btn3 {
-    background: rgb(var(--white));
-    padding: 10px 20px;
-    border: 1px solid var(--border-color1);
-    transition: var(--transition);
-    font-size: 16px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
-    gap: 5px;
-    font-weight: 500;
-
-    &:hover {
-        color: rgb(var(--primary-color));
-        box-shadow: var(--shadow2);
-        border: 1px solid var(--border-color2);
-    }
-}
 
 .cmn-btn4 {
     background-color: rgb(var(--primary-color));
@@ -1885,12 +1941,27 @@ Offcanvas end
     }
 }
 
-.rtl {
-    .cmn-btn3 {
-        img {
-            margin-right: 0;
-            margin-left: 5px;
-        }
+.social-btn {
+    background: var(--bg-color3);
+    padding: 10px 20px;
+    border: 1px solid var(--border-color1);
+    transition: var(--transition);
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    gap: 5px;
+    font-weight: 500;
+    color: rgb(var(--white));
+    border-radius: 9999px;
+
+    &:hover {
+        color: rgb(var(--primary-color));
+    }
+
+    img {
+        width: 16px;
     }
 }
 
@@ -2257,9 +2328,9 @@ Alerts section start
 Alerts end 
 ----------------------------------------------*/
 
-// --------------------------------------------------------
-// -- Cmn tab section start --
-// --------------------------------------------------------
+/*----------------------------------------------
+Cmn tab section start
+----------------------------------------------*/
 
 .cmn-tabs .nav-pills {
     display: inline-flex;
@@ -2288,9 +2359,9 @@ Alerts end
     color: rgb(var(--white));
 }
 
-// --------------------------------------------------------
-// -- Cmn tab section end --
-// --------------------------------------------------------
+/*----------------------------------------------
+Cmn tab section end
+----------------------------------------------*/
 
 /*----------------------------------------------
 Cmn tab2 section start 
@@ -2431,7 +2502,7 @@ section {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--bg-color1);
+            background: var(--bg-color3);
             color: rgb(var(--primary-color));
             border: 1px solid var(--border-color1);
             border-radius: 8px;
@@ -2535,8 +2606,8 @@ hr.divider:after {
     position: relative;
     top: -12px;
     padding: 0 16px;
-    background: var(--bg-color1);
-    color: rgb(var(--heading-color));
+    background: var(--bg-color2);
+    color: rgb(var(--white));
 }
 
 .dropdown-menu {
@@ -3038,8 +3109,9 @@ hr.divider:after {
 // Card sectio start
 .card {
     background-color: var(--bg-color2);
-    border: 1px solid var(--border-color1);
+    border: 1px solid none;
     box-shadow: none;
+    border-radius: 15px;
 
     .card-header {
         padding: 20px;
@@ -3738,7 +3810,7 @@ user nav Profile end
                     justify-content: center;
 
                     &:hover {
-                        color: rgb(var(--primary-color));
+                        color: rgb(var(--white));
                         background-color: var(--bg-color1);
                     }
                 }
@@ -4172,12 +4244,12 @@ Payment section start
         height: 100%;
         padding: 15px;
         cursor: pointer;
-        box-shadow: var(--shadow1);
         border-radius: 5px;
         transition: var(--transition);
         gap: 15px;
         border: 1px solid var(--border-color1);
-        background-color: var(--bg-color1);
+        outline: 1px solid transparent;
+        background-color: var(--bg-color3);
 
 
         .image-area {
@@ -4203,6 +4275,9 @@ Payment section start
 
     .form-check-input[type=radio]:checked+.form-check-label {
         background-color: rgb(var(--primary-color), 0.1);
+        border-color: rgb(var(--primary-color));
+        outline: 1px solid rgb(var(--primary-color));
+
     }
 }
 
@@ -4267,6 +4342,7 @@ Cmn table start
 
     table {
         margin-bottom: 0;
+        color: var(--body-color);
 
         thead {
             tr {
@@ -4347,6 +4423,10 @@ Cmn table start
             font-weight: 500;
         }
     }
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    color: var(--body-color);
 }
 
 // Responsive cmn tabele start
@@ -4704,14 +4784,14 @@ Cmn table end
         border: 1px solid var(--border-color1);
         border-radius: 5px;
         font-weight: 400;
-        background-color: hsl(var(--white));
+        background-color: var(--bg-color3);
         box-shadow: var(--shadow1);
         transition: var(--transition);
         font-size: 16px;
+        color: rgb(var(--white));
 
         &:hover {
-            color: rgb(var(--primary-color));
-            box-shadow: var(--shadow2);
+            background-color: rgb(var(--primary-color));
         }
 
         &.active {
@@ -5802,7 +5882,6 @@ Flash deal section end
 }
 
 .region {
-    margin-top: 10px;
     font-size: 16px;
     text-transform: capitalize;
 
@@ -7157,6 +7236,7 @@ Copyright end
 Banner end
 ----------------------------------------------*/
 
+
 /*----------------------------------------------
 24. Contact section start
 ----------------------------------------------*/
@@ -7164,12 +7244,12 @@ Banner end
     background-color: var(--bg-color1);
     position: relative;
     z-index: 0;
-}
 
-.contact-area {
-    .thumbs-area {
-        max-width: 250px;
-        margin: auto;
+    .left-side {
+        .img-box {
+            max-width: 487px;
+            margin: 0 auto;
+        }
     }
 }
 
@@ -7182,19 +7262,19 @@ Banner end
     .item {
         display: flex;
         align-items: center;
-        gap: 15px;
-        border: 1px solid var(--border-color1);
-        padding: 10px;
+        gap: 20px;
+        padding: 25px;
         border-radius: 10px;
-        box-shadow: var(--shadow1);
+        background-color: var(--bg-color2);
 
         .icon-area {
             border-radius: 5px;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            min-width: 50px;
+            height: 50px;
             font-size: 18px;
             color: rgb(var(--primary-color));
-            background-color: rgb(var(--primary-color), 0.1);
+            background-color: var(--bg-color3);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -7204,11 +7284,7 @@ Banner end
 }
 
 .contact-message-area {
-    background-color: var(--bg-color2);
-    padding: 30px 25px;
-    box-shadow: var(--shadow1);
-    border-radius: 20px;
-    border: 1px solid var(--border-color1);
+    background-color: var(--bg-color1);
 
     .contact-header {
         margin-bottom: 30px;
@@ -7228,7 +7304,7 @@ Banner end
 }
 
 /*----------------------------------------------
-Contact section end
+Contact end
 ----------------------------------------------*/
 
 /*----------------------------------------------
@@ -7236,7 +7312,7 @@ Contact section end
 ----------------------------------------------*/
 .map-section {
     iframe {
-        margin-bottom: -6px;
+        margin-bottom: -7px;
         width: 100%;
         height: 450px;
         padding: 5px;
@@ -7252,28 +7328,17 @@ Map section end
 /*----------------------------------------------
 24. Login Signup section start
 ----------------------------------------------*/
-.login-signup-box {
-    border: 1px solid var(--border-color1);
+.login-register-section {
     background-color: var(--bg-color1);
-    box-shadow: var(--shadow1);
-    border-radius: 12px;
-
-    .img-box {
-        height: 100%;
-
-        img {
-            height: 100%;
-            border-top-right-radius: 12px;
-            border-bottom-right-radius: 12px;
-            object-fit: cover;
-        }
-    }
 }
 
-.login-signup-form {
+
+.login-register-form {
     padding: 30px;
     z-index: 1;
     position: relative;
+    background-color: var(--bg-color2);
+    border-radius: 20px;
 
     .logo-area {
         margin-bottom: 20px;
@@ -7317,19 +7382,19 @@ Map section end
 
 // Responsive login signup start
 @media (max-width: 991px) {
-    .login-signup-page .login-signup-form {
+    .login-register-section .login-register-form {
         padding: 40px;
     }
 }
 
 @media (max-width: 767px) {
-    .login-signup-page .login-signup-form {
+    .login-register-section .login-register-form {
         margin: auto;
     }
 }
 
 @media (max-width: 575px) {
-    .login-signup-page .login-signup-form {
+    .login-register-section .login-register-form {
         padding: 20px;
     }
 }
@@ -7351,7 +7416,7 @@ Map section end
         }
     }
 
-    .login-signup-box .img-box img {
+    .login-register-box .img-box img {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-top-left-radius: 20px;
@@ -7970,12 +8035,12 @@ Product details section start
 
 
 .item-count {
-    padding: 2px;
+    padding: 5px 8px;
     width: auto;
     display: inline-flex;
     align-items: center;
     border: 1px solid var(--border-color1);
-    border-radius: 5px;
+    border-radius: 9999px;
     transition: var(--transition);
     color: rgb(var(--white));
     background-color: var(--bg-color3);
@@ -7995,9 +8060,9 @@ Product details section start
 }
 
 .btn-inc-dec {
-    border-radius: 3px;
-    width: 40px;
-    height: 35px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -8117,6 +8182,65 @@ Product details section start
     }
 }
 
+.product-card {
+    background-color: var(--bg-color2);
+    padding: 25px;
+    border-radius: 15px;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+.product-card-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+
+    &:hover {
+        color: rgb(var(--white));
+
+        .img-box {
+            img {
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    .img-box {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+    }
+
+    .text-box {
+        .title {
+            font-size: 16px;
+            font-weight: 500;
+            color: rgb(var(--white));
+        }
+    }
+}
+
+.iframe-video {
+    // border-radius: 15px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+
 /*----------------------------------------------
 Product details section end
 ----------------------------------------------*/
@@ -8125,6 +8249,10 @@ Product details section end
 00. Cart section start 
 ----------------------------------------------*/
 .cart-table {
+    table {
+        color: var(--body-color);
+    }
+
     tbody td {
         padding: 20px 15px;
     }
@@ -8633,8 +8761,10 @@ Docs end
 Reviews details section start 
 ----------------------------------------------*/
 .reviews-details-section {
+    background-color: var(--bg-color1);
+
     .isotop-content {
-        border: 1px solid var(--border-color1);
+        background-color: var(--bg-color2);
         padding: 25px;
         border-radius: 20px;
         font-size: 16px;
@@ -8642,7 +8772,7 @@ Reviews details section start
 }
 
 .sidebar-card-box {
-    border: 1px solid var(--border-color1);
+    background-color: var(--bg-color2);
     padding: 25px;
     border-radius: 12px;
 
@@ -8769,4 +8899,26 @@ Reviews details section start
 // Responsive reviews section end
 /*----------------------------------------------
 Reviews details section end 
+----------------------------------------------*/
+
+/*----------------------------------------------
+Cart section start
+----------------------------------------------*/
+.cart-section {
+    background-color: var(--bg-color1);
+}
+
+/*----------------------------------------------
+Cart section section end 
+----------------------------------------------*/
+
+/*----------------------------------------------
+Checkout section start
+----------------------------------------------*/
+.checkout-section {
+    background-color: var(--bg-color1);
+}
+
+/*----------------------------------------------
+Checkout section section end 
 ----------------------------------------------*/

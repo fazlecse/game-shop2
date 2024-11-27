@@ -314,6 +314,7 @@ body {
   line-height: 1.5;
   color: var(--body-color);
   font-size: 16px;
+  padding: 0 !important;
 }
 
 @media (max-width: 991px) {
@@ -328,6 +329,7 @@ html {
 
 textarea.form-control {
   height: initial;
+  border-radius: 15px;
 }
 
 .form-label {
@@ -350,7 +352,7 @@ option {
 
 .form-control,
 .form-select {
-  border-radius: 5px;
+  border-radius: 9999px;
   background-color: var(--input-color);
   border: 1px solid var(--border-color1);
   height: 45px;
@@ -358,10 +360,12 @@ option {
 }
 .form-control::-moz-placeholder, .form-select::-moz-placeholder {
   text-transform: capitalize;
+  color: var(--body-color);
 }
 .form-control::placeholder,
 .form-select::placeholder {
   text-transform: capitalize;
+  color: var(--body-color);
 }
 .form-control:focus,
 .form-select:focus {
@@ -427,6 +431,7 @@ intlTelInput section start
   box-shadow: var(--shadow1);
   border: 1px solid var(--border-color2);
   border-radius: 5px;
+  background-color: var(--bg-color3);
 }
 
 .iti-mobile .iti__country-list {
@@ -435,10 +440,20 @@ intlTelInput section start
 
 .iti--separate-dial-code .iti__selected-flag {
   background-color: rgb(var(--primary-color), 0.1);
+  border-radius: 9999px;
 }
 
 .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
   background-color: rgb(var(--primary-color), 0.1);
+}
+
+.iti__arrow {
+  border-top: 4px solid rgb(var(--white));
+}
+
+.iti__arrow--up {
+  border-top: none;
+  border-bottom: 4px solid rgb(var(--white));
 }
 
 .rtl .iti--allow-dropdown .iti__flag-container,
@@ -745,12 +760,12 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 6px;
   transition: var(--transition);
   background-color: var(--bg-color3);
-  color: rgb(var(--white));
+  color: var(--body-color);
 }
 
 .cmn-btn-close:hover {
   background-color: rgb(var(--primary-color), 0.1);
-  color: rgb(var(--primary-color));
+  color: rgb(var(--white));
 }
 
 .accordion-button {
@@ -1155,6 +1170,52 @@ Reusable style section start
   }
 }
 
+.search-box3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-box3 .form-control {
+  background-color: var(--bg-color1);
+  border-radius: 4px;
+  height: 50px;
+  border-radius: 9999px;
+  padding: 6px 115px 6px 12px;
+}
+.search-box3 .search-btn {
+  transition: var(--transition);
+  position: absolute;
+  right: 6px;
+  background-color: rgb(var(--primary-color));
+  height: calc(100% - 12px);
+  border-radius: 9999px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(var(--white));
+  text-transform: capitalize;
+  gap: 10px;
+  font-size: 16px;
+}
+.search-box3 .search-btn:hover {
+  background-color: rgb(var(--primary-color), 0.8);
+  color: rgb(var(--white));
+}
+
+.rtl .search-box2 .form-control {
+  padding: 6px 12px 6px 115px;
+}
+.rtl .search-box2 .search-btn2 {
+  right: auto;
+  left: 5px;
+}
+@media (max-width: 575px) {
+  .rtl .search-box2 .form-control {
+    padding: 6px 12px 6px 85px;
+  }
+}
+
 .multiple-search-section {
   margin-top: 50px;
 }
@@ -1506,6 +1567,7 @@ Offcanvas end
   text-transform: capitalize;
   gap: 5px;
   border-radius: 40px;
+  font-weight: 600;
 }
 .cmn-btn:hover {
   background-color: rgb(var(--primary-color), 0.8);
@@ -1533,25 +1595,6 @@ Offcanvas end
   background-color: var(--bg-color2);
 }
 
-.cmn-btn3 {
-  background: rgb(var(--white));
-  padding: 10px 20px;
-  border: 1px solid var(--border-color1);
-  transition: var(--transition);
-  font-size: 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: capitalize;
-  gap: 5px;
-  font-weight: 500;
-}
-.cmn-btn3:hover {
-  color: rgb(var(--primary-color));
-  box-shadow: var(--shadow2);
-  border: 1px solid var(--border-color2);
-}
-
 .cmn-btn4 {
   background-color: rgb(var(--primary-color));
   color: rgb(var(--primary-color));
@@ -1572,9 +1615,26 @@ Offcanvas end
   background-color: var(--btn-hover-bg);
 }
 
-.rtl .cmn-btn3 img {
-  margin-right: 0;
-  margin-left: 5px;
+.social-btn {
+  background: var(--bg-color3);
+  padding: 10px 20px;
+  border: 1px solid var(--border-color1);
+  transition: var(--transition);
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  gap: 5px;
+  font-weight: 500;
+  color: rgb(var(--white));
+  border-radius: 9999px;
+}
+.social-btn:hover {
+  color: rgb(var(--primary-color));
+}
+.social-btn img {
+  width: 16px;
 }
 
 .lang-currency-btn {
@@ -1880,6 +1940,9 @@ Alerts section start
 /*----------------------------------------------
 Alerts end 
 ----------------------------------------------*/
+/*----------------------------------------------
+Cmn tab section start
+----------------------------------------------*/
 .cmn-tabs .nav-pills {
   display: inline-flex;
   gap: 10px;
@@ -1907,6 +1970,9 @@ Alerts end
   color: rgb(var(--white));
 }
 
+/*----------------------------------------------
+Cmn tab section end
+----------------------------------------------*/
 /*----------------------------------------------
 Cmn tab2 section start 
 ----------------------------------------------*/
@@ -2022,7 +2088,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-color1);
+  background: var(--bg-color3);
   color: rgb(var(--primary-color));
   border: 1px solid var(--border-color1);
   border-radius: 8px;
@@ -2111,8 +2177,8 @@ hr.divider:after {
   position: relative;
   top: -12px;
   padding: 0 16px;
-  background: var(--bg-color1);
-  color: rgb(var(--heading-color));
+  background: var(--bg-color2);
+  color: rgb(var(--white));
 }
 
 .dropdown-menu {
@@ -2472,8 +2538,9 @@ hr.divider:after {
 
 .card {
   background-color: var(--bg-color2);
-  border: 1px solid var(--border-color1);
+  border: 1px solid none;
   box-shadow: none;
+  border-radius: 15px;
 }
 .card .card-header {
   padding: 20px;
@@ -3032,7 +3099,7 @@ user nav Profile end
   justify-content: center;
 }
 .shopping-cart .cart-dropdown li .dropdown-item .close:hover {
-  color: rgb(var(--primary-color));
+  color: rgb(var(--white));
   background-color: var(--bg-color1);
 }
 .shopping-cart .cart-dropdown li:not(:last-child) {
@@ -3343,12 +3410,12 @@ Payment section start
   height: 100%;
   padding: 15px;
   cursor: pointer;
-  box-shadow: var(--shadow1);
   border-radius: 5px;
   transition: var(--transition);
   gap: 15px;
   border: 1px solid var(--border-color1);
-  background-color: var(--bg-color1);
+  outline: 1px solid transparent;
+  background-color: var(--bg-color3);
 }
 .payment-container-list .form-check-label .image-area img {
   width: 50px;
@@ -3366,6 +3433,8 @@ Payment section start
 }
 .payment-container-list .form-check-input[type=radio]:checked + .form-check-label {
   background-color: rgb(var(--primary-color), 0.1);
+  border-color: rgb(var(--primary-color));
+  outline: 1px solid rgb(var(--primary-color));
 }
 
 .rtl .payment-container-list .form-check-label .content-area {
@@ -3410,6 +3479,7 @@ Cmn table start
 }
 .cmn-table table {
   margin-bottom: 0;
+  color: var(--body-color);
 }
 .cmn-table table thead tr th {
   font-size: 18px;
@@ -3470,6 +3540,10 @@ Cmn table start
 .cmn-table .profile-box .text-box {
   text-transform: capitalize;
   font-weight: 500;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  color: var(--body-color);
 }
 
 @media (min-width: 768px) {
@@ -3724,14 +3798,14 @@ Cmn table end
   border: 1px solid var(--border-color1);
   border-radius: 5px;
   font-weight: 400;
-  background-color: hsl(var(--white));
+  background-color: var(--bg-color3);
   box-shadow: var(--shadow1);
   transition: var(--transition);
   font-size: 16px;
+  color: rgb(var(--white));
 }
 .isotope-btn-group button:hover {
-  color: rgb(var(--primary-color));
-  box-shadow: var(--shadow2);
+  background-color: rgb(var(--primary-color));
 }
 .isotope-btn-group button.active {
   background-color: rgb(var(--primary-color));
@@ -4646,7 +4720,6 @@ Flash deal section end
 }
 
 .region {
-  margin-top: 10px;
   font-size: 16px;
   text-transform: capitalize;
   display: flex;
@@ -5691,10 +5764,9 @@ Banner end
   position: relative;
   z-index: 0;
 }
-
-.contact-area .thumbs-area {
-  max-width: 250px;
-  margin: auto;
+.contact-section .left-side .img-box {
+  max-width: 487px;
+  margin: 0 auto;
 }
 
 .contact-item-list {
@@ -5706,30 +5778,26 @@ Banner end
 .contact-item-list .item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  border: 1px solid var(--border-color1);
-  padding: 10px;
+  gap: 20px;
+  padding: 25px;
   border-radius: 10px;
-  box-shadow: var(--shadow1);
+  background-color: var(--bg-color2);
 }
 .contact-item-list .item .icon-area {
   border-radius: 5px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
   font-size: 18px;
   color: rgb(var(--primary-color));
-  background-color: rgb(var(--primary-color), 0.1);
+  background-color: var(--bg-color3);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .contact-message-area {
-  background-color: var(--bg-color2);
-  padding: 30px 25px;
-  box-shadow: var(--shadow1);
-  border-radius: 20px;
-  border: 1px solid var(--border-color1);
+  background-color: var(--bg-color1);
 }
 .contact-message-area .contact-header {
   margin-bottom: 30px;
@@ -5745,13 +5813,13 @@ Banner end
 }
 
 /*----------------------------------------------
-Contact section end
+Contact end
 ----------------------------------------------*/
 /*----------------------------------------------
 00. Map section start
 ----------------------------------------------*/
 .map-section iframe {
-  margin-bottom: -6px;
+  margin-bottom: -7px;
   width: 100%;
   height: 450px;
   padding: 5px;
@@ -5765,40 +5833,29 @@ Map section end
 /*----------------------------------------------
 24. Login Signup section start
 ----------------------------------------------*/
-.login-signup-box {
-  border: 1px solid var(--border-color1);
+.login-register-section {
   background-color: var(--bg-color1);
-  box-shadow: var(--shadow1);
-  border-radius: 12px;
-}
-.login-signup-box .img-box {
-  height: 100%;
-}
-.login-signup-box .img-box img {
-  height: 100%;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
-.login-signup-form {
+.login-register-form {
   padding: 30px;
   z-index: 1;
   position: relative;
+  background-color: var(--bg-color2);
+  border-radius: 20px;
 }
-.login-signup-form .logo-area {
+.login-register-form .logo-area {
   margin-bottom: 20px;
   display: inline-flex;
 }
-.login-signup-form .cmn-btn {
+.login-register-form .cmn-btn {
   height: 45px;
 }
-.login-signup-form .cmn-btn2 {
+.login-register-form .cmn-btn2 {
   height: 45px;
   border-radius: 5px;
 }
-.login-signup-form .cmn-btn-group .btn img {
+.login-register-form .cmn-btn-group .btn img {
   width: 16px;
 }
 
@@ -5817,17 +5874,17 @@ Map section end
 }
 
 @media (max-width: 991px) {
-  .login-signup-page .login-signup-form {
+  .login-register-section .login-register-form {
     padding: 40px;
   }
 }
 @media (max-width: 767px) {
-  .login-signup-page .login-signup-form {
+  .login-register-section .login-register-form {
     margin: auto;
   }
 }
 @media (max-width: 575px) {
-  .login-signup-page .login-signup-form {
+  .login-register-section .login-register-form {
     padding: 20px;
   }
 }
@@ -5839,7 +5896,7 @@ Map section end
   right: auto;
   left: 15px;
 }
-.rtl .login-signup-box .img-box img {
+.rtl .login-register-box .img-box img {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-top-left-radius: 20px;
@@ -6306,12 +6363,12 @@ Product details section start
 }
 
 .item-count {
-  padding: 2px;
+  padding: 5px 8px;
   width: auto;
   display: inline-flex;
   align-items: center;
   border: 1px solid var(--border-color1);
-  border-radius: 5px;
+  border-radius: 9999px;
   transition: var(--transition);
   color: rgb(var(--white));
   background-color: var(--bg-color3);
@@ -6331,9 +6388,9 @@ Product details section start
 }
 
 .btn-inc-dec {
-  border-radius: 3px;
-  width: 40px;
-  height: 35px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -6431,12 +6488,62 @@ Product details section start
   transition: var(--transition);
 }
 
+.product-card {
+  background-color: var(--bg-color2);
+  padding: 25px;
+  border-radius: 15px;
+}
+.product-card:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.product-card-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.product-card-item:hover {
+  color: rgb(var(--white));
+}
+.product-card-item:hover .img-box img {
+  transform: scale(1.03);
+}
+.product-card-item .img-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.product-card-item .img-box img {
+  border-radius: 10px;
+  transition: var(--transition);
+}
+.product-card-item .text-box .title {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(var(--white));
+}
+
+.iframe-video {
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+.iframe-video iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
 /*----------------------------------------------
 Product details section end
 ----------------------------------------------*/
 /*----------------------------------------------
 00. Cart section start 
 ----------------------------------------------*/
+.cart-table table {
+  color: var(--body-color);
+}
 .cart-table tbody td {
   padding: 20px 15px;
 }
@@ -6828,15 +6935,18 @@ Docs end
 /*----------------------------------------------
 Reviews details section start 
 ----------------------------------------------*/
+.reviews-details-section {
+  background-color: var(--bg-color1);
+}
 .reviews-details-section .isotop-content {
-  border: 1px solid var(--border-color1);
+  background-color: var(--bg-color2);
   padding: 25px;
   border-radius: 20px;
   font-size: 16px;
 }
 
 .sidebar-card-box {
-  border: 1px solid var(--border-color1);
+  background-color: var(--bg-color2);
   padding: 25px;
   border-radius: 12px;
 }
@@ -6939,4 +7049,24 @@ Reviews details section start
 }
 /*----------------------------------------------
 Reviews details section end 
+----------------------------------------------*/
+/*----------------------------------------------
+Cart section start
+----------------------------------------------*/
+.cart-section {
+  background-color: var(--bg-color1);
+}
+
+/*----------------------------------------------
+Cart section section end 
+----------------------------------------------*/
+/*----------------------------------------------
+Checkout section start
+----------------------------------------------*/
+.checkout-section {
+  background-color: var(--bg-color1);
+}
+
+/*----------------------------------------------
+Checkout section section end 
 ----------------------------------------------*/

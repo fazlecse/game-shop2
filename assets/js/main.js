@@ -80,6 +80,25 @@ $(document).ready(function () {
         }
     });
 
+    // img-slider carousel
+    $('.img-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        margin: 10,
+        autoplayTimeout: 2000,
+        // rtl: true,
+        nav: false,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            768: {
+                items: 1,
+            },
+        }
+    });
+
 
 
 
@@ -407,10 +426,10 @@ if ($(".js-range-slider").length) {
     $(".js-range-slider").ionRangeSlider({
         type: "double",
         min: 0,
-        max: 100,
-        from: 800,
+        max: 1000,
+        from: 200,
         to: 500,
-        grid: true
+        grid: false
     });
 }
 // Range area end

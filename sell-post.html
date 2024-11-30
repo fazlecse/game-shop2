@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <!-- Meanmenu css link -->
     <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <!-- rangeSlider Css link -->
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
 
     <!-- Style Css link -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -551,128 +553,231 @@
     </nav>
     <!-- Nav section end -->
 
-    <!-- Banner section start -->
-    <div class="banner-section banner-section2">
+    <!-- Products section start -->
+    <section class="products-section">
         <div class="container">
             <div class="row g-4 g-xxl-5">
-                <div class="col-lg-3 col-md-4">
-                    <div class="img-box">
-                        <img src="./assets/img/banner/EdF3QC3AnYW7WUKG44yFfEefzzqyQD.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-8">
-                    <div class="text-box">
-                        <h4 class="title">Castle</h4>
-                        <div class="d-flex gap-4 mt-15">
-                            <p class="mb-0">Global</p>
-                            <p class="mb-0 d-flex gap-2"><i class="fa-regular fa-gamepad-modern"></i>PC</p>
+                <div class="col-lg-4">
+                    <div class="sidebar-widget-area">
+                        <h4 class="widget-title">Search</h4>
+                        <div class="search-box">
+                            <input type="text" class="form-control" placeholder="Search here...">
+                            <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
                         </div>
                     </div>
+                    <div class="sidebar-widget-area">
+                        <h4 class="widget-title">Filter by price</h4>
+                        <div class="range-area">
+                            <input type="text" class="js-range-slider" name="my_range" value="">
+                        </div>
+                    </div>
+                    <div class="sidebar-widget-area">
+                        <h4 class="widget-title">Categories</h4>
+                        <div class="checkbox-categories-area">
+                            <div class="section-inner">
+                                <div class="categories-list">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckChecked16" />
+                                        <label class="form-check-label" for="flexCheckChecked16"> <span>Carrom
+                                                Pool</span> <span class="">(20)</span> </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked9"
+                                            checked />
+                                        <label class="form-check-label" for="flexCheckChecked9"> <span>PUBG</span>
+                                            <span class="">(145)</span> </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckChecked10" />
+                                        <label class="form-check-label" for="flexCheckChecked10"> <span>Free Fire</span>
+                                            <span class="">(100)</span> </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckChecked11" />
+                                        <label class="form-check-label" for="flexCheckChecked11"> <span>Call Of
+                                                Duty</span>
+                                            <span class="">(319)</span> </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckChecked12" />
+                                        <label class="form-check-label" for="flexCheckChecked12"> <span>Mobile Legend
+
+                                            </span> <span class="">(50)</span> </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row justify-content-between align-items-center gap-2">
+                        <div class="col-auto">
+                            <h6>04 Items found</h6>
+                        </div>
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center gap-2">
+                                <span>Sort By</span>
+                                <div class="nice-select-section">
+                                    <select class="nice-select right">
+                                        <option data-display="All Type">All Type</option>
+                                        <option value="1">Popular</option>
+                                        <option value="2">Latest</option>
+                                        <option value="3">Featured</option>
+                                        <option value="4">Featured</option>
+                                        <option value="4">Discount</option>
+                                        <option value="4">Date</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-20">
+                        <div class="row g-4">
+                            <div class="col-xl-4 col-lg-6 col-sm-6">
+                                <div class="product-box3">
+                                    <div class="img-box owl-carousel owl-theme img-carousel">
+                                        <div class="item">
+                                            <img src="./assets/img/products/big/clash-of-clan.webp" alt="">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./assets/img/products/big/clash-of-clan2" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="text-box">
+                                        <a class="title" href="sell-post-details.html">Clash of Clans</a>
+                                        <div class="price">Price: <span>$26.0</span></div>
+                                        <div class="d-flex justify-content-between gap-3 mt-2">
+                                            <small>TimeSpent: 8</small>
+                                            <small>Level: 4</small>
+                                        </div>
+                                        <hr class="cmn-hr3">
+                                        <a class="make-offer-btn" href="" data-bs-toggle="modal"
+                                            data-bs-target="#make-offer">make offer <i
+                                                class="fa-regular fa-circle-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-sm-6">
+                                <div class="product-box3">
+                                    <div class="img-box owl-carousel owl-theme img-carousel">
+                                        <div class="item">
+                                            <img src="./assets/img/products/big/6.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="text-box">
+                                        <a class="title" href="sell-post-details.html">PUBG</a>
+                                        <div class="price">Price: <span>$26.0</span></div>
+                                        <div class="d-flex justify-content-between gap-3 mt-2">
+                                            <small>TimeSpent: 8</small>
+                                            <small>Level: 4</small>
+                                        </div>
+                                        <hr class="cmn-hr3">
+                                        <a class="make-offer-btn" href="" data-bs-toggle="modal"
+                                            data-bs-target="#make-offer">make offer <i
+                                                class="fa-regular fa-circle-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-sm-6">
+                                <div class="product-box3">
+                                    <div class="img-box owl-carousel owl-theme img-carousel">
+                                        <div class="item">
+                                            <img src="./assets/img/products/big/league-of-legends.png" alt="">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./assets/img/products/big/league-of-legends2.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="text-box">
+                                        <a class="title" href="sell-post-details.html">League of Legends</a>
+                                        <div class="price">Price: <span>$26.0</span></div>
+                                        <div class="d-flex justify-content-between gap-3 mt-2">
+                                            <small>TimeSpent: 8</small>
+                                            <small>Level: 4</small>
+                                        </div>
+                                        <hr class="cmn-hr3">
+                                        <a class="make-offer-btn" href="" data-bs-toggle="modal"
+                                            data-bs-target="#make-offer">make offer <i
+                                                class="fa-regular fa-circle-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-sm-6">
+                                <div class="product-box3">
+                                    <div class="img-box owl-carousel owl-theme img-carousel">
+                                        <div class="item">
+                                            <img src="./assets/img/products/big/5.png" alt="">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./assets/img/products/big/free-fire-photo-2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="text-box">
+                                        <a class="title" href="sell-post-details.html">Free Fire</a>
+                                        <div class="price">Price: <span>$26.0</span></div>
+                                        <div class="d-flex justify-content-between gap-3 mt-2">
+                                            <small>TimeSpent: 8</small>
+                                            <small>Level: 4</small>
+                                        </div>
+                                        <hr class="cmn-hr3">
+                                        <a class="make-offer-btn" href="" data-bs-toggle="modal"
+                                            data-bs-target="#make-offer">make offer <i
+                                                class="fa-regular fa-circle-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-sm-6">
+                                <div class="product-box3">
+                                    <div class="img-box owl-carousel owl-theme img-carousel">
+                                        <div class="item">
+                                            <img src="./assets/img/products/big/Path-of-Exile-POE-TH.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="text-box">
+                                        <a class="title" href="sell-post-details.html">Path of Exile POE TH</a>
+                                        <div class="price">Price: <span>$26.0</span></div>
+                                        <div class="d-flex justify-content-between gap-3 mt-2">
+                                            <small>TimeSpent: 8</small>
+                                            <small>Level: 4</small>
+                                        </div>
+                                        <hr class="cmn-hr3">
+                                        <a class="make-offer-btn" href="" data-bs-toggle="modal"
+                                            data-bs-target="#make-offer">make offer <i
+                                                class="fa-regular fa-circle-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- pagination section start -->
+                    <div class="pagination-section mt-20">
+                        <nav aria-label="...">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fal fa-long-arrow-left"></i></a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active" aria-current="page">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fal fa-long-arrow-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- pagination section end -->
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Banner section end -->
-
-
-    <!-- Product details section start -->
-    <section class="product-details-section">
-        <div class="container">
-            <div class="row g-4 g-xxl-5">
-                <div class="col-lg-8 order-2 order-lg-1">
-                    <h4>Castle (Global) - Direct Top -Up</h4>
-                    <div class="product-card mt-15">
-                        <div class="row g-4">
-                            <div class="col-lg-4 col-md-6">
-                                <a href="" class="product-card-item">
-                                    <div class="img-box">
-                                        <img src="./assets/img/products/clash-of-clan-gold-pass.webp" alt="">
-                                    </div>
-                                    <div class="text-box">
-                                        <div class="title">Clash of Clans Gold Pass</div>
-                                        <div>GLobal</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <a href="" class="product-card-item">
-                                    <div class="img-box">
-                                        <img src="./assets/img/products/PUBG-Mobile-UC-(Global).webp" alt="">
-                                    </div>
-                                    <div class="text-box">
-                                        <div class="title">PUBG Mobile UC (Global)</div>
-                                        <div>GLobal</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <a href="" class="product-card-item">
-                                    <div class="img-box">
-                                        <img src="./assets/img/products/Free-Fire-Max-Diamonds.webp" alt="">
-                                    </div>
-                                    <div class="text-box">
-                                        <div class="title">Free Fire Max Diamonds</div>
-                                        <div>GLobal</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <h4>Castle (Global) - Game Cards</h4>
-                    <div class="product-card mt-15">
-                        <div class="row g-4">
-                            <div class="col-lg-4 col-md-6">
-                                <a href="" class="product-card-item">
-                                    <div class="img-box">
-                                        <img src="./assets/img/products/google-play-gift-card.webp" alt="">
-                                    </div>
-                                    <div class="text-box">
-                                        <div class="title">Google Play Gift Card</div>
-                                        <div>Germany</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <a href="" class="product-card-item">
-                                    <div class="img-box">
-                                        <img src="./assets/img/products/iTunes-Gift-Card.webp" alt="">
-                                    </div>
-                                    <div class="text-box">
-                                        <div class="title">iTunes Gift Card (JP)</div>
-                                        <div>Japan</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <a href="" class="product-card-item">
-                                    <div class="img-box">
-                                        <img src="./assets/img/products/big/robolox.jpg" alt="">
-                                    </div>
-                                    <div class="text-box">
-                                        <div class="title">Roblox Game Cards (Global)</div>
-                                        <div>GLobal</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 order-1 order-lg-2">
-                    <div class="sidebar-widget-area">
-                        <h4 class="widget-title">About Castle</h4>
-                        <p>Grab your friends, hone your blades, and set off for adventure in Trove, the ultimate action
-                            MMO!
-                        </p>
-                        <h4 class="mt-20">Castle</h4>
-                        <div class="iframe-video mt-20">
-                            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&amp;amp;mute=1">
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
     </section>
-    <!-- Product details section end -->
+    <!-- Products section end -->
 
     <!-- Footer Section start -->
     <section class="footer-section">
@@ -782,7 +887,10 @@
 
 
 
+
+
     <!-- Modal section start -->
+    <!-- Lang currency modal -->
     <div class="modal fade" id="lang-currency-modal" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered ">
@@ -825,6 +933,38 @@
             </div>
         </div>
     </div>
+
+    <!-- product-box modal -->
+    <div class="modal fade" id="make-offer" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="staticBackdropLabel">Make Offer</h4>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-light fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <label class="form-label" for="Amount">Amount</label>
+                            <input class="form-control" type="text" id="Amount">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="Description">Description</label>
+                            <textarea class="form-control" name="" id="Description" rows="4"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer mt-10">
+                    <!-- <button type="button" class="cmn-btn2" data-bs-dismiss="modal">Close</button> -->
+                    <a href="" class="cmn-btn w-100 mt-10">Submit</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Modal section end -->
 
 
@@ -833,61 +973,26 @@
 
 
 
-
-
-
-    <!-- Jquery_Js_link -->
-
+    <!-- Jquery Js link -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
-
-    <!-- Bootstrap_Js_link -->
+    <!-- Bootstrap Js link -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- Owl_carausel_Js_link -->
+    <!-- Owl carausel Js link -->
     <script src="assets/js/owl.carousel.min.js"></script>
-    <!-- Swiper_Js_link -->
+    <!-- Swiper Js link -->
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- select2_Js_link -->
+    <!-- select2 Js link -->
     <script src="assets/js/select2.min.js"></script>
     <!-- Nice select Js link -->
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <!-- Meanmenu Js link -->
     <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <!-- rangeSlider Js link -->
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
 
 
-    <!-- Main_Js_link -->
+    <!-- Main Js link -->
     <script src="assets/js/main.js"></script>
-
-    <script>
-        // counter start
-        const itemCounts = document.querySelectorAll('.item-count');
-        itemCounts.forEach(itemCount => {
-            const decreaseBtn = itemCount.querySelector('[data-decrease]');
-            const increaseBtn = itemCount.querySelector('[data-increase]');
-            const valueInput = itemCount.querySelector('[data-value]');
-
-            decreaseBtn.addEventListener('click', () => {
-                const currentValue = parseInt(valueInput.value);
-                if (currentValue > 1) {
-                    valueInput.value = currentValue - 1;
-                }
-            })
-            increaseBtn.addEventListener('click', () => {
-                const currentValue = parseInt(valueInput.value);
-                valueInput.value = currentValue + 1;
-            })
-        })
-        // counter end
-
-        // Active class start
-        const productBoxs = document.querySelectorAll('.product-box2');
-        productBoxs.forEach(productBox => {
-            productBox.addEventListener('click', () => {
-                productBoxs.forEach(productBox => productBox.classList.remove('active'));
-                productBox.classList.add('active');
-            })
-        })
-        // Active class end
-    </script>
 
 </body>
 

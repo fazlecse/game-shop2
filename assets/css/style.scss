@@ -832,9 +832,11 @@ body::-webkit-scrollbar-thumb {
 // Modal section end
 
 // Language currency modal start
-#lang-currency-modal {
-    .modal-content {
-        padding: 20px 40px;
+@media(min-width: 576px) {
+    #lang-currency-modal {
+        .modal-content {
+            padding: 20px 40px;
+        }
     }
 }
 
@@ -1356,6 +1358,12 @@ Reusable style section start
 @media(min-width:768px) {
     .search-box2 .form-control {
         width: 350px;
+    }
+}
+
+@media(min-width: 992px) and (max-width:1199px) {
+    .search-box2 .form-control {
+        width: 258px;
     }
 }
 
@@ -2223,6 +2231,17 @@ Offcanvas end
 
 }
 
+.make-offer-btn {
+    text-transform: capitalize;
+    display: inline-flex;
+    gap: 5px;
+    transition: var(--transition);
+
+    &:hover {
+        gap: 10px;
+    }
+}
+
 /*----------------------------------------------
 Alerts section start 
 ----------------------------------------------*/
@@ -2571,7 +2590,7 @@ section {
 // Badge section end
 hr {
     margin: 10px 0;
-    border-color: var(--border-color1);
+    border-color: var(--border-color2);
     opacity: 1;
 }
 
@@ -3219,10 +3238,19 @@ hr.divider:after {
             border: 4px solid rgb(var(--primary-color));
         }
 
+        .irs-handle {
+            width: 0;
+            height: 0;
+        }
+
         .irs-handle>i:first-child {
-            top: -3px;
+            top: -2px;
             left: 0;
-            margin-left: 0;
+        }
+
+        .irs-min,
+        .irs-max {
+            display: none;
         }
     }
 }
@@ -3255,7 +3283,7 @@ hr.divider:after {
 
 
     .form-check {
-        margin: 10px 0;
+        margin: 15px 0;
 
         .form-check-input {
             cursor: pointer;
@@ -6020,6 +6048,46 @@ Flash deal section end
     }
 }
 
+.product-box3 {
+    background-color: var(--bg-color3);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .img-box {
+        .owl-item {
+            img {
+                height: 180px;
+                object-fit: cover;
+                border-radius: 8px;
+                width: 100%;
+            }
+        }
+    }
+
+    .text-box {
+
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .price {
+            margin-top: 5px;
+        }
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+}
+
 .trending-offers-carousel {
     position: relative;
 
@@ -7221,7 +7289,6 @@ Copyright end
 
     .img-box {
         max-width: 300px;
-        margin-bottom: -50px;
 
         img {
             width: 100%;
@@ -7295,12 +7362,16 @@ Copyright end
 }
 
 // Responsive banner section start
-@media(max-width: 991px) {
-    .banner-section {
-        padding-top: 140px;
-        padding-bottom: 50px;
+@media(min-width: 768px) {
+    .banner-section .img-box {
+        margin-bottom: -50px;
     }
+}
 
+@media(max-width: 991px) {
+    .banner-section2{
+        padding-top: 150px;
+    }
     .banner-section h3 {
         font-size: 36px
     }
@@ -7793,6 +7864,7 @@ Login Signup end
 
     .img-box {
         width: 90px;
+        min-width: 90px;
         height: 90px;
 
 
@@ -8000,6 +8072,7 @@ Policy section end
 27. Error section start
 ----------------------------------------------*/
 .error-section {
+    overflow: hidden;
     height: 100vh;
     width: 100vw;
     background-color: var(--bg-color1);
@@ -9009,4 +9082,44 @@ Checkout section start
 
 /*----------------------------------------------
 Checkout section section end 
+----------------------------------------------*/
+
+/*----------------------------------------------
+Sell post details section start
+----------------------------------------------*/
+.sell-post-details-section {
+    background-color: var(--bg-color1);
+
+
+}
+
+@media(min-width:576px) {
+    .sell-post-details-section {
+        .product-box3 {
+            flex-direction: row;
+            padding: 20px;
+            align-items: center;
+
+            .img-box {
+                width: 200px;
+                min-width: 200px;
+                height: 200px;
+
+                .owl-item img {
+                    height: 200px;
+                }
+            }
+
+            .text-box {
+                .title {
+                    font-size: 20px;
+                }
+            }
+
+        }
+    }
+}
+
+/*----------------------------------------------
+Sell post details section end 
 ----------------------------------------------*/

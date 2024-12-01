@@ -2313,6 +2313,7 @@ Cmn table end
 
 // Responsive modal fullscreen section end
 // Modal fullscreen section end
+
 /*----------------------------------------------
 Chat section start
 ----------------------------------------------*/
@@ -2325,7 +2326,7 @@ Chat section start
 .single-btn {
     width: 40px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 7px;
     background: rgb(var(--primary-color), 0.1);
     display: flex;
     align-items: center;
@@ -2356,7 +2357,7 @@ Chat section start
     border-radius: 10px;
     margin-right: 10px;
     font-size: 16px;
-    color: var(--heading-color);
+    color: rgb(var(--heading-color));
 
     &:hover {
         background-color: rgb(var(--primary-color), 0.1);
@@ -2407,6 +2408,27 @@ Chat section start
     }
 }
 
+.chat-conversation-btn {
+    height: 40px;
+    width: 40px;
+    background: rgb(var(--primary-color));
+    border-radius: 8px;
+    transition: all .3s ease-in-out;
+    font-size: 16px;
+    color: rgb(var(--white));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 1px solid rgb(var(--primary-color));
+
+    &:hover {
+        color: rgb(var(--primary-color));
+        background: rgb(var(--white));
+    }
+}
+
 .message-container {
     box-shadow: var(--shadow1);
     border: 1px solid var(--border-color1);
@@ -2418,7 +2440,7 @@ Chat section start
     .chat-box {
         position: relative;
         background-color: var(--gray);
-        background-color: #EFF3F8;
+        background-color: #f7f7f7;
         margin: 20px;
         border-radius: 10px;
         padding: 5px 0;
@@ -2459,7 +2481,7 @@ Chat section start
                 .title {
                     font-size: 15px;
                     font-weight: 600;
-                    color: var(--heading-color);
+                    color: rgb(var(--heading-color));
                 }
 
                 .description {
@@ -2490,14 +2512,33 @@ Chat section start
                 }
             }
 
-            .message-text {
-                padding: 5px 10px;
-                border-radius: 15px;
-                border-top-left-radius: 0;
-                background: rgb(var(--primary-color));
-                color: rgb(var(--white));
+            .message-text-box {
                 max-width: 85%;
+
+                .message-text {
+                    padding: 5px 10px;
+                    border-radius: 15px;
+                    border-top-left-radius: 0;
+                    background: rgb(var(--primary-color));
+                    color: rgb(var(--white));
+
+                }
+
+                .attach-file-box {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 5px;
+                    margin-top: 6px;
+                }
+
+                .time {
+                    margin-bottom: 0;
+                    margin-top: 2px;
+                    font-size: 12px;
+                }
             }
+
+
         }
 
         .message-bubble-right {
@@ -2508,11 +2549,21 @@ Chat section start
                 margin-left: 10px;
             }
 
-            .message-text {
-                border-top-left-radius: 15px;
-                border-top-right-radius: 0;
-                background: var(--bg-color1);
-                color: var(--heading-color);
+            .message-text-box {
+                .message-text {
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 0;
+                    background: var(--bg-color1);
+                    color: rgb(var(--heading-color));
+                }
+
+                .attach-file-box {
+                    justify-content: end;
+                }
+
+                .time {
+                    text-align: right;
+                }
             }
 
         }
@@ -2551,7 +2602,7 @@ Chat section start
             font-size: 20px;
             font-weight: 700;
             font-family: var(--heading-font);
-            color: var(--heading-color);
+            color: rgb(var(--heading-color));
             text-transform: capitalize;
             margin-right: 10px;
         }
@@ -2587,7 +2638,7 @@ Chat section start
                         i {
                             font-size: 12px;
                             margin: 0 5px;
-                            color: var(--heading-color);
+                            color: rgb(var(--heading-color));
 
                             &:hover {
                                 color: rgb(var(--primary-color));
@@ -2598,7 +2649,7 @@ Chat section start
 
                 .chat-title {
                     font-size: 14px;
-                    color: var(--heading-color);
+                    color: rgb(var(--heading-color));
                     text-transform: capitalize;
                     font-family: var(--heading-font);
                     font-weight: 700;
@@ -2774,6 +2825,7 @@ Chat section start
 /*----------------------------------------------
 Chat section end
 ----------------------------------------------*/
+
 // User data area start
 .user-data-area {
     margin-bottom: 20px;

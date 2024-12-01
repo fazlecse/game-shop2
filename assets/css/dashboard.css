@@ -1919,7 +1919,7 @@ Chat section start
 .single-btn {
   width: 40px;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 7px;
   background: rgb(var(--primary-color), 0.1);
   display: flex;
   align-items: center;
@@ -1947,7 +1947,7 @@ Chat section start
   border-radius: 10px;
   margin-right: 10px;
   font-size: 16px;
-  color: var(--heading-color);
+  color: rgb(var(--heading-color));
 }
 .single-btn2:hover {
   background-color: rgb(var(--primary-color), 0.1);
@@ -1989,6 +1989,26 @@ Chat section start
   margin-left: 0;
 }
 
+.chat-conversation-btn {
+  height: 40px;
+  width: 40px;
+  background: rgb(var(--primary-color));
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  font-size: 16px;
+  color: rgb(var(--white));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 1px solid rgb(var(--primary-color));
+}
+.chat-conversation-btn:hover {
+  color: rgb(var(--primary-color));
+  background: rgb(var(--white));
+}
+
 .message-container {
   box-shadow: var(--shadow1);
   border: 1px solid var(--border-color1);
@@ -1999,7 +2019,7 @@ Chat section start
 .message-container .chat-box {
   position: relative;
   background-color: var(--gray);
-  background-color: #EFF3F8;
+  background-color: #f7f7f7;
   margin: 20px;
   border-radius: 10px;
   padding: 5px 0;
@@ -2035,7 +2055,7 @@ Chat section start
 .message-container .chat-box .profile-info .content-area .title {
   font-size: 15px;
   font-weight: 600;
-  color: var(--heading-color);
+  color: rgb(var(--heading-color));
 }
 .message-container .chat-box .profile-info .content-area .description {
   font-size: 13px;
@@ -2059,13 +2079,26 @@ Chat section start
   width: 30px;
   height: 30px;
 }
-.message-container .chat-box .message-bubble .message-text {
+.message-container .chat-box .message-bubble .message-text-box {
+  max-width: 85%;
+}
+.message-container .chat-box .message-bubble .message-text-box .message-text {
   padding: 5px 10px;
   border-radius: 15px;
   border-top-left-radius: 0;
   background: rgb(var(--primary-color));
   color: rgb(var(--white));
-  max-width: 85%;
+}
+.message-container .chat-box .message-bubble .message-text-box .attach-file-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+}
+.message-container .chat-box .message-bubble .message-text-box .time {
+  margin-bottom: 0;
+  margin-top: 2px;
+  font-size: 12px;
 }
 .message-container .chat-box .message-bubble-right {
   flex-direction: row-reverse;
@@ -2074,11 +2107,17 @@ Chat section start
   margin-right: 0;
   margin-left: 10px;
 }
-.message-container .chat-box .message-bubble-right .message-text {
+.message-container .chat-box .message-bubble-right .message-text-box .message-text {
   border-top-left-radius: 15px;
   border-top-right-radius: 0;
   background: var(--bg-color1);
-  color: var(--heading-color);
+  color: rgb(var(--heading-color));
+}
+.message-container .chat-box .message-bubble-right .message-text-box .attach-file-box {
+  justify-content: end;
+}
+.message-container .chat-box .message-bubble-right .message-text-box .time {
+  text-align: right;
 }
 .message-container .chat-box .chat-box-bottom {
   display: flex;
@@ -2110,7 +2149,7 @@ Chat section start
   font-size: 20px;
   font-weight: 700;
   font-family: var(--heading-font);
-  color: var(--heading-color);
+  color: rgb(var(--heading-color));
   text-transform: capitalize;
   margin-right: 10px;
 }
@@ -2143,14 +2182,14 @@ Chat section start
 .message-sidebar .conversations-wrapper li .item-link .item-header .chat-action i {
   font-size: 12px;
   margin: 0 5px;
-  color: var(--heading-color);
+  color: rgb(var(--heading-color));
 }
 .message-sidebar .conversations-wrapper li .item-link .item-header .chat-action i:hover {
   color: rgb(var(--primary-color));
 }
 .message-sidebar .conversations-wrapper li .item-link .chat-title {
   font-size: 14px;
-  color: var(--heading-color);
+  color: rgb(var(--heading-color));
   text-transform: capitalize;
   font-family: var(--heading-font);
   font-weight: 700;

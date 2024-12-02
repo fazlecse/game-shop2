@@ -58,7 +58,7 @@ Typography
   --primary-color: 111, 79, 242;
   --body-color: #c6c7cb;
   --body-color: #e2e3e7;
-  --heading-color: 0, 0, 0;
+  --heading-color: 255, 255, 255;
   --black: 0, 0, 0;
   --btn-hover-bg: hsl(var(--base)/.8);
   --btn-hover-bg2: #332f8c;
@@ -228,7 +228,7 @@ h5 {
   font-family: var(--heading-font);
   font-weight: 700;
   line-height: 1.2;
-  color: rgb(var(--white));
+  color: rgb(var(--heading-color));
 }
 
 h1 {
@@ -715,6 +715,11 @@ body::-webkit-scrollbar-thumb:hover {
 
 .owl-theme .owl-dots .owl-dot span {
   transition: all 0.5s ease-in-out;
+}
+
+.rtl .owl-nav .owl-next,
+.rtl .owl-nav .owl-prev {
+  transform: rotate(180deg);
 }
 
 .modal {
@@ -3598,9 +3603,12 @@ Chat section start
   margin-right: 10px;
   margin-left: 0;
 }
-.rtl .chat-box .message-bubble-right .message-text {
+.rtl .chat-box .message-bubble-right .message-text-box .message-text {
   border-top-right-radius: 15px;
   border-top-left-radius: 0;
+}
+.rtl .chat-box .message-bubble-right .message-text-box .time {
+  text-align: left;
 }
 
 .dark-theme .message-container .chat-box {
@@ -5372,6 +5380,11 @@ Buy game id section end
     height: 324px;
   }
 }
+.rtl .testimonial-carousel .owl-nav {
+  right: auto;
+  left: 0;
+}
+
 /*----------------------------------------------
 Testimonial end
 ----------------------------------------------*/
@@ -5931,17 +5944,6 @@ Newsletter end
   font-size: 20px;
   font-family: var(--heading-font);
   color: var(--white);
-}
-.footer-section .footer-widget input[type=email] {
-  margin: 30px 0 20px 0;
-  border: none;
-  border-bottom: 1px solid var(--border-color2);
-  background: var(--bg-color1);
-  border-radius: 15px;
-}
-.footer-section .footer-widget input[type=email]:focus {
-  border-bottom: 1px solidrgb(var(--primary-color));
-  box-shadow: none;
 }
 
 .footer-widget .widget-logo {
@@ -6892,6 +6894,7 @@ Product details section start
 }
 .product-card-item .img-box {
   width: 60px;
+  min-width: 60px;
   height: 60px;
   border-radius: 10px;
   overflow: hidden;

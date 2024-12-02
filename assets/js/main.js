@@ -25,7 +25,7 @@ $(document).ready(function () {
         margin: 20,
         autoplayTimeout: 2000,
         navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
-        // rtl: true,
+        rtl: true,
         responsive: {
             0: {
                 items: 1,
@@ -59,7 +59,7 @@ $(document).ready(function () {
         autoplay: true,
         margin: 20,
         autoplayTimeout: 2000,
-        // rtl: true,
+        rtl: true,
         nav: true,
         dots: false,
         navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],

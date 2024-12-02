@@ -63,7 +63,7 @@ Typography
     --primary-color: 111, 79, 242;
     --body-color: #c6c7cb;
     --body-color: #e2e3e7;
-    --heading-color: 0, 0, 0;
+    --heading-color: 255, 255, 255;
     --black: 0, 0, 0;
     --btn-hover-bg: hsl(var(--base)/.8);
     --btn-hover-bg2: #332f8c;
@@ -250,7 +250,7 @@ h5 {
     font-family: var(--heading-font);
     font-weight: 700;
     line-height: 1.2;
-    color: rgb(var(--white));
+    color: rgb(var(--heading-color));
 }
 
 h1 {
@@ -798,6 +798,17 @@ body::-webkit-scrollbar-thumb {
 
 .owl-theme .owl-dots .owl-dot span {
     transition: all 0.5s ease-in-out;
+}
+
+.rtl {
+    .owl-nav {
+
+        .owl-next,
+        .owl-prev {
+            transform: rotate(180deg);
+        }
+
+    }
 }
 
 // Owl carouse section start
@@ -4476,9 +4487,16 @@ Chat section start
                 margin-left: 0;
             }
 
-            .message-text {
-                border-top-right-radius: 15px;
-                border-top-left-radius: 0;
+            .message-text-box {
+                .message-text {
+                    border-top-right-radius: 15px;
+                    border-top-left-radius: 0;
+
+                }
+
+                .time {
+                    text-align: left;
+                }
             }
         }
     }
@@ -6689,6 +6707,15 @@ Buy game id section end
 }
 
 // Respoinsive testimonial section end
+// Rtl testimonial section start
+.rtl {
+    .testimonial-carousel .owl-nav {
+        right: auto;
+        left: 0;
+    }
+}
+
+// Rtl testimonial section end
 /*----------------------------------------------
 Testimonial end
 ----------------------------------------------*/
@@ -7434,19 +7461,6 @@ Newsletter end
             font-size: 20px;
             font-family: var(--heading-font);
             color: var(--white);
-        }
-
-        input[type=email] {
-            margin: 30px 0 20px 0;
-            border: none;
-            border-bottom: 1px solid var(--border-color2);
-            background: var(--bg-color1);
-            border-radius: 15px;
-
-            &:focus {
-                border-bottom: 1px solidrgb(var(--primary-color));
-                box-shadow: none;
-            }
         }
     }
 }
@@ -8674,6 +8688,7 @@ Product details section start
 
     .img-box {
         width: 60px;
+        min-width: 60px;
         height: 60px;
         border-radius: 10px;
         overflow: hidden;

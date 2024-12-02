@@ -134,11 +134,11 @@ $(document).ready(function () {
                 bar: {
                     horizontal: false,
                     columnWidth: '55%',
-                    endingShape: 'rounded'
+                    endingShape: 'rounded',
                 },
             },
             dataLabels: {
-                enabled: false
+                enabled: false,
             },
             stroke: {
                 show: true,
@@ -155,7 +155,7 @@ $(document).ready(function () {
                 }
             },
             fill: {
-                opacity: 1
+                opacity: 1,
             },
             tooltip: {
                 y: {

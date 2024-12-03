@@ -5,7 +5,6 @@ const preloaderFunction = () => {
     preloader.style.display = "none";
 };
 
-
 // Toggle sidebar start
 document.querySelectorAll('.toggle-sidebar-btn').forEach(button => {
     button.addEventListener('click', () => {
@@ -52,9 +51,6 @@ function formatState(state) {
 // cmn-select2 with image start
 
 
-
-
-
 $(document).ready(function () {
     // owl carousel dashboard card
     $('.carousel-1').owlCarousel({
@@ -82,15 +78,6 @@ $(document).ready(function () {
             }
         }
     });
-
-    // Bootstrap datepicker start
-    if ($('.date').length) {
-        $('.date').datepicker({
-            // options here
-            format: 'dd/mm/yyyy',
-        });
-    }
-    // Bootstrap datepicker end
     //Multi step progress section start
 
     // Jquery UI start
@@ -130,6 +117,11 @@ $(document).ready(function () {
                 type: 'bar',
                 height: 350
             },
+            legend: {
+                labels: {
+                    colors: '#ffffff',
+                }
+            },
             plotOptions: {
                 bar: {
                     horizontal: false,
@@ -147,11 +139,24 @@ $(document).ready(function () {
             },
             xaxis: {
                 categories: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                labels: {
+                    style: {
+                        colors: '#ffffff',
+                    }
+                }
 
             },
             yaxis: {
                 title: {
-                    text: '$ (thousands)'
+                    text: '$ (thousands)',
+                    style: {
+                        color: '#ffffff'
+                    }
+                },
+                labels: {
+                    style: {
+                        colors: '#ffffff',
+                    }
                 }
             },
             fill: {
@@ -198,7 +203,6 @@ $(document).ready(function () {
     // Apexcharts end
 
     // Circle progress start
-
     if ($('.circle').length) {
         $('.first.circle').circleProgress({
             value: 0.90,
@@ -237,44 +241,7 @@ $(document).ready(function () {
             $(this).find('span').addClass('percent');
         });
     }
-
     // Circle progress start
-
-    // Line progressbar start
-    if ($('#jq1').length) {
-        $('#jq1').LineProgressbar({
-            percentage: 90,
-            fillBackgroundColor: '#fec339',
-            height: '5px',
-            radius: '5px',
-        });
-    }
-    if ($('#jq2').length) {
-        $('#jq2').LineProgressbar({
-            percentage: 50,
-            fillBackgroundColor: '#fec339',
-            height: '5px',
-            radius: '5px',
-        });
-    }
-    if ($('#jq3').length) {
-        $('#jq3').LineProgressbar({
-            percentage: 70,
-            fillBackgroundColor: '#fec339',
-            height: '5px',
-            radius: '5px',
-        });
-    }
-    if ($('#jq4').length) {
-        $('#jq4').LineProgressbar({
-            percentage: 60,
-            fillBackgroundColor: '#fec339',
-            height: '5px',
-            radius: '5px',
-        });
-    }
-
-    // Line progressbar end
 
 });
 

@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAMOT Dashboard</title>
+    <title>ChainCity</title>
     <!-- Favicon link -->
-    <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
     <!-- Fontawesome-6 Js link -->
     <link rel="stylesheet" href="assets/css/all.min.css">
-
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <!-- Bootstrap 5 Css link -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Owl carousel Css link -->
@@ -32,7 +32,7 @@
     <div class="dashboard-wrapper">
         <!-- Preloader section start -->
         <div id="preloader">
-            <img src="./assets/img/preloader/game.png" alt="">
+            <img src="./assets/img/preloader/house.png" alt="">
         </div>
         <!-- Preloader section end -->
 
@@ -151,7 +151,7 @@
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                             <li class="dropdown-header d-flex justify-content-center align-items-center text-start">
                                 <div class="profile-thum">
-                                    <img src="assets/img/person/2.jpg" alt="GAMOT">
+                                    <img src="assets/img/person/2.jpg" alt="ChainCity">
                                 </div>
                                 <div class="profile-content">
                                     <h6>John Doe</h6>
@@ -204,13 +204,15 @@
         <!-- Bottom Mobile Tab nav section start -->
         <ul class="nav bottom-nav fixed-bottom d-lg-none">
             <li class="nav-item">
-                <a class="nav-link toggle-sidebar-btn" aria-current="page"><i class="fa-light fa-list"></i></a>
+                <a class="nav-link toggle-sidebar-btn" aria-current="page">
+                    <i class="fa-light fa-list"></i>
+                </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#"><i class="fa-light fa-house"></i></a>
+                <a class="nav-link active" href="#"><i class="fa-regular fa-house"></i></a>
             </li>
             <li class="nav-item">
                 <a onclick="searchBar()" class="nav-link search-bar-toggle" href="#"><i
@@ -226,10 +228,9 @@
         <aside id="sidebar" class="sidebar">
             <div class="logo-container">
                 <a href="user-panel.html" class="logo d-flex align-items-center">
-                    <img src="assets/img/logo/logo.avif" alt="GAMOT">
+                    <img src="assets/img/logo/logo.png" alt="ChainCity">
                 </a>
             </div>
-
             <ul class="sidebar-nav" id="sidebar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" href="user-panel.html">
@@ -344,200 +345,68 @@
                         <span>chat</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="support-ticket.html">
-                        <i class="fa-regular fa-headset"></i>
-                        <span>support ticket</span>
-                    </a>
-                </li>
             </ul>
         </aside>
         <!-- Sidebar section end -->
 
-
-        <!-- Main section start -->
-        <main id="main" class="main bg-color2">
+        <main id="main" class="main">
             <div class="main-wrapper">
+                <!-- Page title start -->
                 <div class="pagetitle">
-                    <h4 class="mb-1">new order</h4>
                     <nav>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active">new order</li>
+                            <li class="breadcrumb-item active">create new ticket</li>
                         </ol>
                     </nav>
                 </div>
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-header pb-0 border-0">
-                                <h4>select service</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="row g-3">
-                                    <div class="col-12">
-                                        <label class="form-label">Category</label>
-                                        <select class="cmn-select2" name="state">
-                                            <option value="0" hidden>Select Category</option>
-                                            <option value="1">🥇 [VIP]
-                                            </option>
-                                            <option value="2">🔥Cheapest Services On The Market</option>
-                                            <option value="3">💬 Instagram - Verified / Power Comments [ Own Service ]
-                                            </option>
-                                            <option value="4">🔮 TikTok
-                                            </option>
-                                            <option value="5">📺 IGTV Likes</option>
-                                            <option value="6">📦 YouTube - Packages
-                                            </option>
-                                            <option value="7">🛑 YouTube - Watch Hours
-                                            </option>
-                                            <option value="8">🛑 YouTube - Subscribers
-                                            </option>
-                                            <option value="9">🛑 YouTube - Likes / Comments / Shares
-                                            </option>
-                                            <option value="10">🛑 YouTube - Views / Live Stream Views
-                                            </option>
-                                            <option value="11">🛑 YouTube - GEO Targeted Views
-                                            </option>
-                                            <option value="12">📦 Instagram - Packages
-                                            </option>
-                                            <option value="13">💣 Instagram - Followers
-                                            </option>
-                                            <option value="14">💣 Instagram - Likes
-                                            </option>
-                                            <option value="15">💣 Instagram - Views / Comments / Impressions / Saves /
-                                                Reach
-                                            </option>
-                                            <option value="16">💣 Instagram - Reels
-                                            </option>
-                                            <option value="17">🔵 Facebook - Page Likes / Followers
-                                            </option>
-                                            <option value="18">🔵 Facebook - Post Likes / Emoticons
-                                            </option>
-                                            <option value="19">🔵 Facebook - Views / Comments / Shares
-                                            </option>
-                                            <option value="20">🔵 Facebook - Live Stream Views
-                                            </option>
-                                            <option value="21">♨♣ Top Best Seller ⚑</option>
-                                            <option value="22">♨♣ Cheap Services [Go2Top Panel Cheap Services] ⚑
-                                            </option>
-                                            <option value="23">♨♣ Web Application Development [Special Enterprise] ⚑
-                                            </option>
-                                            <option value="24">♨♣ Mobile App Development [Special Enterprise] ⚑</option>
-                                            <option value="25">♨♣ E-Commerce Solution [Special Enterprise] ⚑</option>
-                                            <option value="26">♨♣ Logo Design [Special Enterprise] ⚑</option>
-                                            <option value="27">♨♣ Banner Design [Special Enterprise] ⚑</option>
-                                            <option value="28">♨♣ Dynamic Website Development ⚑</option>
-                                            <option value="29">♨♣ Video Production [Special Enterprise] ⚑</option>
-                                            <option value="30">♨♣ SEO - Search Engine Optimization [Special Enterprise]
-                                                ⚑
-                                            </option>
-                                            <option value="31">♨♣ PPC - Advertising [Special Enterprise] ⚑</option>
-                                            <option value="32">♨♣ Mobile App Promotion [Special Enterprise] ⚑</option>
-                                            <option value="33">♨♣ Podcast Promotion [iTunes &amp; Spotify] ⚑</option>
-                                            <option value="34">♨♣ Instagram Followers [No Refill] ⚑</option>
-                                            <option value="35">♨♣ Instagram Followers [Refill Guarantee] ⚑</option>
-                                            <option value="36">♨♣Instagram Followers REAL Packages⚑</option>
-                                            <option value="37">♨♣ Instagram Followers [Country Targeted] ⚑</option>
-                                            <option value="38">♨♣ Instagram Likes ⚑</option>
-                                            <option value="40">Instagram Data Scraper [Accounts / Links must be Public]
-                                            </option>
-                                            <option value="41">Discord Direct Message</option>
-                                            <option value="42">Twitter Data Scraper [Accounts / Links must be Public]
-                                            </option>
-                                            <option value="43">Twitter Mentions</option>
-                                            <option value="44">Instagram TOP Services [JAP EXCLUSIVE]</option>
-                                        </select>
-                                        </select>
-                                    </div>
-                                    <div class="col-12">
-                                        <label class="form-label">Category</label>
-                                        <select class="cmn-select2" name="state">
-                                            <option value="" disabled="" selected="">Select Service</option>
-                                            <option value="1">🙋&zwj;♂️ Followers [Ultra-High Quality Profiles]</option>
-                                            <option value="2">👍 Likes - Non Drop </option>
-                                            <option value="3">♻️👍 Auto Likes </option>
-                                            <option value="4">📺 IGTV Likes </option>
-                                        </select>
-                                        </select>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="link" class="form-label">link</label>
-                                        <input type="text" class="form-control" id="link"
-                                            placeholder="www.example.com/your_profile_identity">
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="quantity" class="form-label">Quantity</label>
-                                        <input type="number" class="form-control" id="quantity" value="0">
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="price" class="form-label">price</label>
-                                        <input type="number" class="form-control" id="price" disabled>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="Comments" class="form-label">Comments</label>
-                                        <textarea class="form-control" id="Comments" rows="3"></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="Yes, i have confirmed the order!">
-                                            <label class="form-check-label" for="Yes, i have confirmed the order!">
-                                                Yes, i have confirmed the order!
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <a href="" class="cmn-btn mt-30">place order</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-header  pb-0 border-0">
-                                <h4>service description</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="row g-3">
-                                    <div class="col-12">
-                                        <label for="Service-name" class="form-label">Service name</label>
-                                        <input type="text" class="form-control" id="Service-name"
-                                            value="🧨 Instagram Power Comments (100k+ Accounts) ➡️ [3 Comments]"
-                                            disabled>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="row g-3">
-                                            <div class="col-md-4">
-                                                <label for="Minimum Amount" class="form-label">Minimum Amount</label>
-                                                <input type="text" class="form-control" id="Minimum Amount" disabled>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="Maximum Amount" class="form-label">Maximum Amount</label>
-                                                <input type="text" class="form-control" id="Maximum Amount" disabled>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="Price per 1k" class="form-label">Price per 1k</label>
-                                                <input type="text" class="form-control" id="Price per 1k" disabled>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="Description" class="form-label">Description</label>
-                                        <textarea class="form-control" id="Description" rows="12" disabled></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Page title end -->
 
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="card">
+                            <div class="card-header border-0 pb-0">
+                                <h4 class="title">Create a new ticket</h4>
+                            </div>
+                            <div class="card-body">
+                                <form action="" method="post">
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <label for="Subject" class="form-label">Subject</label>
+                                            <input type="text" class="form-control" id="Subject" name="">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="Message" class="form-label">Message</label>
+                                            <textarea class="form-control" id="Message" rows="3"></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="Upload-File" class="form-label">Upload File</label>
+                                            <div class="attach-file">
+                                                <div class="prev">Upload File</div>
+                                                <input class="form-control" type="file" id="Upload-File">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <a href="ticket.html" class="cmn-btn mt-10"><i
+                                                    class="fa-regular fa-circle-plus"></i>create</a>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
+
         </main>
-        <!-- Main section start -->
-
-
 
     </div>
+
+
+
+
 
 
 
@@ -591,33 +460,313 @@
     </div>
     <!-- Offcanvas sidebar end -->
 
-    <!-- Modal section start -->
-    <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title" id="staticBackdropLabel">Modal title</h1>
-                    <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="fa-light fa-xmark"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Modal body
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="cmn-btn" data-bs-dismiss="modal">Close</button>
 
+    <!-- Offcanvas section start -->
+
+    <!-- message offcanvas start-->
+    <div class="offcanvas offcanvas-end message-offcanvas" tabindex="-1" id="image-generator-offcanvas"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <a class="logo" href="user-panel.html"><img src="assets/img/logo/logo.png" alt="ChainCity"></a>
+            <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                    class="fa-regular fa-arrow-right"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="message-sidebar">
+                <div class="header-section">
+                    <div class="section-title">chats</div>
+                    <div class="search-bar">
+                        <div class="search-form d-flex align-items-center" method="POST" action="#">
+                            <input type="text" class="form-control" name="query" placeholder="Search"
+                                title="Enter search keyword">
+                            <span class="search-icon" title="Search"><i
+                                    class="fa-regular fa-magnifying-glass"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="conversations-wrapper">
+                    <li class="active">
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="message-sidebar-bottom">
+                    <button type="button" class="cmn-btn w-100"> New Conversation </button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Modal section end -->
+    <!-- message offcanvas end-->
 
 
 
-
-
+    <!-- Offcanvas section end -->
 
 
 
@@ -625,14 +774,14 @@
 
 
     <!-- Jquery Js link -->
-
+    <!-- <script src="assets/js/jquery-3.6.1.min.js"></script> -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
 
     <!-- Bootstrap Js link -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- select2 Js link -->
     <script src="assets/js/select2.min.js"></script>
-    <!-- select2 Js link -->
+    <!-- Owl carousel Js link -->
     <script src="assets/js/owl.carousel.min.js"></script>
 
 

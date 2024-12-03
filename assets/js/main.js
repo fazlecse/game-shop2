@@ -25,7 +25,7 @@ $(document).ready(function () {
         margin: 20,
         autoplayTimeout: 2000,
         navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
-        rtl: true,
+        // rtl: true,
         responsive: {
             0: {
                 items: 1,
@@ -59,7 +59,7 @@ $(document).ready(function () {
         autoplay: true,
         margin: 20,
         autoplayTimeout: 2000,
-        rtl: true,
+        // rtl: true,
         nav: true,
         dots: false,
         navText: ["<i class='fa-regular fa-angle-left'></i>", "<i class='fa-regular fa-angle-right'></i>"],
@@ -98,10 +98,6 @@ $(document).ready(function () {
             },
         }
     });
-
-
-
-
 
     // cmn select2 start
     $('.cmn-select2').select2();
@@ -184,90 +180,6 @@ $(document).ready(function () {
     });
     // cmn select2 modal start
 
-
-    // Fancybox carousel section start
-    // Initialise Carousel
-    if ($("#mainCarousel").length) {
-        const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
-            Dots: false,
-        });
-
-        // Thumbnails
-        const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
-            Sync: {
-                target: mainCarousel,
-                friction: 0,
-            },
-            Dots: false,
-            Navigation: false,
-            center: true,
-            slidesPerPage: 1,
-            infinite: true,
-        });
-
-        // Customize Fancybox
-        Fancybox.bind('[data-fancybox="gallery"]', {
-            Carousel: {
-                on: {
-                    change: (that) => {
-                        mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
-                            friction: 0,
-                        });
-                    },
-                },
-            },
-        });
-    }
-    // Fancybox carousel section end
-
-    // magnificPopup start
-    if ($('.magnific-popup').length) {
-        $('.magnific-popup').magnificPopup({
-            type: 'image',
-            delegate: 'a',
-            gallery: {
-                enabled: true
-            }
-        });
-    }
-    // magnificPopup end
-
-    // gallery_magnificPopup
-    if ($('.gallery-magnific-popup').length) {
-        $('.gallery-magnific-popup').magnificPopup({
-            type: 'image',
-            delegate: 'a',
-            gallery: {
-                enabled: true
-            }
-        });
-    }
-    if ($('.statistics-counter').length) {
-        $('.statistics-counter').counterUp({
-            delay: 10,
-            time: 2000
-        });
-    }
-
-
-    // Round button animation
-    $(function () {
-        $('.btn-1, .round-btn')
-            .on('mouseenter', function (e) {
-                var parentOffset = $(this).offset(),
-                    relX = e.pageX - parentOffset.left,
-                    relY = e.pageY - parentOffset.top;
-                $(this).find('span').css({ top: relY, left: relX })
-            })
-            .on('mouseout', function (e) {
-                var parentOffset = $(this).offset(),
-                    relX = e.pageX - parentOffset.left,
-                    relY = e.pageY - parentOffset.top;
-                $(this).find('span').css({ top: relY, left: relX })
-            });
-    });
-    // button animation
-
     // Hero slider start
     const progressCircle = document.querySelector(".autoplay-progress svg");
     const progressContent = document.querySelector(".autoplay-progress span");
@@ -304,14 +216,6 @@ $(document).ready(function () {
         });
     }
     // Countdown end
-
-    // Highlight editor start
-
-    document.querySelectorAll('pre code').forEach((el) => {
-        hljs.highlightElement(el);
-    });
-
-    // Highlight editor end
 
     // Isotope start
     if ($('.listing-row').length) {
@@ -381,6 +285,9 @@ $(document).ready(function () {
     }
     //--- BAR FILLAR ---//
 
+    // Aos start
+    AOS.init();
+    // Aos end
 });
 
 // input file preview
@@ -433,6 +340,7 @@ if ($(".js-range-slider").length) {
     });
 }
 // Range area end
+
 // International Telephone Input start
 if ($("#telephone").length) {
     const input = document.querySelector("#telephone");
@@ -442,21 +350,6 @@ if ($("#telephone").length) {
     });
 }
 // International Telephone Input end
-
-// curved-circle start
-
-$(window).on('load', function () {
-    if ($('.curved-circle').length) {
-        $('.curved-circle').circleType({
-            position: 'absolute',
-            dir: 1,
-            radius: 67,
-            forceHeight: true,
-            forceWidth: true
-        });
-    }
-});
-// curved-circle end
 
 // Increase decrease button start
 document.addEventListener('DOMContentLoaded', (event) => {

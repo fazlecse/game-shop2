@@ -173,6 +173,7 @@ html {
 
 textarea.form-control {
   height: initial;
+  border-radius: 15px;
 }
 
 .form-label {
@@ -201,13 +202,14 @@ textarea.form-control {
   border: 1px solid var(--border-color1);
   height: 45px;
 }
-
-.form-control:disabled {
-  background: #f8fafd;
+.form-control::-moz-placeholder, .form-select::-moz-placeholder {
+  text-transform: capitalize;
+  color: var(--body-color);
 }
-
-.dark-theme .form-control:disabled {
-  background-color: var(--bg-color4);
+.form-control::placeholder,
+.form-select::placeholder {
+  text-transform: capitalize;
+  color: var(--body-color);
 }
 
 .form-control:focus,
@@ -216,6 +218,14 @@ textarea.form-control {
   border: 1px solid rgb(var(--primary-color));
   background-color: var(--bg-color1);
   color: rgb(var(--white));
+}
+
+.form-control:disabled {
+  background: var(--bg-color3);
+}
+
+.dark-theme .form-control:disabled {
+  background-color: var(--bg-color4);
 }
 
 .form-check label,
@@ -260,6 +270,8 @@ textarea.form-control {
   border: 1px solid var(--border-color1);
   cursor: pointer;
   text-transform: capitalize;
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
 }
 
 .rtl .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3),
@@ -280,7 +292,7 @@ textarea.form-control {
 
 .cmn-file-input {
   position: relative;
-  height: 40px;
+  height: 45px;
 }
 .cmn-file-input:hover label {
   background: var(--btn-hover-bg);
@@ -288,10 +300,10 @@ textarea.form-control {
 .cmn-file-input label {
   font-size: 16px !important;
   margin-bottom: 0;
-  height: 40px;
+  height: 45px;
   font-weight: 500 !important;
   background: rgb(var(--primary-color));
-  border-radius: 10px;
+  border-radius: 9999px;
   color: rgb(var(--white));
   display: flex;
   align-items: center;
@@ -424,10 +436,10 @@ img.img-flag {
   height: 45px;
   display: flex;
   align-items: center;
-  background: rgb(var(--white));
+  background: var(--input-color);
   font-size: 15px;
   padding: 0.375rem 15px;
-  border-radius: 10px;
+  border-radius: 9999px;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -470,16 +482,15 @@ img.img-flag {
 }
 
 .select2-container .select2-dropdown .select2-search__field {
-  border-radius: 5px;
+  border-radius: 9999px;
   border: 1px solid var(--border-color2);
   outline: 0;
-  background-color: rgb(var(--white));
+  background-color: var(--input-color);
   color: rgb(var(--heading-color));
 }
 
 .select2-container .select2-dropdown .select2-search__field:focus-visible {
-  box-shadow: 0 0 1rem 0 rgba(140, 152, 164, 0.25);
-  border: 1px solid var(--border-color2);
+  border: 1px solid rgb(var(--primary-color));
 }
 
 .select2-results__option {
@@ -818,6 +829,18 @@ a.ui-button:active,
   background-color: rgb(var(--primary-color), 0.1) !important;
 }
 
+.apexcharts-menu {
+  background-color: var(--bg-color3) !important;
+}
+
+.apexcharts-menu-item {
+  color: rgb(var(--white)) !important;
+}
+
+.apexcharts-menu-item:hover {
+  background: var(--bg-color2) !important;
+}
+
 /*----------------------------------------------
 Reset section end
 ----------------------------------------------*/
@@ -1044,24 +1067,24 @@ Offcanvas section end
 }
 
 .cmn-btn2 {
-  position: relative;
-  padding: 8px 15px;
-  background: rgb(var(--white));
-  border-radius: 15px;
-  border: 1px solid rgb(var(--primary-color));
+  background-color: var(--bg-color3);
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: 1px solid var(--border-color2);
   transition: var(--transition);
   font-size: 16px;
-  color: rgb(var(--heading-color));
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  gap: 5px;
+  font-weight: 500;
   text-transform: capitalize;
   font-family: var(--heading-font);
+  color: rgb(var(--primary-color));
 }
 .cmn-btn2:hover {
-  color: rgb(var(--white));
-  background-color: rgb(var(--primary-color));
+  color: rgb(var(--primary-color));
+  background-color: var(--bg-color2);
 }
 
 .cmn-btn3 {
@@ -1149,17 +1172,16 @@ Offcanvas section end
   border-radius: 5px;
   background-color: var(--bg-color1);
   line-height: initial;
-  color: #677788;
+  color: rgb(var(--heading-color));
   border: 1px solid var(--border-color1);
   transition: var(--transition);
 }
 .action-btn-secondary:hover {
-  color: rgb(var(--primary-color));
-  background-color: var(--bg-color1);
-  box-shadow: 0 3px 6px -2px rgba(140, 152, 164, 0.25);
+  color: rgb(var(--white));
+  background-color: rgb(var(--primary-color));
 }
 .action-btn-secondary.show {
-  box-shadow: 0 3px 6px -2px rgba(140, 152, 164, 0.25);
+  background-color: rgb(var(--primary-color));
 }
 
 .dark-theme .action-btn-secondary {
@@ -1170,7 +1192,7 @@ Offcanvas section end
   position: relative;
   background-color: rgb(var(--soft-red));
   padding: 8px 15px;
-  border-radius: 5px;
+  border-radius: 9999px;
   transition: var(--transition);
   font-size: 16px;
   color: rgb(var(--white));
@@ -1179,6 +1201,7 @@ Offcanvas section end
   justify-content: center;
   font-weight: 500;
   text-transform: capitalize;
+  gap: 5px;
 }
 .delete-btn:hover {
   color: rgb(var(--white));
@@ -1260,7 +1283,6 @@ Offcanvas section end
 
 .alert-success {
   color: #3AC279;
-  border-color: #C5F7DC;
   border-left-color: #3ac279;
 }
 .alert-success .btn-close {
@@ -1269,7 +1291,6 @@ Offcanvas section end
 
 .alert-danger {
   color: #E9594C;
-  border-color: #FFCFCB;
   border-left-color: #E9594C;
 }
 .alert-danger .btn-close {
@@ -1278,7 +1299,6 @@ Offcanvas section end
 
 .alert-warning {
   color: #E89F29;
-  border-color: #FFE8C3;
   border-left-color: #E89F29;
 }
 .alert-warning .btn-close {
@@ -1333,21 +1353,6 @@ Offcanvas section end
   }
   .rtl .alert-dismissible .btn-close {
     left: 10px;
-  }
-}
-.richtexteditor.rte-modern {
-  border: 1px solid var(--border-color1);
-  border-radius: 5px;
-}
-
-@media (max-width: 991px) {
-  .richtexteditor.rte-modern {
-    height: 400px;
-  }
-}
-@media (max-width: 767px) {
-  .richtexteditor.rte-modern {
-    height: 300px;
   }
 }
 .video_play_btn {
@@ -1602,27 +1607,30 @@ Cmn table start
 ----------------------------------------------*/
 .cmn-table {
   border-radius: 10px;
-  background: rgb(var(--white));
 }
 .cmn-table table {
   margin-bottom: 0;
   color: var(--body-color);
 }
 .cmn-table table thead tr th {
+  white-space: nowrap;
   font-size: 18px;
   font-weight: 500;
   color: rgb(var(--heading-color));
   padding: 15px 10px;
   text-transform: capitalize;
-  background-color: var(--bg-color1);
+  background-color: var(--bg-color2);
 }
 .cmn-table table thead tr th:first-child {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 .cmn-table table thead tr th:last-child {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.cmn-table tbody tr:not(:last-child) {
+  border-bottom: 1px dashed var(--border-color2);
 }
 .cmn-table tbody td {
   padding: 15px 10px;
@@ -1660,7 +1668,7 @@ Cmn table start
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) > * {
-  --bs-table-accent-bg: var(--bg-color2);
+  --bs-table-accent-bg: var(--bg-color1);
   color: var(--body-color);
 }
 .table-striped > tbody > tr:nth-of-type(odd) > * .table-img-box .img-box {
@@ -1721,7 +1729,7 @@ Cmn table start
     --bs-table-accent-bg: var(--bg-color1);
   }
   .table-striped > tbody > tr:nth-of-type(even) > * {
-    --bs-table-accent-bg: rgb(var(--primary-color), 0.1);
+    --bs-table-accent-bg: var(--bg-color2);
   }
   .table-responsive .table thead {
     display: none;
@@ -1745,7 +1753,7 @@ Cmn table start
   .table-responsive .table tbody tr td::before {
     content: attr(data-label);
     font-size: 16px;
-    color: var(--black);
+    color: rgb(var(--heading-color));
     font-weight: 600;
     text-transform: capitalize;
     margin-right: 20px;
@@ -1857,13 +1865,13 @@ Chat section start
   width: 40px;
   height: 40px;
   border-radius: 7px;
-  background: rgb(var(--primary-color), 0.1);
+  background: var(--bg-color2);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition);
   font-size: 15px;
-  color: var(--grayish-blue);
+  color: var(--body-color);
 }
 .single-btn.active {
   background-color: rgb(var(--primary-color));
@@ -1884,7 +1892,7 @@ Chat section start
   border-radius: 10px;
   margin-right: 10px;
   font-size: 16px;
-  color: rgb(var(--heading-color));
+  color: rgb(var(--white));
 }
 .single-btn2:hover {
   background-color: rgb(var(--primary-color), 0.1);
@@ -1947,7 +1955,6 @@ Chat section start
 }
 
 .message-container {
-  box-shadow: var(--shadow1);
   border: 1px solid var(--border-color1);
   background-color: var(--bg-color1);
   border-radius: 15px;
@@ -1956,7 +1963,7 @@ Chat section start
 .message-container .chat-box {
   position: relative;
   background-color: var(--gray);
-  background-color: #f7f7f7;
+  background-color: var(--bg-color2);
   margin: 20px;
   border-radius: 10px;
   padding: 5px 0;
@@ -1967,11 +1974,12 @@ Chat section start
   display: flex;
   justify-content: space-between;
   margin: 15px;
-  background-color: var(--bg-color1);
+  background-color: var(--bg-color3);
   border-radius: 20px;
 }
 .message-container .chat-box .profile-info {
   display: flex;
+  align-items: center;
 }
 .message-container .chat-box .profile-info .thumbs-area {
   margin-right: 10px;
@@ -1992,7 +2000,7 @@ Chat section start
 .message-container .chat-box .profile-info .content-area .title {
   font-size: 15px;
   font-weight: 600;
-  color: rgb(var(--heading-color));
+  color: rgb(var(--white));
 }
 .message-container .chat-box .profile-info .content-area .description {
   font-size: 13px;
@@ -2027,7 +2035,7 @@ Chat section start
   color: rgb(var(--white));
 }
 .message-container .chat-box .message-bubble .message-text-box .attach-file-box {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 5px;
   margin-top: 6px;
@@ -2047,8 +2055,8 @@ Chat section start
 .message-container .chat-box .message-bubble-right .message-text-box .message-text {
   border-top-left-radius: 15px;
   border-top-right-radius: 0;
-  background: var(--bg-color1);
-  color: rgb(var(--heading-color));
+  background: var(--bg-color3);
+  color: rgb(var(--white));
 }
 .message-container .chat-box .message-bubble-right .message-text-box .attach-file-box {
   justify-content: end;
@@ -2060,7 +2068,7 @@ Chat section start
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: var(--bg-color1);
+  background-color: var(--bg-color3);
   margin: 0 15px 15px 15px;
   border-radius: 20px;
 }
@@ -2129,18 +2137,18 @@ Chat section start
   color: rgb(var(--heading-color));
   text-transform: capitalize;
   font-family: var(--heading-font);
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 5px;
 }
 .message-sidebar .conversations-wrapper li .item-link .chat-info {
-  color: var(--grayish-blue);
+  color: var(--body-color);
   display: flex;
   justify-content: space-between;
   font-size: 14px;
 }
 .message-sidebar .conversations-wrapper li .item-link .chat-info .chat-date {
   text-transform: capitalize;
-  color: var(--grayish-blue);
+  color: var(--body-color);
 }
 .message-sidebar .conversations-wrapper li:nth-child(odd) {
   background-color: var(--bg-color1);
@@ -2219,9 +2227,12 @@ Chat section start
   margin-right: 10px;
   margin-left: 0;
 }
-.rtl .chat-box .message-bubble-right .message-text {
+.rtl .chat-box .message-bubble-right .message-text-box .message-text {
   border-top-right-radius: 15px;
   border-top-left-radius: 0;
+}
+.rtl .chat-box .message-bubble-right .message-text-box .time {
+  text-align: left;
 }
 
 .dark-theme .message-container .chat-box {
@@ -2313,6 +2324,35 @@ Chat section end
     transform: rotate(360deg);
   }
 }
+.attach-file {
+  position: relative;
+}
+.attach-file .prev {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 111px;
+  background: rgb(var(--primary-color));
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
+  color: rgb(var(--white));
+  text-transform: capitalize;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.rtl .attach-file .prev {
+  left: auto;
+  right: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 /*----------------------------------------------
 Reusable style section end
 ----------------------------------------------*/
@@ -2752,9 +2792,9 @@ Padding bottom
   background-color: var(--bg-color2);
 }
 
-/*---------------------------------------------------
+/*-----------------------------------------------
 Desktop view card section start
-----------------------------------------------------*/
+------------------------------------------------*/
 .desktop-view-card-section {
   display: none;
 }
@@ -2774,12 +2814,12 @@ Desktop view card section start
     display: none;
   }
 }
-/*---------------------------------------------------
+/*-----------------------------------------------
 Desktop view card section end
-----------------------------------------------------*/
-/*---------------------------------------------------
+------------------------------------------------*/
+/*-----------------------------------------------
 Tab mobile view card section end
-----------------------------------------------------*/
+------------------------------------------------*/
 .carousel-1 {
   height: 100%;
 }
@@ -2809,9 +2849,9 @@ Tab mobile view card section end
     margin-right: 32px;
   }
 }
-/*---------------------------------------------------
+/*-----------------------------------------------
 Tab mobile view card section end
-----------------------------------------------------*/
+------------------------------------------------*/
 .bottom-nav {
   background: var(--bg-color1);
   justify-content: space-around;
@@ -2842,21 +2882,21 @@ Tab mobile view card section end
   font-size: 20px;
 }
 
-/*---------------------------------------------------
+/*-----------------------------------------------
 Dashboard warpper section start
-----------------------------------------------------*/
+------------------------------------------------*/
 .dashboard-wrapper {
   background-color: var(--bg-color1);
   margin: 20px;
   border-radius: 25px;
 }
 
-/*---------------------------------------------------
+/*-----------------------------------------------
 Dashboard warpper section end
-----------------------------------------------------*/
-/*---------------------------------------------------
+------------------------------------------------*/
+/*-----------------------------------------------
 Header section start
-----------------------------------------------------*/
+------------------------------------------------*/
 .header {
   transition: var(--transition);
   z-index: 997;
@@ -2970,9 +3010,9 @@ Header section start
   right: 20px;
 }
 
-/*---------------------------------------------------
+/*-----------------------------------------------
   Header Nav start
-----------------------------------------------------*/
+------------------------------------------------*/
 .header-nav .nav-icons {
   display: flex;
   align-items: center;
@@ -3322,11 +3362,6 @@ Sidebar start
   margin-left: 8px;
 }
 
-.rtl .sidebar .upgrade-btn-area .cmn-btn2 i {
-  margin-right: 0;
-  margin-left: 5px;
-}
-
 @media (min-width: 1200px) {
   .rtl #main,
   .rtl #footer {
@@ -3442,7 +3477,7 @@ Account settings profile section start
   gap: 5px;
 }
 .account-settings-navbar .nav .nav-link {
-  background-color: var(--bg-color1);
+  background-color: var(--bg-color3);
   color: rgb(var(--heading-color));
   border-radius: 10px;
   padding: 8px 20px;
@@ -3490,6 +3525,7 @@ Account settings profile section start
 .account-settings-profile-section .profile-details-section .btn-area .btn-area-inner {
   margin-bottom: 20px;
   display: flex;
+  gap: 5px;
 }
 .account-settings-profile-section .profile-details-section .btn-area .btn-area-inner .cmn-btn3 {
   height: 40px;
@@ -3795,98 +3831,6 @@ Chat widget section start
 
 /*----------------------------------------------
 Chat widget section end
-----------------------------------------------*/
-/*----------------------------------------------
-Wideget Section start
-----------------------------------------------*/
-.widget-settings .form-check {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.widget-round {
-  width: 46px;
-  height: 46px;
-  border-radius: 50px;
-  background-color: rgb(var(--primary-color));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(var(--white));
-  font-size: 20px;
-}
-
-.widget-rectangle {
-  width: 100%;
-  height: 46px;
-  background-color: rgb(var(--primary-color));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(var(--white));
-  font-size: 18px;
-  border-radius: 5px;
-  text-transform: capitalize;
-  gap: 5px;
-}
-
-.widget-settings .form-check-label {
-  width: 100%;
-}
-
-.widget-pos-selector-area .form-check-input {
-  display: none;
-}
-.widget-pos-selector-area .widget-pos-selector:nth-child(1) .form-check-label .dot:nth-child(3) {
-  background-color: rgb(var(--primary-color));
-}
-.widget-pos-selector-area .widget-pos-selector:nth-child(2) .form-check-label .dot:nth-child(1) {
-  background-color: rgb(var(--primary-color));
-}
-.widget-pos-selector-area .widget-pos-selector:nth-child(3) .form-check-label .dot:nth-child(6) {
-  background-color: rgb(var(--primary-color));
-}
-.widget-pos-selector-area .widget-pos-selector:nth-child(4) .form-check-label .dot:nth-child(4) {
-  background-color: rgb(var(--primary-color));
-}
-.widget-pos-selector-area .widget-pos-selector:nth-child(5) .form-check-label .dot:nth-child(9) {
-  background-color: rgb(var(--primary-color));
-}
-.widget-pos-selector-area .widget-pos-selector:nth-child(6) .form-check-label .dot:nth-child(7) {
-  background-color: rgb(var(--primary-color));
-}
-.widget-pos-selector-area .form-check-label {
-  width: 40px;
-  height: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: center;
-  border-radius: 3px;
-  padding: 1px;
-  border: 1px solid transparent;
-}
-.widget-pos-selector-area .form-check-label:hover {
-  border-color: var(--border-color2);
-}
-.widget-pos-selector-area .form-check-label .dot {
-  width: 10px;
-  height: 10px;
-  border: 1px solid var(--border-color2);
-  margin: 1px;
-}
-.widget-pos-selector-area .form-check-input:checked[type=radio] + .form-check-label {
-  border: 1px solid rgb(var(--primary-color));
-}
-
-.widget-preview-section {
-  height: calc(100% - 30px);
-  min-height: 400px;
-}
-
-/*----------------------------------------------
-Wideget Section end
 ----------------------------------------------*/
 /*----------------------------------------------
 Notice card section start

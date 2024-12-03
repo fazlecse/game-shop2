@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAMOT Dashboard</title>
+    <title>ChainCity</title>
     <!-- Favicon link -->
-    <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
     <!-- Fontawesome-6 Js link -->
     <link rel="stylesheet" href="assets/css/all.min.css">
-
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <!-- Bootstrap 5 Css link -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Owl carousel Css link -->
@@ -32,7 +32,7 @@
     <div class="dashboard-wrapper">
         <!-- Preloader section start -->
         <div id="preloader">
-            <img src="./assets/img/preloader/game.png" alt="">
+            <img src="./assets/img/preloader/house.png" alt="">
         </div>
         <!-- Preloader section end -->
 
@@ -151,7 +151,7 @@
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                             <li class="dropdown-header d-flex justify-content-center align-items-center text-start">
                                 <div class="profile-thum">
-                                    <img src="assets/img/person/2.jpg" alt="GAMOT">
+                                    <img src="assets/img/person/2.jpg" alt="ChainCity">
                                 </div>
                                 <div class="profile-content">
                                     <h6>John Doe</h6>
@@ -204,13 +204,15 @@
         <!-- Bottom Mobile Tab nav section start -->
         <ul class="nav bottom-nav fixed-bottom d-lg-none">
             <li class="nav-item">
-                <a class="nav-link toggle-sidebar-btn" aria-current="page"><i class="fa-light fa-list"></i></a>
+                <a class="nav-link toggle-sidebar-btn" aria-current="page">
+                    <i class="fa-light fa-list"></i>
+                </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="#"><i class="fa-light fa-house"></i></a>
+                <a class="nav-link active" href="#"><i class="fa-regular fa-house"></i></a>
             </li>
             <li class="nav-item">
                 <a onclick="searchBar()" class="nav-link search-bar-toggle" href="#"><i
@@ -354,23 +356,26 @@
         </aside>
         <!-- Sidebar section end -->
 
-        <main id="main" class="main bg-color2">
+        <main id="main" class="main">
             <div class="main-wrapper">
+                <!-- Page title start -->
                 <div class="pagetitle">
-                    <h4 class="mb-1">transactions</h4>
                     <nav>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active">transactions</li>
+                            <li class="breadcrumb-item active">support ticket</li>
                         </ol>
                     </nav>
                 </div>
+                <!-- Page title end -->
 
                 <!-- Cmn table section start -->
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between pb-0 border-0">
-                        <h4>Fund History</h4>
-                        <div class="btn-area">
+                <div class="card mt-25">
+                    <div class="card-header d-flex align-items-center justify-content-between pb-0 border-0">
+                        <h4 class="mb-0">Ticket List</h4>
+                        <div class="btn-area d-flex align-items-center gap-2">
+                            <a href="create-ticket.html" class="cmn-btn3"><i
+                                    class="fa-regular fa-circle-plus"></i>create ticket</a>
                             <button type="button" class="cmn-btn" data-bs-toggle="offcanvas"
                                 data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Filter<i
                                     class="fa-regular fa-filter"></i></button>
@@ -378,228 +383,108 @@
                     </div>
                     <div class="card-body">
                         <div class="cmn-table">
-                            <div class="table-responsive">
+                            <div class="table-responsive overflow-hidden">
                                 <table class="table table-striped align-middle">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Transaction ID</th>
-                                            <th scope="col">Gateway</th>
-                                            <th scope="col">Amount</th>
-                                            <th scope="col">Charge</th>
+                                            <th scope="col">Ticket No.</th>
+                                            <th scope="col">Subject</th>
                                             <th scope="col">Status</th>
-                                            <th scope="col">Time & Date</th>
-                                            <th scope="col">action</th>
+                                            <th scope="col">Last Reply</th>
+                                            <th scope="col">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
+                                            <td data-label="Ticket No."><span>#12415346563475</span></td>
+                                            <td data-label="Subject">
+                                                <span>if only</span>
                                             </td>
                                             <td data-label="Status">
-                                                <span class="badge text-bg-primary">Primary</span>
+                                                <span class="badge text-bg-danger">Closed</span>
                                             </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
+                                            <td data-label="Last Reply">
+                                                <span>33 minutes ago</span>
                                             </td>
                                             <td data-label="Action">
-                                                <div class="dropdown">
-                                                    <button class="action-btn-secondary" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="fa-regular fa-ellipsis-stroke-vertical"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#">save</a></li>
-                                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#apply-modal">apply</a></li>
-                                                        <li><a class="dropdown-item" href="#">copy link</a>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href="#">report</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                <a href="" class="cmn-btn2"><i class="fa-regular fa-eye"></i>view</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
+                                            <td data-label="Ticket No."><span>#12415346563475</span></td>
+                                            <td data-label="Subject">
+                                                <span>Support ticket test One</span>
                                             </td>
                                             <td data-label="Status">
-                                                <span class="badge text-bg-secondary">Primary</span>
+                                                <span class="badge text-bg-warning">Replied</span>
                                             </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
+                                            <td data-label="Last Reply">
+                                                <span>08 minutes ago</span>
                                             </td>
                                             <td data-label="Action">
-                                                <div class="dropdown">
-                                                    <button class="action-btn-secondary" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="fa-regular fa-ellipsis-stroke-vertical"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#">save</a></li>
-                                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#apply-modal">apply</a></li>
-                                                        <li><a class="dropdown-item" href="#">copy link</a>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href="#">report</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                <a href="" class="cmn-btn2"><i class="fa-regular fa-eye"></i>view</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
+                                            <td data-label="Ticket No."><span>#12415346563475</span></td>
+                                            <td data-label="Subject">
+                                                <span>final api test</span>
                                             </td>
                                             <td data-label="Status">
-                                                <span class="badge text-bg-success">Primary</span>
+                                                <span class="badge text-bg-success">success</span>
                                             </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
+                                            <td data-label="Last Reply">
+                                                <span>6 day ago</span>
                                             </td>
                                             <td data-label="Action">
-                                                <div class="dropdown">
-                                                    <button class="action-btn-secondary" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="fa-regular fa-ellipsis-stroke-vertical"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#">save</a></li>
-                                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#apply-modal">apply</a></li>
-                                                        <li><a class="dropdown-item" href="#">copy link</a>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href="#">report</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                <a href="" class="cmn-btn2"><i class="fa-regular fa-eye"></i>view</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
+                                            <td data-label="Ticket No."><span>#12415346563475</span></td>
+                                            <td data-label="Subject">
+                                                <span>if only</span>
                                             </td>
                                             <td data-label="Status">
-                                                <span class="badge text-bg-danger">Primary</span>
+                                                <span class="badge text-bg-danger">Closed</span>
                                             </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
+                                            <td data-label="Last Reply">
+                                                <span>33 minutes ago</span>
                                             </td>
                                             <td data-label="Action">
-                                                <div class="dropdown">
-                                                    <button class="action-btn-secondary" type="button"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="fa-regular fa-ellipsis-stroke-vertical"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a class="dropdown-item" href="#">save</a></li>
-                                                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                                                data-bs-target="#apply-modal">apply</a></li>
-                                                        <li><a class="dropdown-item" href="#">copy link</a>
-                                                        </li>
-                                                        <li><a class="dropdown-item" href="#">report</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                                <a href="" class="cmn-btn2"><i class="fa-regular fa-eye"></i>view</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
+                                            <td data-label="Ticket No."><span>#12415346563475</span></td>
+                                            <td data-label="Subject">
+                                                <span>Support ticket test One</span>
                                             </td>
                                             <td data-label="Status">
-                                                <span class="badge text-bg-warning">Primary</span>
+                                                <span class="badge text-bg-warning">Replied</span>
                                             </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
-                                            </td>
-                                            <td data-label="Action"><button type="button" class="action-btn-primary"
-                                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                                        class="fa-regular fa-pen-to-square"></i></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
-                                            </td>
-                                            <td data-label="Status">
-                                                <span class="badge text-bg-info">Primary</span>
-                                            </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
+                                            <td data-label="Last Reply">
+                                                <span>08 minutes ago</span>
                                             </td>
                                             <td data-label="Action">
-                                                <button type="button" class="action-btn-primary" data-bs-toggle="modal"
-                                                    data-bs-target="#staticBackdrop"><i
-                                                        class="fa-regular fa-pen-to-square"></i>
-                                                </button>
+                                                <a href="" class="cmn-btn2"><i class="fa-regular fa-eye"></i>view</a>
                                             </td>
                                         </tr>
-
                                         <tr>
-                                            <td data-label="Transaction ID"><span>#12415346563475</span></td>
-                                            <td data-label="Gateway">
-                                                <span>Bank Transfer</span>
-                                            </td>
-                                            <td data-label="Amount">
-                                                <span>10 USD</span>
-                                            </td>
-                                            <td data-label="Charge">
-                                                <span>5 USD</span>
+                                            <td data-label="Ticket No."><span>#12415346563475</span></td>
+                                            <td data-label="Subject">
+                                                <span>final api test</span>
                                             </td>
                                             <td data-label="Status">
-                                                <span class="badge text-bg-dark">Primary</span>
+                                                <span class="badge text-bg-success">success</span>
                                             </td>
-                                            <td data-label="Time">
-                                                <span>12 Apr 2023 04:40 PM</span>
+                                            <td data-label="Last Reply">
+                                                <span>6 day ago</span>
                                             </td>
-                                            <td data-label="Action"><button type="button" class="action-btn-primary"
-                                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                                        class="fa-regular fa-pen-to-square"></i></button></td>
+                                            <td data-label="Action">
+                                                <a href="" class="cmn-btn2"><i class="fa-regular fa-eye"></i>view</a>
+                                            </td>
                                         </tr>
-
                                     </tbody>
                                 </table>
                             </div>
@@ -608,94 +493,21 @@
                 </div>
                 <!-- Cmn table section end -->
 
-                <!-- transactions section start -->
-                <div class="transactions-section mt-50">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4>Send money</h4>
-                                </div>
-                                <div class="card-body">
-                                    <form>
-                                        <div class="row g-4">
-                                            <div class="col-12">
-                                                <div>
-                                                    <label for="Recipient-email-or-username"
-                                                        class="form-label">Recipient
-                                                        email
-                                                        or username </label>
-                                                    <input type="text" class="form-control"
-                                                        id="Recipient-email-or-username">
-                                                    <div class="form-text">User found. Are you looking for Lucky
-                                                        Imuesili?
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div>
-                                                    <label for="currency" class="form-label">currency</label>
-                                                    <input type="text" class="form-control" id="currency">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div>
-                                                    <label for="Amount" class="form-label">Amount</label>
-                                                    <input type="text" class="form-control" id="Amount">
-                                                    <div class="form-text">Remaining balance: 342342.14</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" role="switch"
-                                                        id="flexSwitchCheckDefault2">
-                                                    <label class="form-check-label"
-                                                        for="flexSwitchCheckDefault2">Receiver
-                                                        will
-                                                        pay the txt charge</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div>
-                                                    <label for="exampleFormControlTextarea1"
-                                                        class="form-label">Note</label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                        rows="2"></textarea>
-                                                </div>
-                                            </div>
 
-                                            <div class="btn-area">
-                                                <button type="submit" class="cmn-btn w-100">send money</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="section-header">
-                                <h5>transaction Details</h5>
-                            </div>
-                            <ul class="list-area">
-                                <li><span>Available balance</span> <span>2544.14 USD</span></li>
-                                <li><span>Transfer charge</span> <span>0.15 + 1 = 1.15 USD</span></li>
-                                <li><span>payable amount</span> <span>14.15 USD</span></li>
-                                <li><span>receiver will receive</span> <span>10 USD</span></li>
-                                <li><span>remeining balance</span> <span>55456.11 USD</span></li>
-                                <li><span>min request limit</span> <span>1.00 USD</span></li>
-                                <li><span>max request limit</span> <span>500.00 USD</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- transactions section end -->
             </div>
 
         </main>
 
-
-
     </div>
+
+
+
+
+
+
+
+
+
 
     <!-- Offcanvas sidebar start -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -744,33 +556,313 @@
     </div>
     <!-- Offcanvas sidebar end -->
 
-    <!-- Modal section start -->
-    <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title" id="staticBackdropLabel">Modal title</h1>
-                    <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <i class="fa-light fa-xmark"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Modal body
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="cmn-btn" data-bs-dismiss="modal">Close</button>
 
+    <!-- Offcanvas section start -->
+
+    <!-- message offcanvas start-->
+    <div class="offcanvas offcanvas-end message-offcanvas" tabindex="-1" id="image-generator-offcanvas"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <a class="logo" href="user-panel.html"><img src="assets/img/logo/logo.png" alt="ChainCity"></a>
+            <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                    class="fa-regular fa-arrow-right"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="message-sidebar">
+                <div class="header-section">
+                    <div class="section-title">chats</div>
+                    <div class="search-bar">
+                        <div class="search-form d-flex align-items-center" method="POST" action="#">
+                            <input type="text" class="form-control" name="query" placeholder="Search"
+                                title="Enter search keyword">
+                            <span class="search-icon" title="Search"><i
+                                    class="fa-regular fa-magnifying-glass"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="conversations-wrapper">
+                    <li class="active">
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+                    </li>
+                    <li>
+                        <a href="" class="item-link">
+                            <div class="item-header">
+                                <div class="chat-title">new conversion</div>
+                                <div class="chat-action">
+                                    <div class="chat-edit">
+                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="chat-delete">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="chat-info">
+                                <div class="chat-count">2 messages</div>
+                                <div class="chat-date">now</div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="message-sidebar-bottom">
+                    <button type="button" class="cmn-btn w-100"> New Conversation </button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Modal section end -->
+    <!-- message offcanvas end-->
 
 
 
-
-
+    <!-- Offcanvas section end -->
 
 
 
@@ -778,14 +870,14 @@
 
 
     <!-- Jquery Js link -->
-
+    <!-- <script src="assets/js/jquery-3.6.1.min.js"></script> -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
 
     <!-- Bootstrap Js link -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- select2 Js link -->
     <script src="assets/js/select2.min.js"></script>
-    <!-- select2 Js link -->
+    <!-- Owl carousel Js link -->
     <script src="assets/js/owl.carousel.min.js"></script>
 
 

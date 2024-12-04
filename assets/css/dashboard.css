@@ -2006,7 +2006,7 @@ Chat section start
   font-size: 13px;
 }
 .message-container .chat-box .chat-box-inner {
-  max-height: 425px;
+  height: 425px;
   overflow-y: auto;
   padding: 15px;
 }

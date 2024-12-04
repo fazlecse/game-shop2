@@ -1180,12 +1180,6 @@ Reusable style section start
 .rtl .search-box2 .search-btn2 i {
   transform: rotate(90deg);
 }
-@media (max-width: 575px) {
-  .rtl .header-top-section .top-bar {
-    justify-content: end;
-    margin-right: 50px;
-  }
-}
 
 .search-box3 {
   position: relative;
@@ -4421,10 +4415,19 @@ Padding bottom
   }
 }
 @media (max-width: 575px) {
+  .header-top-section .top-bar {
+    margin-right: 50px;
+  }
   .header-top-section .top-bar .contact-info {
     display: none;
   }
 }
+@media (max-width: 575px) {
+  .rtl .header-top-section .top-bar {
+    justify-content: end;
+  }
+}
+
 /*----------------------------------------------
 01. Nav section start
 ----------------------------------------------*/

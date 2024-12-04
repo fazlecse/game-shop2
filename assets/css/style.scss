@@ -1387,12 +1387,7 @@ Reusable style section start
         }
     }
 
-    @media(max-width:575px) {
-        .header-top-section .top-bar {
-            justify-content: end;
-            margin-right: 50px;
-        }
-    }
+
 }
 
 // Rtl search box2 end
@@ -5506,6 +5501,8 @@ Padding bottom
 @media(max-width:575px) {
     .header-top-section {
         .top-bar {
+            margin-right: 50px;
+
             .contact-info {
                 display: none;
             }
@@ -5514,6 +5511,16 @@ Padding bottom
 }
 
 // Responsiv header top section end
+// Rtl header top section start
+.rtl {
+    @media(max-width:575px) {
+        .header-top-section .top-bar {
+            justify-content: end;
+        }
+    }
+}
+
+// Rtl header top section end
 // Header top section end
 
 /*----------------------------------------------
@@ -7682,13 +7689,15 @@ Copyright end
         font-size: 16px;
     }
 }
+
 @media(max-width: 767px) {
     .banner-section2 {
         padding-top: 50px;
     }
 }
+
 @media(max-width: 575px) {
-    .banner-section .img-box{
+    .banner-section .img-box {
         max-width: 200px;
     }
 }

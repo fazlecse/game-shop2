@@ -7681,6 +7681,11 @@ Copyright end
         font-size: 16px;
     }
 }
+@media(max-width: 767px) {
+    .banner-section2 {
+        padding-top: 50px;
+    }
+}
 
 // Responsive banner section end
 

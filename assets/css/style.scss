@@ -1390,6 +1390,7 @@ Reusable style section start
     @media(max-width:575px) {
         .header-top-section .top-bar {
             justify-content: end;
+            margin-right: 50px;
         }
     }
 }
@@ -7684,6 +7685,11 @@ Copyright end
 @media(max-width: 767px) {
     .banner-section2 {
         padding-top: 50px;
+    }
+}
+@media(max-width: 575px) {
+    .banner-section .img-box{
+        max-width: 200px;
     }
 }
 

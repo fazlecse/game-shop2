@@ -1759,11 +1759,6 @@ Cmn table start
     margin-right: 20px;
   }
 }
-@media (max-width: 575px) {
-  .cmn-btn {
-    padding: 7px;
-  }
-}
 .rtl .cmn-table .table thead tr th:first-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;

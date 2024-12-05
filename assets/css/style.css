@@ -2433,10 +2433,10 @@ hr.divider:after {
   right: 12px;
 }
 
-.reviews li i {
+.reviews div i {
   color: #dee2e8;
 }
-.reviews li .active {
+.reviews div .active {
   color: var(--orange);
   opacity: 1;
 }

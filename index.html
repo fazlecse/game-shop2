@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="GameMart is your ultimate platform for purchasing top-ups, gift cards, and in-game currencies. Elevate your gaming experience with fast, reliable, and exclusive deals designed for gamers worldwide." />
+
     <title>GAMOT</title>
     <!-- Favicon link -->
     <link rel="shortcut icon" href="./assets/img/logo/favicon.png" type="image/x-icon">
@@ -32,7 +35,7 @@
 <body onload="preloaderFunction()" class="">
     <!-- Preloader section start -->
     <div id="preloader">
-        <img src="./assets/img/preloader/game.png" alt="">
+        <img src="./assets/img/preloader/game.png" alt="preloader-img">
     </div>
     <!-- Preloader section end -->
 
@@ -49,13 +52,17 @@
                 </ul>
                 <div class="right-side ">
                     <ul class="social-box">
-                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://facebook.com" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i> </a></li>
+                        <li><a href="https://twitter.com" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com" aria-label="Linkedin">
+                                <i class="fab fa-linkedin"></i></a> </li>
+                        <li><a href="https://instagram.com" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i></a></li>
                     </ul>
                     <a href="" class="lang-currency-btn" data-bs-toggle="modal" data-bs-target="#lang-currency-modal">
-                        <img src="./assets/img/language/en.png" alt="">
+                        <img src="./assets/img/language/en.png" alt="lang-currency-img">
                         EN/USD</a>
                 </div>
             </div>
@@ -224,7 +231,7 @@
         <div class="desktop-view">
             <div class="container">
                 <div class="desktop-view-wrapper">
-                    <a href="index.html" class="logo"><img src="assets/img/logo/logo.png" alt=""></a>
+                    <a href="index.html" class="logo"><img src="assets/img/logo/logo.png" alt="logo"></a>
                     <div class="main-menu d-none d-lg-block">
                         <nav>
                             <ul>
@@ -382,67 +389,69 @@
                         </nav>
                     </div>
                     <ul class="custom-nav">
-                        <div class="search-box2" id="search-box2">
-                            <input type="text" id="search-input" class="form-control" placeholder="Search here...">
-                            <a class="search-btn2"><i class="far fa-search"></i></a>
-                            <div class="search-result" id="search-result">
+                        <li class="nav-item">
+                            <div class="search-box2" id="search-box2">
+                                <input type="text" id="search-input" class="form-control" placeholder="Search here...">
+                                <div class="search-btn2"><i class="far fa-search"></i></div>
+                                <div class="search-result" id="search-result">
 
-                                <a href="" class="search-item">
-                                    <div class="img-area">
-                                        <img src="./assets/img/products/clash-of-clan.webp" alt="">
-                                    </div>
-                                    <div class="text-area">
-                                        <div class="title">Clash of Clans Gold Pass</div>
-                                        <div class="sub-title">Direct Top Up</div>
-                                    </div>
-                                </a>
-                                <a href="" class="search-item">
-                                    <div class="img-area">
-                                        <img src="./assets/img/products/league-of-legend.webp" alt="">
-                                    </div>
-                                    <div class="text-area">
-                                        <div class="title">Mobile Legends</div>
-                                        <div class="sub-title">Direct Top Up</div>
-                                    </div>
-                                </a>
-                                <a href="" class="search-item">
-                                    <div class="img-area">
-                                        <img src="./assets/img/products/1.png" alt="">
-                                    </div>
-                                    <div class="text-area">
-                                        <div class="title">PUBG Mobile</div>
-                                        <div class="sub-title">Direct Top Up</div>
-                                    </div>
-                                </a>
-                                <a href="" class="search-item">
-                                    <div class="img-area">
-                                        <img src="./assets/img/products/2.png" alt="">
-                                    </div>
-                                    <div class="text-area">
-                                        <div class="title">Free Fire Mobile</div>
-                                        <div class="sub-title">Direct Top Up</div>
-                                    </div>
-                                </a>
-                                <a href="" class="search-item">
-                                    <div class="img-area">
-                                        <img src="./assets/img/products/google-card.webp" alt="">
-                                    </div>
-                                    <div class="text-area">
-                                        <div class="title">Google Play Gift Card (IN)</div>
-                                        <div class="sub-title">Card</div>
-                                    </div>
-                                </a>
-                                <a href="" class="search-item">
-                                    <div class="img-area">
-                                        <img src="./assets/img/products/itunes.webp" alt="">
-                                    </div>
-                                    <div class="text-area">
-                                        <div class="title">Apple Gift Card (UK)</div>
-                                        <div class="sub-title">Card</div>
-                                    </div>
-                                </a>
+                                    <a href="" class="search-item">
+                                        <div class="img-area">
+                                            <img src="./assets/img/products/clash-of-clan.webp" alt="product-img">
+                                        </div>
+                                        <div class="text-area">
+                                            <div class="title">Clash of Clans Gold Pass</div>
+                                            <div class="sub-title">Direct Top Up</div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="search-item">
+                                        <div class="img-area">
+                                            <img src="./assets/img/products/league-of-legend.webp" alt="product-img">
+                                        </div>
+                                        <div class="text-area">
+                                            <div class="title">Mobile Legends</div>
+                                            <div class="sub-title">Direct Top Up</div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="search-item">
+                                        <div class="img-area">
+                                            <img src="./assets/img/products/1.png" alt="product-img">
+                                        </div>
+                                        <div class="text-area">
+                                            <div class="title">PUBG Mobile</div>
+                                            <div class="sub-title">Direct Top Up</div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="search-item">
+                                        <div class="img-area">
+                                            <img src="./assets/img/products/2.png" alt="product-img">
+                                        </div>
+                                        <div class="text-area">
+                                            <div class="title">Free Fire Mobile</div>
+                                            <div class="sub-title">Direct Top Up</div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="search-item">
+                                        <div class="img-area">
+                                            <img src="./assets/img/products/google-card.webp" alt="product-img">
+                                        </div>
+                                        <div class="text-area">
+                                            <div class="title">Google Play Gift Card (IN)</div>
+                                            <div class="sub-title">Card</div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="search-item">
+                                        <div class="img-area">
+                                            <img src="./assets/img/products/itunes.webp" alt="product-img">
+                                        </div>
+                                        <div class="text-area">
+                                            <div class="title">Apple Gift Card (UK)</div>
+                                            <div class="sub-title">Card</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                        </li>
                         <li class="nav-item">
                             <div class="shopping-cart">
                                 <button class="dropdown-toggle">
@@ -457,7 +466,7 @@
                                     <div class="dropdown-box">
                                         <li>
                                             <a class="dropdown-item" href="#">
-                                                <img src="assets/img/cards/1.webp" alt="">
+                                                <img src="assets/img/cards/1.webp" alt="dropdown-img">
                                                 <div class="text">
                                                     <h6 class="title active">Swift Send - A SAAS Based Email Marketing
                                                         Platform</h6>
@@ -470,7 +479,7 @@
                                         </li>
                                         <li>
                                             <a class="dropdown-item" href="#">
-                                                <img src="assets/img/cards/2.webp" alt="">
+                                                <img src="assets/img/cards/2.webp" alt="dropdown-img">
                                                 <div class="text">
                                                     <h6 class="title">BillPay - Topup, Recharge and Utility Bill Payment
                                                         Solution</h6>
@@ -483,7 +492,7 @@
                                         </li>
                                         <li>
                                             <a class="dropdown-item" href="#">
-                                                <img src="assets/img/cards/3.webp" alt="">
+                                                <img src="assets/img/cards/3.webp" alt="dropdown-img">
                                                 <div class="text">
                                                     <h6 class="title">HYIP PRO - Cross Platform Mobile Application</h6>
                                                     <small class="price-quantity">2 × $370.00</small>
@@ -495,7 +504,7 @@
                                         </li>
                                         <li>
                                             <a class="dropdown-item" href="#">
-                                                <img src="assets/img/cards/4.webp" alt="">
+                                                <img src="assets/img/cards/4.webp" alt="dropdown-img">
                                                 <div class="text">
                                                     <h6 class="title">Gamers Arena - On Demand Game Shop Cross Platform
                                                         Mobile Application</h6>
@@ -518,11 +527,10 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link login-btn" href="login.html">
+                            <a class="nav-link login-btn" href="login.html" aria-label="login-btn">
                                 <span class="icon"><i class="fa-regular fa-user"></i></span>
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <div class="profile-box">
                                 <div class="profile">
@@ -644,21 +652,21 @@
                                     <div class="col-lg-12 col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/6.webp" alt="">
+                                                <img src="./assets/img/products/big/6.webp" alt="product-img">
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">
                                                         Gift Card 10 INR IN
@@ -679,21 +687,22 @@
                                     <div class="col-lg-12 col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/2D3D-Game-Design.png" alt="">
+                                                <img src="./assets/img/products/big/2D3D-Game-Design.png"
+                                                    alt="product-img">
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">
                                                         Gift Card 10 INR IN
@@ -720,21 +729,21 @@
                                     <div class="col-lg-12 col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/apple-card.jpg" alt="">
+                                                <img src="./assets/img/products/big/apple-card.jpg" alt="product-img">
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">
                                                         Gift Card 10 INR IN
@@ -755,21 +764,21 @@
                                     <div class="col-lg-12 col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/google-play.jpg" alt="">
+                                                <img src="./assets/img/products/big/google-play.jpg" alt="product-img">
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">
                                                         Gift Card 10 INR IN
@@ -822,21 +831,21 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500">
                     <a href="product-details.html" class="product-box">
                         <div class="img-box">
-                            <img src="./assets/img/products/big/6.webp" alt="" />
+                            <img src="./assets/img/products/big/6.webp" alt="product-img" />
                         </div>
                         <div class="text-box">
                             <div class="top-info">
                                 <div class="review">
-                                    <ul class="reviews d-flex align-items-center gap-2">
-                                        <li>
+                                    <div class="reviews d-flex align-items-center gap-2">
+                                        <div>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </li>
+                                        </div>
                                         <span>(5 reviews)</span>
-                                    </ul>
+                                    </div>
                                 </div>
                                 <div class="title mt-10">
                                     Gift Card 10 INR IN
@@ -855,21 +864,21 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="700">
                     <a href="product-details.html" class="product-box">
                         <div class="img-box">
-                            <img src="./assets/img/products/big/2D3D-Game-Design.png" alt="" />
+                            <img src="./assets/img/products/big/2D3D-Game-Design.png" alt="product-img" />
                         </div>
                         <div class="text-box">
                             <div class="top-info">
                                 <div class="review">
-                                    <ul class="reviews d-flex align-items-center gap-2">
-                                        <li>
+                                    <div class="reviews d-flex align-items-center gap-2">
+                                        <div>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </li>
+                                        </div>
                                         <span>(5 reviews)</span>
-                                    </ul>
+                                    </div>
                                 </div>
                                 <div class="title mt-10">
                                     Gift Card 10 INR IN
@@ -888,21 +897,21 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="900">
                     <a href="product-details.html" class="product-box">
                         <div class="img-box">
-                            <img src="./assets/img/products/big/free-fire-photo-1.png" alt="" />
+                            <img src="./assets/img/products/big/free-fire-photo-1.png" alt="product-img" />
                         </div>
                         <div class="text-box">
                             <div class="top-info">
                                 <div class="review">
-                                    <ul class="reviews d-flex align-items-center gap-2">
-                                        <li>
+                                    <div class="reviews d-flex align-items-center gap-2">
+                                        <div>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </li>
+                                        </div>
                                         <span>(5 reviews)</span>
-                                    </ul>
+                                    </div>
                                 </div>
                                 <div class="title mt-10">
                                     Gold Pass
@@ -921,21 +930,21 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500">
                     <a href="product-details.html" class="product-box">
                         <div class="img-box">
-                            <img src="./assets/img/products/big/clash-of-clan.webp" alt="" />
+                            <img src="./assets/img/products/big/clash-of-clan.webp" alt="product-img" />
                         </div>
                         <div class="text-box">
                             <div class="top-info">
                                 <div class="review">
-                                    <ul class="reviews d-flex align-items-center gap-2">
-                                        <li>
+                                    <div class="reviews d-flex align-items-center gap-2">
+                                        <div>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </li>
+                                        </div>
                                         <span>(5 reviews)</span>
-                                    </ul>
+                                    </div>
                                 </div>
                                 <div class="title mt-10">
                                     Gold Pass
@@ -954,21 +963,21 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="700">
                     <a href="product-details.html" class="product-box">
                         <div class="img-box">
-                            <img src="./assets/img/products/big/apple-card.jpg" alt="" />
+                            <img src="./assets/img/products/big/apple-card.jpg" alt="product-img" />
                         </div>
                         <div class="text-box">
                             <div class="top-info">
                                 <div class="review">
-                                    <ul class="reviews d-flex align-items-center gap-2">
-                                        <li>
+                                    <div class="reviews d-flex align-items-center gap-2">
+                                        <div>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </li>
+                                        </div>
                                         <span>(5 reviews)</span>
-                                    </ul>
+                                    </div>
                                 </div>
                                 <div class="title mt-10">
                                     Gift Card 10 INR IN
@@ -987,21 +996,21 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="900">
                     <a href="product-details.html" class="product-box">
                         <div class="img-box">
-                            <img src="./assets/img/products/big/google-play.jpg" alt="" />
+                            <img src="./assets/img/products/big/google-play.jpg" alt="product-img" />
                         </div>
                         <div class="text-box">
                             <div class="top-info">
                                 <div class="review">
-                                    <ul class="reviews d-flex align-items-center gap-2">
-                                        <li>
+                                    <div class="reviews d-flex align-items-center gap-2">
+                                        <div>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="active fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </li>
+                                        </div>
                                         <span>(5 reviews)</span>
-                                    </ul>
+                                    </div>
                                 </div>
                                 <div class="title mt-10">
                                     Gift Card 10 INR IN
@@ -1028,7 +1037,7 @@
             <div class="row g-4 align-items-center">
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="img-box">
-                        <img src="./assets/img/about/fortnite-battle-royale-game.png" alt="" />
+                        <img src="./assets/img/about/fortnite-battle-royale-game.png" alt="about-img" />
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-duration="700">
@@ -1067,7 +1076,7 @@
                         <div class="left-side">
                             <div class="img-box">
                                 <img src="./assets/img/hero/gintoki_sakata_png_render_gintama_shounen_jump_by_marcopolo157_dgg6n0z-pre.png"
-                                    alt="" />
+                                    alt="flash-img" />
                             </div>
                             <div class="text-box">
                                 <h3>Flash Deal</h3>
@@ -1087,21 +1096,21 @@
                                     <div class="col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/1.jpg" alt="" />
+                                                <img src="./assets/img/products/big/1.jpg" alt="product-img" />
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2 flex-wrap">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2 flex-wrap">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">Silver Pass</div>
                                                     <p class="name mt-1">Clash of Clans Gold Pass</p>
@@ -1120,21 +1129,21 @@
                                     <div class="col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/2.png" alt="" />
+                                                <img src="./assets/img/products/big/2.png" alt="product-img" />
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2 flex-wrap">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2 flex-wrap">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">Farming Simulator 25 (PC) - Steam Key -
                                                         GLOBAL</div>
@@ -1153,21 +1162,21 @@
                                     <div class="col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/apple-card.jpg" alt="" />
+                                                <img src="./assets/img/products/big/apple-card.jpg" alt="product-img" />
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2 flex-wrap">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2 flex-wrap">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">Apple Gift Card (Uk)</div>
                                                 </div>
@@ -1185,21 +1194,22 @@
                                     <div class="col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/google-play.jpg" alt="" />
+                                                <img src="./assets/img/products/big/google-play.jpg"
+                                                    alt="product-img" />
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2 flex-wrap">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2 flex-wrap">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">Google Play Gift Card (UK)</div>
                                                 </div>
@@ -1219,21 +1229,21 @@
                                     <div class="col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/1.jpg" alt="" />
+                                                <img src="./assets/img/products/big/1.jpg" alt="product-img" />
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2 flex-wrap">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2 flex-wrap">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">EA SPORTS FC 25 (PC) - Steam Account -
                                                         GLOBAL</div>
@@ -1252,21 +1262,21 @@
                                     <div class="col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/2.png" alt="" />
+                                                <img src="./assets/img/products/big/2.png" alt="product-img" />
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2 flex-wrap">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2 flex-wrap">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">Farming Simulator 25 (PC) - Steam Key -
                                                         GLOBAL</div>
@@ -1285,21 +1295,21 @@
                                     <div class="col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/apple-card.jpg" alt="" />
+                                                <img src="./assets/img/products/big/apple-card.jpg" alt="product-img" />
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2 flex-wrap">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2 flex-wrap">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">Apple Gift Card (Uk)</div>
                                                 </div>
@@ -1317,21 +1327,22 @@
                                     <div class="col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/google-play.jpg" alt="" />
+                                                <img src="./assets/img/products/big/google-play.jpg"
+                                                    alt="product-img" />
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2 flex-wrap">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2 flex-wrap">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">Google Play Gift Card (UK)</div>
                                                 </div>
@@ -1351,21 +1362,21 @@
                                     <div class="col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/1.jpg" alt="" />
+                                                <img src="./assets/img/products/big/1.jpg" alt="product-img" />
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2 flex-wrap">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2 flex-wrap">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">EA SPORTS FC 25 (PC) - Steam Account -
                                                         GLOBAL</div>
@@ -1384,21 +1395,21 @@
                                     <div class="col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/2.png" alt="" />
+                                                <img src="./assets/img/products/big/2.png" alt="product-img" />
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2 flex-wrap">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2 flex-wrap">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">Farming Simulator 25 (PC) - Steam Key -
                                                         GLOBAL</div>
@@ -1417,21 +1428,21 @@
                                     <div class="col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/apple-card.jpg" alt="" />
+                                                <img src="./assets/img/products/big/apple-card.jpg" alt="product-img" />
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2 flex-wrap">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2 flex-wrap">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">Apple Gift Card (Uk)</div>
                                                 </div>
@@ -1449,21 +1460,22 @@
                                     <div class="col-md-6">
                                         <a href="product-details.html" class="product-box">
                                             <div class="img-box">
-                                                <img src="./assets/img/products/big/google-play.jpg" alt="" />
+                                                <img src="./assets/img/products/big/google-play.jpg"
+                                                    alt="product-img" />
                                             </div>
                                             <div class="text-box">
                                                 <div class="top-info">
                                                     <div class="review">
-                                                        <ul class="reviews d-flex align-items-center gap-2 flex-wrap">
-                                                            <li>
+                                                        <div class="reviews d-flex align-items-center gap-2 flex-wrap">
+                                                            <div>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="active fa-solid fa-star"></i>
                                                                 <i class="fa-solid fa-star"></i>
-                                                            </li>
+                                                            </div>
                                                             <span>(5 reviews)</span>
-                                                        </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="title mt-10">Google Play Gift Card (UK)</div>
                                                 </div>
@@ -1506,7 +1518,7 @@
                 <div class="col-xl-2 col-md-3 col-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="category-box">
                         <a href="" class="img-box">
-                            <img src="./assets/img/products/big/clash-of-clan.webp" alt="" />
+                            <img src="./assets/img/products/big/clash-of-clan.webp" alt="product-img" />
                         </a>
                         <div class="text-box">
                             <a href="" class="title">Clash of Clans Gold Pass</a>
@@ -1516,7 +1528,7 @@
                 <div class="col-xl-2 col-md-3 col-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="category-box">
                         <a href="" class="img-box">
-                            <img src="./assets/img/products/big/6.png" alt="" />
+                            <img src="./assets/img/products/big/6.png" alt="product-img" />
                         </a>
                         <div class="text-box">
                             <a href="" class="title">PUBG Mobile</a>
@@ -1526,7 +1538,7 @@
                 <div class="col-xl-2 col-md-3 col-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="category-box">
                         <a href="" class="img-box">
-                            <img src="./assets/img/products/big/5.png" alt="" />
+                            <img src="./assets/img/products/big/5.png" alt="product-img" />
                         </a>
                         <div class="text-box">
                             <a href="" class="title">Free Fire Diamonds</a>
@@ -1536,7 +1548,7 @@
                 <div class="col-xl-2 col-md-3 col-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="category-box">
                         <a href="" class="img-box">
-                            <img src="./assets/img/products/big/league-of-legends.png" alt="" />
+                            <img src="./assets/img/products/big/league-of-legends.png" alt="product-img" />
                         </a>
                         <div class="text-box">
                             <a href="" class="title">League of Legends</a>
@@ -1546,7 +1558,7 @@
                 <div class="col-xl-2 col-md-3 col-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="category-box">
                         <a href="" class="img-box">
-                            <img src="./assets/img/products/big/clash-of-clan.webp" alt="" />
+                            <img src="./assets/img/products/big/clash-of-clan.webp" alt="product-img" />
                         </a>
                         <div class="text-box">
                             <a href="" class="title">Clash of Clans Gold Pass</a>
@@ -1556,7 +1568,7 @@
                 <div class="col-xl-2 col-md-3 col-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="category-box">
                         <a href="" class="img-box">
-                            <img src="./assets/img/products/big/6.png" alt="" />
+                            <img src="./assets/img/products/big/6.png" alt="product-img" />
                         </a>
                         <div class="text-box">
                             <a href="" class="title">PUBG Mobile</a>
@@ -1612,7 +1624,7 @@
                 <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-duration="500">
                     <div class="img-box">
                         <img src="./assets/img/why-choose-us/dungeons-dragons-pathfinder-roleplaying-game-dwarf-dungeon-crawl-wizard-dungeons-and-dragons-15592e3dfa58a42e4b802de91df9ac8e copy.png"
-                            alt="">
+                            alt="why-choose-img">
                     </div>
                 </div>
             </div>
@@ -1641,7 +1653,7 @@
                 <div class="col-xl-2 col-md-3 col-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="category-box">
                         <a href="sell-post.html" class="img-box">
-                            <img src="./assets/img/products/big/clash-of-clan.webp" alt="" />
+                            <img src="./assets/img/products/big/clash-of-clan.webp" alt="product-img" />
                         </a>
                         <div class="text-box">
                             <a href="" class="title">Clash of Clans</a>
@@ -1651,7 +1663,7 @@
                 <div class="col-xl-2 col-md-3 col-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="category-box">
                         <a href="sell-post.html" class="img-box">
-                            <img src="./assets/img/products/big/6.png" alt="" />
+                            <img src="./assets/img/products/big/6.png" alt="product-img" />
                         </a>
                         <div class="text-box">
                             <a href="" class="title">PUBG</a>
@@ -1661,7 +1673,7 @@
                 <div class="col-xl-2 col-md-3 col-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="category-box">
                         <a href="sell-post.html" class="img-box">
-                            <img src="./assets/img/products/big/5.png" alt="" />
+                            <img src="./assets/img/products/big/5.png" alt="product-img" />
                         </a>
                         <div class="text-box">
                             <a href="" class="title">Free Fire</a>
@@ -1671,7 +1683,7 @@
                 <div class="col-xl-2 col-md-3 col-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="category-box">
                         <a href="sell-post.html" class="img-box">
-                            <img src="./assets/img/products/big/league-of-legends.png" alt="" />
+                            <img src="./assets/img/products/big/league-of-legends.png" alt="product-img" />
                         </a>
                         <div class="text-box">
                             <a href="" class="title">League of Legends</a>
@@ -1681,7 +1693,7 @@
                 <div class="col-xl-2 col-md-3 col-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="category-box">
                         <a href="sell-post.html" class="img-box">
-                            <img src="./assets/img/products/big/clash-of-clan.webp" alt="" />
+                            <img src="./assets/img/products/big/clash-of-clan.webp" alt="product-img" />
                         </a>
                         <div class="text-box">
                             <a href="" class="title">Clash of Clans</a>
@@ -1691,7 +1703,7 @@
                 <div class="col-xl-2 col-md-3 col-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="category-box">
                         <a href="sell-post.html" class="img-box">
-                            <img src="./assets/img/products/big/6.png" alt="" />
+                            <img src="./assets/img/products/big/6.png" alt="product-img" />
                         </a>
                         <div class="text-box">
                             <a href="" class="title">PUBG</a>
@@ -1728,7 +1740,8 @@
                                 <div class="item">
                                     <div class="testimonial-box">
                                         <div class="img-box">
-                                            <img src="./assets/img/testimonial/testimonial-img-2.jpg" alt="" />
+                                            <img src="./assets/img/testimonial/testimonial-img-2.jpg"
+                                                alt="testimonial-img" />
                                         </div>
                                         <div class="text-box">
                                             <div class="d-flex justify-content-end">
@@ -1762,7 +1775,8 @@
                                 <div class="item">
                                     <div class="testimonial-box">
                                         <div class="img-box">
-                                            <img src="./assets/img/testimonial/testimonial-img-1.jpg" alt="" />
+                                            <img src="./assets/img/testimonial/testimonial-img-1.jpg"
+                                                alt="testimonial-img" />
                                         </div>
                                         <div class="text-box">
                                             <div class="d-flex justify-content-end">
@@ -1796,7 +1810,8 @@
                                 <div class="item">
                                     <div class="testimonial-box">
                                         <div class="img-box">
-                                            <img src="./assets/img/testimonial/testimonial-img-3.jpg" alt="" />
+                                            <img src="./assets/img/testimonial/testimonial-img-3.jpg"
+                                                alt="testimonial-img" />
                                         </div>
                                         <div class="text-box">
                                             <div class="d-flex justify-content-end">
@@ -1853,7 +1868,7 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="500">
                     <div class="blog-box">
                         <a class="img-box" href="blog-details.html">
-                            <img src="./assets/img/blog/1.png" alt="">
+                            <img src="./assets/img/blog/1.png" alt="blog-img">
                         </a>
                         <div class="text-box">
                             <ul class="meta">
@@ -1877,7 +1892,7 @@
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="700">
                     <div class="blog-box">
                         <a class="img-box" href="blog-details.html">
-                            <img src="./assets/img/blog/2.png" alt="">
+                            <img src="./assets/img/blog/2.png" alt="blog-img">
                         </a>
                         <div class="text-box">
                             <ul class="meta">
@@ -1902,7 +1917,7 @@
                     <div class="blog-box">
 
                         <a class="img-box" href="blog-details.html">
-                            <img src="./assets/img/blog/3.png" alt="">
+                            <img src="./assets/img/blog/3.png" alt="blog-img">
                         </a>
                         <div class="text-box">
                             <ul class="meta">
@@ -1964,10 +1979,14 @@
                         </p>
 
                         <ul class="social-box mt-30">
-                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://facebook.com" aria-label="Facebook"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com" aria-label="Linkedin"><i
+                                        class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://instagram.com" aria-label="Instagram"><i
+                                        class="fab fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -2020,10 +2039,14 @@
                     </div>
                     <div class="col-sm-6 d-flex justify-content-center justify-content-sm-end">
                         <div class="payment-gateway">
-                            <img src="./assets/img/gateway/small/396d4ffb14c64be61694621c480d9917.png" alt="">
-                            <img src="./assets/img/gateway/small/9862aeaf448f32090a4c61dced07ae74.png" alt="">
-                            <img src="./assets/img/gateway/small/98e2d9681b5a058a3eed7ea018a70269.png" alt="">
-                            <img src="./assets/img/gateway/small/c1e8cfdb317c02f0892c59027811a97e.png" alt="">
+                            <img src="./assets/img/gateway/small/396d4ffb14c64be61694621c480d9917.png"
+                                alt="gateway-img">
+                            <img src="./assets/img/gateway/small/9862aeaf448f32090a4c61dced07ae74.png"
+                                alt="gateway-img">
+                            <img src="./assets/img/gateway/small/98e2d9681b5a058a3eed7ea018a70269.png"
+                                alt="gateway-img">
+                            <img src="./assets/img/gateway/small/c1e8cfdb317c02f0892c59027811a97e.png"
+                                alt="gateway-img">
                         </div>
                     </div>
                 </div>
